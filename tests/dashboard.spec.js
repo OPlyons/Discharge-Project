@@ -6,6 +6,7 @@ test('wizard, borough map and support icons share the opening dashboard',async({
  if(!isMobile)await page.setViewportSize({width:1280,height:720});
  await page.goto('/');await page.locator('nav[aria-label="Main navigation"]').getByRole('link',{name:'Find support',exact:true}).click();await expect(page.locator('#service-search')).toBeEnabled();
  await expect(page.locator('.wizard-panel')).toBeVisible();await expect(page.locator('#borough-map')).toBeVisible();await expect(page.locator('#activity-choices')).toBeVisible();
+ const workforce=page.locator('#workforce-advice-link');await expect(workforce).toBeVisible();await expect(workforce).toHaveAttribute('href','https://map.lxportal.space/');await expect(workforce).toHaveAttribute('target','_blank');await expect(workforce).toContainText('on behalf of the service user');await expect(workforce).toContainText('Not a referral process.');
  await expect(page.locator('[data-search-mode]')).toHaveCount(0);await expect(page.locator('#activity-choices > button')).toHaveCount(14);
  if(!isMobile){
   const wizard=await page.locator('.wizard-panel').boundingBox(),map=await page.locator('.support-area').boundingBox(),types=await page.locator('.support-types').boundingBox();
@@ -13,6 +14,7 @@ test('wizard, borough map and support icons share the opening dashboard',async({
   const sizing=await page.evaluate(()=>Object.fromEntries(['.brand-inner','.navigation-wrap','.utility-bar','main','.support-heading','.wizard-panel','.support-area','.support-types'].map(selector=>{const n=document.querySelector(selector),s=getComputedStyle(n),r=n.getBoundingClientRect();return[selector,{y:r.y,height:r.height,padding:s.padding,fontSize:s.fontSize,has:document.body.matches(':has(#support.active)')}];})));
   expect(Math.max(wizard.y+wizard.height,map.y+map.height,types.y+types.height),JSON.stringify(sizing)).toBeLessThanOrEqual(720);
   const more=await page.locator('#support-more-filters').boundingBox();expect(more.y+more.height).toBeLessThanOrEqual(720);
+  const workforceBox=await workforce.boundingBox();expect(workforceBox.y+workforceBox.height).toBeLessThanOrEqual(wizard.y);expect(workforceBox.y).toBeGreaterThanOrEqual(0);
  }
  expect(calls).toHaveLength(0);
  await test.info().attach('Opening support dashboard',{body:await page.screenshot(),contentType:'image/png'});
