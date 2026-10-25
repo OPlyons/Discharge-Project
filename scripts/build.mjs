@@ -20,7 +20,7 @@ fill('style','navigator-design',await read('site/navigator.css'));fill('style','
 fill('script','navigator-config',JSON.stringify({endpoint:settings.apiPath,release:'community-navigator-v18-2026-10-25'}));
 const ingestOrigin=new URL(settings.sentry.dsn).origin;
 template=template.replace("script-src 'unsafe-inline'","script-src 'self' 'unsafe-inline'").replace(/connect-src 'self' https:\/\/discharge-community-navigator-dev[^;]+/,"connect-src 'self' "+ingestOrigin);
-template=template.replace('</head>','<meta name="application-name" content="Discharge and Transition Project"><script src="/assets/monitoring.js"></script></head>');
+template=template.replace('</head>','<meta name="application-name" content="Discharge and Transition Project"><script src="/assets/monitoring.js?v='+encodeURIComponent(commit)+'"></script></head>');
 template=template.replace('The site does not use a call database, built-in visitor tracking or an account sign-in.','The site does not use a call database, visitor tracking or an account sign-in. It sends technical fault reports to Sentry; search text and form entries are excluded.');
 template=template.replace('The AI and hosting provider processes requests under its own data arrangements.','The AI and hosting provider processes requests under its own data arrangements. Sentry receives limited technical error information, without search text, form entries or session recordings.');
 await build({entryPoints:[path.join(root,'site/monitoring.js')],outfile:path.join(out,'assets/monitoring.js'),bundle:true,minify:false,format:'iife',target:'es2022',sourcemap:false,legalComments:'inline',define:{__DTP_MONITORING_CONFIG__:JSON.stringify({...settings.sentry,release})}});

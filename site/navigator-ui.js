@@ -38,8 +38,8 @@
   if(top)article.append(make('p',where,'navigator-where'));
   const next=make('p',undefined,'navigator-next');next.append(make('strong','Next step: '),document.createTextNode(r.nextStep||r.access||'Contact the service to check how to join.'));article.append(next);
   const links=make('div',undefined,'navigator-contact');
-  if(/^https:\/\//.test(r.url||'')){const a=link(r.url,'Visit website ↗','button secondary');a.setAttribute('aria-label',r.name+' website (opens in a new tab)');links.append(a);}
-  if(r.phone){const a=make('a','Call '+r.phone,'navigator-phone');a.href='tel:'+r.phone.replace(/[^+0-9]/g,'');a.setAttribute('aria-label','Call '+r.name+' on '+r.phone);links.append(a);}
+  if(/^https:\/\//.test(r.url||'')){const a=link(r.url,'Visit website ↗','button secondary');a.setAttribute('aria-label','Visit website ↗ for '+r.name+' (opens in a new tab)');links.append(a);}
+  if(r.phone){const a=make('a','Call '+r.phone,'navigator-phone');a.href='tel:'+r.phone.replace(/[^+0-9]/g,'');a.setAttribute('aria-label','Call '+r.phone+' — '+r.name);links.append(a);}
   article.append(links);
   const details=make('details'),summary=make('summary','Joining details and source');summary.setAttribute('aria-label','Joining details and source for '+r.name);details.append(summary,make('p',r.description));
   const dl=make('dl');definition(dl,'Where it helps',r.coverage||dir?.name);definition(dl,'Who it is for',r.who);definition(dl,'How to make contact',r.access);definition(dl,'Costs and things to check',r.check);details.append(dl);

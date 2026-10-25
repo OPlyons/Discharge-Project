@@ -55,7 +55,7 @@
   card.append(make('p',[r.category,r.national?'National · '+(r.coverage||'Check service area'):dir?.name].filter(Boolean).join(' · '),'category'),heading,make('p',r.description));
   if(r.nextStep){const step=make('p',undefined,'resource-next-step');step.append(make('strong','Next step: '),document.createTextNode(r.nextStep));card.append(step);}
   const links=make('div',undefined,'contact-links');
-  if(/^https?:\/\//.test(r.url||'')){const a=make('a','Website ↗','website-link');a.href=r.url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label',r.name+' website (opens in a new tab)');links.append(a);}
+  if(/^https?:\/\//.test(r.url||'')){const a=make('a','Website ↗','website-link');a.href=r.url;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label','Website ↗ for '+r.name+' (opens in a new tab)');links.append(a);}
   if(r.phone){const a=make('a',r.phone,'phone-link');a.href='tel:'+r.phone.replace(/[^+0-9]/g,'');a.setAttribute('aria-label','Call '+r.name+' on '+r.phone);links.append(a);}
   card.append(links);
   const details=make('details'),summary=make('summary','Joining details');summary.setAttribute('aria-label','Joining details for '+r.name);details.append(summary);
@@ -102,7 +102,7 @@
   const counts=Object.fromEntries(data.directories.map(d=>[d.id,0]));
   for(const r of data.resources)if(matches(r,words,true))counts[r.directoryId]++;
   for(const b of areaButtons){const id=b.dataset.area,count=counts[id]||0,selected=area.value===id;const name=data.directories.find(d=>d.id===id).name;
-   b.setAttribute('aria-pressed',String(selected));b.setAttribute('aria-label',name+' · '+count+' '+(count===1?'listing':'listings')+(selected?' · selected':''));b.querySelector('.map-place-count,.area-count').textContent=count+' '+(count===1?'listing':'listings');
+   b.setAttribute('aria-pressed',String(selected));b.removeAttribute('aria-label');const countLabel=b.querySelector('.map-place-count,.area-count');countLabel.removeAttribute('aria-hidden');countLabel.textContent=' '+count+' '+(count===1?'listing':'listings');
   }
   for(const p of shapes){p.classList.toggle('is-selected',p.dataset.mapShape===area.value);p.classList.toggle('no-matches',!counts[p.dataset.mapShape]);}
   for(const b of activityButtons)b.setAttribute('aria-pressed',String(b.dataset.activity===activity&&!topic.value));
@@ -111,7 +111,7 @@
  }
  function selectedChoices(){
   const choices=[];
-  function add(kind,label,clear){const b=make('button',label+' ×','selected-filter');b.type='button';b.setAttribute('aria-label','Remove '+kind+' filter: '+label);b.addEventListener('click',()=>{clearTimeout(timer);clear();pendingArea=area.value;shown=12;areaChanged();$('resource-results-heading').focus({preventScroll:true});});choices.push(b);}
+  function add(kind,label,clear){const b=make('button',label+' ×','selected-filter');b.type='button';b.setAttribute('aria-label',label+' × — remove '+kind+' filter');b.addEventListener('click',()=>{clearTimeout(timer);clear();pendingArea=area.value;shown=12;areaChanged();$('resource-results-heading').focus({preventScroll:true});});choices.push(b);}
   const dir=data.directories.find(d=>d.id===area.value);
   if(dir)add('area',dir.name,()=>area.value='all');
   if(activity!=='all')add('activity',groups.find(g=>g.id===activity).label,()=>activity='all');
