@@ -13,7 +13,8 @@
     "test": "playwright test",
     "test:a11y": "playwright test tests/accessibility.spec.js",
     "test:report": "playwright show-report",
-    "deploy:api": "wrangler deploy --config navigator/wrangler.jsonc"
+    "deploy:api": "wrangler deploy --config navigator/wrangler.jsonc",
+    "verify:monitoring": "node scripts/verify-monitoring.mjs"
   },
   "dependencies": {
     "@sentry/browser": "11.9.0"
