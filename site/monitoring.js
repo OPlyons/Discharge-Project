@@ -17,10 +17,3 @@ window.DTPMonitoring=Object.freeze({
  captureCode(code){if(!Object.hasOwn(ERROR_CODES,code))return null;return Sentry.captureException(new Error(ERROR_CODES[code]),{level:'error',tags:{dtp_code:code}});},
  flush:()=>Sentry.flush(5000)
 });
-// Temporary, explicit installation verification. Removed after Sentry confirms receipt.
-if(location.hash==='#monitoring-check')addEventListener('load',async()=>{
- const eventId=window.DTPMonitoring.captureCode('monitoring_check');
- const flushed=await window.DTPMonitoring.flush();
- const output=document.createElement('p');output.id='monitoring-verification';output.textContent='Monitoring verification: '+eventId+'; sent: '+flushed;
- document.querySelector('main').prepend(output);
-});
