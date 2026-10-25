@@ -4,6 +4,8 @@ The public website for peer support calls after discharge, service users, carers
 
 Production: https://dtp.lxportal.space
 
+Find support opens a single dashboard with a compact Support wizard, borough map and coloured support icons. Map and icon choices browse locally and can refine existing AI results without another AI request. Find support explicitly runs AI; Search without AI performs local text search. Start again clears the query and every filter.
+
 ## Run and check
 
 Use Node.js 24.

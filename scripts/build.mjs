@@ -17,6 +17,7 @@ let template=await read('site/template.html');
 function fill(tag,id,value){const re=new RegExp('(<'+tag+'\\b[^>]*\\bid="'+id+'"[^>]*>)[\\s\\S]*?(</'+tag+'>)','g');let count=0;template=template.replace(re,(_all,open,close)=>{count++;return open+value+close;});if(count!==1)throw new Error('Expected one '+id+', got '+count);}
 fill('script','navigator-core',core);fill('script','navigator-ui',await read('site/navigator-ui.js'));fill('script','service-directory',await read('site/directory.js'));fill('script','needs-search-engine',await read('site/needs-search.js'));
 fill('style','navigator-design',await read('site/navigator.css'));fill('style','needs-search-design',await read('site/needs-search.css'));
+template=template.replace('</head>','<style id="support-dashboard-design">'+await read('site/support-dashboard.css')+'</style></head>');
 fill('script','navigator-config',JSON.stringify({endpoint:settings.apiPath,release:'community-navigator-v18-2026-10-25'}));
 const ingestOrigin=new URL(settings.sentry.dsn).origin;
 template=template.replace("script-src 'unsafe-inline'","script-src 'self' 'unsafe-inline'").replace(/connect-src 'self' https:\/\/discharge-community-navigator-dev[^;]+/,"connect-src 'self' "+ingestOrigin);

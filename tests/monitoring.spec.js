@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';import {interceptSentry,openSupport} from './support.js';
 test('normal browsing and search typing send no monitoring events or store data',async({page})=>{
- const envelopes=await interceptSentry(page);await openSupport(page);await page.locator('#service-search').fill('Synthetic support search in Brent');await page.getByRole('button',{name:'Browse directory',exact:true}).click();await page.locator('#area').selectOption('brent');
+ const envelopes=await interceptSentry(page);await openSupport(page);await page.locator('#service-search').fill('Synthetic support search in Brent');await page.locator('#area').selectOption('brent');
  expect(envelopes).toHaveLength(0);expect(await page.evaluate(()=>({local:localStorage.length,session:sessionStorage.length,cookie:document.cookie}))).toEqual({local:0,session:0,cookie:''});
 });
 test('error transport removes synthetic personal details and request context',async({page})=>{

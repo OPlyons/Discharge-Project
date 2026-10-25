@@ -5,23 +5,11 @@
  const config=JSON.parse($('navigator-config').textContent);
  const make=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
  const client=window.crypto?.randomUUID?.()||Array.from(window.crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('').replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/,'$1-$2-$3-$4-$5');
- let mode='ai',generation=0,controller=null,last=null,catalog=null,shownMore=0;
+ let generation=0,controller=null,last=null,catalog=null,shownMore=0;
  const status=text=>{$('navigator-status').textContent=text;};
  const choices=()=>({area:area.value,audience:$('audience').value,topic:$('topic').value});
  function stop(){generation++;controller?.abort();controller=null;$('navigator-submit').disabled=false;form.removeAttribute('aria-busy');}
  function clearResults(){last=null;shownMore=0;$('navigator-results').hidden=true;$('navigator-cards').replaceChildren();$('navigator-more-list').replaceChildren();$('navigator-more').open=false;status('');}
- function setMode(value){
-  stop();mode=value;clearResults();
-  if(mode==='ai'){$('topic').value='';$('audience').value='';}
-  for(const b of document.querySelectorAll('[data-search-mode]'))b.setAttribute('aria-pressed',String(b.dataset.searchMode===mode));
-  $('navigator-heading').hidden=mode!=='ai';$('navigator-warning').hidden=mode!=='ai';$('directory-explorer').hidden=mode==='ai';
-  $('search-label').textContent=mode==='ai'?'Describe what would help':'Search the directory';
-  $('navigator-submit').textContent=mode==='ai'?'Find support':'Search';
-  $('search-help').textContent=mode==='ai'?'A support need and borough are enough. You can also choose an area below.':'Search a group, activity or support need. Directory search stays in this browser.';
-  search.placeholder=mode==='ai'?'I’m in Brent, need housing advice and help with benefits':'Search a group or activity';
-  if(mode==='directory'){search.dispatchEvent(new Event('input',{bubbles:true}));}
-  search.focus({preventScroll:true});
- }
  function link(url,label,cls){const a=make('a',label,cls);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;}
  function definition(dl,label,value){if(value){dl.append(make('dt',label),make('dd',value));}}
  function card(hit,index,top=true){
@@ -55,7 +43,8 @@
  }
  function render(){
   if(!last)return;
-  last.result=core.searchDirectory(catalog,last.intent,choices(),last.query);const result=last.result;
+  last.result=core.searchDirectory(window.CNWLResourceDirectory.getSearchCatalog(),last.intent,choices(),last.query);const result=last.result;
+  $('directory-explorer').hidden=true;$('support-start').hidden=true;
   $('navigator-results').hidden=false;$('navigator-more-list').replaceChildren();shownMore=0;$('navigator-more').open=false;
   const labels=last.intent.needs.map(id=>core.NEEDS[id].label.toLowerCase());
   $('navigator-result-heading').textContent=result.count?'A few places to start':'No close matches yet';
@@ -72,7 +61,7 @@
    if(result.urgent){const r=catalog.resources.find(r=>r.id==='wider-council-homeless-help');if(r)note.append(link(r.url,'Find the council’s homelessness contact ↗'));}
   }
   const empty=$('navigator-empty');empty.hidden=!!result.count;
-  empty.textContent='Try fewer details, change the area, or use Browse directory. You can clear everything with Start again.';
+  empty.textContent='Try fewer details, a different area or another support icon. Start again clears every choice.';
   const missing=$('navigator-missing');missing.hidden=!result.missingNeeds.length;
   missing.textContent=result.missingNeeds.length?'No close match for '+result.missingNeeds.map(n=>core.NEEDS[n].label.toLowerCase()).join(', ')+' with these choices. Try another area or browse the directory.':'';
   const clarify=$('navigator-clarify');clarify.hidden=!!result.area||!last.intent.needs.some(n=>['housing','food','meet','sport','outdoors','arts','faith'].includes(n));
@@ -111,22 +100,23 @@
    }finally{clearTimeout(timeout);}
    if(id!==generation)return;
    if(intent.outOfScope){status('This Navigator finds community groups and practical support. Try a support need such as housing advice, benefits or meeting people. For treatment questions, contact your care team.');return;}
-   last={intent,query,mode:matchedMode,result:null};render();
+   last={intent,query,mode:matchedMode,result:null};
+   if(!area.value&&intent.area)window.CNWLResourceDirectory.setInferredArea(intent.area);
+   render();
    $('navigator-result-heading').focus({preventScroll:true});$('navigator-results').scrollIntoView({block:'start',behavior:'auto'});
   }catch(error){if(id===generation){if(error.message!=='personal_information')window.DTPMonitoring?.captureCode('directory_unavailable');status(error.message==='personal_information'?'Please remove personal information and describe only the support needed and borough.':'The directory is unavailable. Please try again, or use the printable directories below.');}}
   finally{clearTimeout(timeout);if(id===generation){form.removeAttribute('aria-busy');$('navigator-submit').disabled=false;controller=null;}}
  }
- form.addEventListener('submit',event=>{if(mode==='ai'){event.preventDefault();event.stopImmediatePropagation();navigate();}},true);
- search.addEventListener('input',event=>{if(mode==='ai'){event.stopImmediatePropagation();stop();clearResults();$('navigator-safety').hidden=true;}},true);
+ form.addEventListener('submit',event=>{event.preventDefault();event.stopImmediatePropagation();if(event.submitter?.id==='navigator-local'){stop();clearResults();window.CNWLResourceDirectory.search();}else navigate();},true);
+ search.addEventListener('input',event=>{event.stopImmediatePropagation();stop();clearResults();$('navigator-safety').hidden=true;},true);
  search.addEventListener('keydown',event=>{if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();form.requestSubmit();}});
- for(const b of document.querySelectorAll('[data-search-mode]'))b.addEventListener('click',()=>setMode(b.dataset.searchMode));
- function resetNavigator(){stop();window.CNWLResourceDirectory.reset();area.value='';area.dispatchEvent(new Event('change',{bubbles:true}));$('navigator-safety').hidden=true;clearResults();search.focus();search.scrollIntoView({block:'center',behavior:'auto'});}
+ function resetNavigator(){stop();clearResults();window.CNWLResourceDirectory.reset();$('navigator-safety').hidden=true;search.focus({preventScroll:true});$('support-heading').scrollIntoView({block:'start',behavior:'auto'});}
  $('navigator-reset').addEventListener('click',resetNavigator);$('navigator-clear-results').addEventListener('click',resetNavigator);
  $('navigator-edit').addEventListener('click',()=>{search.focus();search.scrollIntoView({block:'center',behavior:'auto'});});
  $('clear-filters').addEventListener('click',()=>{stop();clearResults();$('navigator-safety').hidden=true;});
- for(const n of [area,$('topic'),$('audience')])n.addEventListener('change',()=>{if(mode!=='ai')return;stop();if(last)render();});
+ document.addEventListener('directorychoiceschange',event=>{if(last){stop();render();}else{$('directory-explorer').hidden=!event.detail.started;$('support-start').hidden=event.detail.started;}});
  $('navigator-choose-area').addEventListener('click',()=>{area.focus();area.scrollIntoView({block:'center'});});
  $('navigator-more').addEventListener('toggle',()=>{if($('navigator-more').open&&shownMore===0)renderMore();});
  $('navigator-more-button').addEventListener('click',renderMore);
- window.CNWLNavigatorUI={active:()=>mode==='ai',example(value){stop();search.value=value;clearResults();search.focus();navigate();}};
+ window.CNWLNavigatorUI={active:()=>!!last,example(value){stop();search.value=value;clearResults();search.focus();navigate();}};
 })();
