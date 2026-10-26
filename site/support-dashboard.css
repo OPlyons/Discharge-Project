@@ -82,10 +82,15 @@
  #support .activity-choice[data-activity=move],#support .activity-choice[data-activity=access]{--type-tint:#dff3ed;--type-ink:#247a67}
  #support .activity-choice[data-activity=outdoors],#support .activity-choice[data-activity=health]{--type-tint:#eaf1dc;--type-ink:#607c27}
  #support .activity-choice[data-activity=faith]{--type-tint:#fff2ca;--type-ink:#936f19}
+ #support .activity-choice[data-activity=legal]{--type-tint:#e5ecfb;--type-ink:#435f9b}
+ #support .activity-choice[data-activity=addictions]{--type-tint:#fce8df;--type-ink:#a15a34}
+ #support .activity-choice[data-activity=relax]{--type-tint:#e1f3ea;--type-ink:#367b65}
+ #support .activity-choice[data-activity=therapy]{--type-tint:#efe5f8;--type-ink:#795297}
+ #support .activity-choice[data-activity=peers]{--type-tint:#fae7ef;--type-ink:#a04d75}
  #support .activity-choice:hover{border-color:#a799c9;background:#faf7ff}
  #support .activity-choice[aria-pressed=true]{border-color:#8c74b3;background:#f1eafa;color:#4c3376;box-shadow:inset 0 0 0 1px #8c74b3}
  #support .activity-choice[aria-pressed=true]::after{content:'';position:absolute;top:5px;right:6px;width:4px;height:8px;border-right:2px solid #5c3d8a;border-bottom:2px solid #5c3d8a;transform:rotate(45deg)}
- #support .support-types #support-more-filters{grid-column:span 2;min-width:0;margin:0;padding:0 .55rem;background:#f8f5fd;border:1px solid #d6cbe6;border-radius:10px;color:#554173}
+ #support .support-types #support-more-filters{min-width:0;margin:0;padding:0 .45rem;background:#f8f5fd;border:1px solid #d6cbe6;border-radius:10px;color:#554173}
  #support .support-types #support-more-filters>summary{font-size:.72rem;line-height:1.4;min-height:58px;padding:.75rem 0;color:#554173}
  #support .support-types #support-more-filters[open]{grid-column:1/-1;padding-bottom:.7rem}
  #support .support-types #support-more-filters #audience-help{color:#4f5e6d}
@@ -130,7 +135,9 @@
   #support .dashboard-panel,#support .wizard-panel{padding:.8rem}
   #support .borough-map{max-width:285px}
   #support .activity-choices{gap:.3rem}
-  #support .activity-choice{min-height:53px;padding:.25rem .15rem;gap:.2rem;font-size:.64rem}
+  #support .activity-choice{min-height:53px;padding:.12rem .15rem;gap:.1rem;font-size:.64rem}
+  #support .activity-choice .activity-icon{width:20px;height:20px;flex-basis:20px;padding:2px}
+  #support .support-types #support-more-filters>summary{min-height:53px;padding:.3rem 0;font-size:.68rem}
   #support .support-toolbar{margin-top:.4rem}
  }
  @media(max-width:1149px) and (min-width:761px){

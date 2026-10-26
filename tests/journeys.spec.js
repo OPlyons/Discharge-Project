@@ -41,7 +41,7 @@ test('unavailable AI has a labelled local fallback',async({page})=>{
 test('directory filters and one clear action work without AI',async({page})=>{
  const calls=await mockNavigator(page);await openSupport(page);await page.locator('#area').selectOption('harrow');await page.locator('[data-activity="move"]').click();
  await expect(page.locator('#resource-list article').first()).toBeVisible();await page.locator('#service-search').fill('cycling');await page.locator('#navigator-local').click();await expect(page.locator('#resource-list')).toContainText(/cycling/i);
- await page.locator('#clear-filters').click();await expect(page.locator('#service-search')).toHaveValue('');await expect(page.locator('#resource-count')).toContainText('786 listings');expect(calls).toHaveLength(0);
+ await page.locator('#clear-filters').click();await expect(page.locator('#service-search')).toHaveValue('');await expect(page.locator('#resource-count')).toContainText(records.length+' listings');expect(calls).toHaveLength(0);
 });
 test('combined person and carer call forms are directly downloadable',async({page})=>{
  await page.goto('/#staff-call');await expect(page.locator('#download-main')).toHaveAttribute('download','Person_Call_and_Feedback_v12.docx');

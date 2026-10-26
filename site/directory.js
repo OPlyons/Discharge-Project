@@ -13,6 +13,11 @@
   practical:'M3 11l9-8 9 8M5 10v11h14V10M10 21v-7h4v7',
   housing:'M3 11l9-8 9 8M5 10v11h14V10M10 21v-7h4v7',
   money:'M3 7h18v13H3zM3 7V4h15v3M16 12h5v5h-5zM17 14.5h.1',
+  legal:'M12 3v18M7 21h10M4 6h16M5 6l-3 7h6L5 6zm14 0-3 7h6l-3-7zM2 13c0 4 6 4 6 0m8 0c0 4 6 4 6 0',
+  addictions:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM5 5l4 4m6 6 4 4M19 5l-4 4m-6 6-4 4',
+  relax:'M12 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM8 10l4-2 4 2 3 4M8 10l-3 4M9 13l-5 5 8 3 8-3-5-5M8 18h8M12 9v6',
+  therapy:'M3 4h14v10H9l-5 4v-4H3V4zM17 8h4v12h-3l-4 2v-4h-3M7 8h6M7 11h4',
+  peers:'M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm9 2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20v-4a6 6 0 0 1 10-4m1 9v-4a5 5 0 0 1 10 0v4M7 15l3 3 3-3m-3-3v6',
   food:'M5 3v6M8 3v6M11 3v6M5 7h6M8 9v12M18 3c-4 5-4 9 0 9V3zM18 12v9',
   health:'M12 21S2 14 2 8c0-6 8-7 10-1 2-6 10-5 10 1 0 6-10 13-10 13zM7 12h3l2-4 2 7 2-3h3',
   carers:'M9 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 21v-5a6 6 0 0 1 10-4M17 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM13 21v-3a4 4 0 0 1 8 0v3',
@@ -21,9 +26,14 @@
  };
  const groups=[
   {id:'all',label:'All support',categories:null},
-  {id:'housing',label:'Housing',categories:['Housing and homelessness']},
-  {id:'money',label:'Money & rights',categories:['Money and benefits','Legal advice and rights','Voice and advocacy']},
-  {id:'food',label:'Food & essentials',categories:['Food and essentials']},
+  {id:'housing',label:'Housing',categories:['Housing and homelessness'],includeNational:true},
+  {id:'money',label:'Benefits & money',categories:['Money and benefits'],includeNational:true},
+  {id:'food',label:'Food & essentials',categories:['Food and essentials'],includeNational:true},
+  {id:'legal',label:'Legal advice',categories:['Legal advice and rights'],includeNational:true},
+  {id:'addictions',label:'Alcohol & drugs',categories:['Alcohol and drug support'],includeNational:true},
+  {id:'relax',label:'Yoga & relaxation',facets:['yoga','wellbeing'],includeNational:true},
+  {id:'therapy',label:'Talking therapies',facets:['talking-therapies'],includeNational:true},
+  {id:'peers',label:'Peer support',facets:['peer-support'],includeNational:true},
   {id:'move',label:'Sport & movement',categories:['Sport and movement']},
   {id:'meet',label:'Meet people',categories:['Social connection and activities','Culture, identity and belonging']},
   {id:'create',label:'Arts & music',categories:['Arts and creativity']},
@@ -35,6 +45,17 @@
   {id:'access',label:'Disability & access',categories:['Disability and neurodiversity']},
   {id:'faith',label:'Faith & belief',categories:['Faith and belief communities']},
  ];
+ // Facets describe an explicitly listed activity, across different broad categories.
+ // Do not turn a mention in eligibility or a referral note into an offered service.
+ function supportFacets(r){
+  const own=[r.name,r.description,...(r.tags||[])].join(' '),facets=new Set(r.facets||[]);
+  if(/\byoga\b/i.test(own))facets.add('yoga');
+  if(/\b(?:meditation|mindfulness|tai chi|qi ?gong|relaxation|breathwork)\b/i.test(own))facets.add('wellbeing');
+  if(/\b(?:counselling|counseling|talking therap(?:y|ies)|psychotherapy|psychotherapist(?:s)?|therapist directory)\b/i.test(own))facets.add('talking-therapies');
+  if(/\b(?:peer[ -](?:support|led|mentoring)|mutual (?:aid|support))\b/i.test(own))facets.add('peer-support');
+  return [...facets];
+ }
+ const matchesGroup=(r,g)=>!g||(!g.categories||g.categories.includes(r.category))&&(!g.facets||g.facets.some(f=>(r.supportFacets||[]).includes(f)));
  const audiences=[['women','Women'],['men','Men'],['neurodivergent','Neurodivergent people'],['disabled','Disabled people / access'],['lgbtq','LGBTQ+ people'],['trans','Trans & non-binary people'],['culture-faith','Cultural & faith communities'],['older','Older people'],['young-adults','Young adults'],['pregnancy-parents','Pregnancy & new parents'],['relationships','Relationships & families'],['carers','Carers']];
  for(const [id,label] of audiences)audience.append(new Option(label,id));
  let data=null,loading=null,shown=12,filtered=[],pendingArea='',activity='all';
@@ -44,8 +65,6 @@
  function icon(key,cls){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.7');svg.setAttribute('stroke-linecap','round');svg.setAttribute('stroke-linejoin','round');svg.setAttribute('aria-hidden','true');svg.setAttribute('focusable','false');if(cls)svg.setAttribute('class',cls);const p=document.createElementNS(svg.namespaceURI,'path');p.setAttribute('d',paths[key]||paths.all);svg.append(p);return svg;}
  const activityButtons=groups.map(g=>{const b=make('button',undefined,'activity-choice');b.type='button';b.dataset.activity=g.id;b.setAttribute('aria-pressed',String(g.id===activity));b.disabled=true;b.append(icon(g.id,'activity-icon'),make('span',g.label));b.addEventListener('click',()=>{activity=g.id;if(g.id==='all'&&!area.value)area.value='all';topic.value='';shown=12;render();});$('activity-choices').insertBefore(b,$('support-more-filters'));return b;});
  const areaButtons=[...document.querySelectorAll('#support button[data-area]')];
- const quickButtons=[...document.querySelectorAll('[data-quick-topic]')];
- for(const b of quickButtons)b.addEventListener('click',()=>{topic.value=topic.value===b.dataset.quickTopic?'':b.dataset.quickTopic;activity='all';shown=12;render();});
  const shapes=[...document.querySelectorAll('[data-map-shape]')];
  for(const b of areaButtons){
   b.addEventListener('click',()=>chooseArea(b.dataset.area));
@@ -73,12 +92,12 @@
   card.append(details);return card;
  }
  function terms(){return engine.parse(search.value);}
- function withNational(query){return query.needIds.length>0||['Housing and homelessness','Money and benefits','Food and essentials','Legal advice and rights'].includes(topic.value);}
+ function withNational(query){return query.needIds.length>0||groups.find(g=>g.id===activity)?.includeNational||['Housing and homelessness','Money and benefits','Food and essentials','Legal advice and rights'].includes(topic.value);}
  function matches(r,query,ignoreArea=false){
   const g=groups.find(g=>g.id===activity)||groups[0];
   const sameArea=ignoreArea||!area.value||area.value==='all'||r.directoryId===area.value;
   const nationalMatch=withNational(query)&&r.national&&r.directoryId==='wider-support';
-  return (sameArea||nationalMatch)&&(!g.categories||g.categories.includes(r.category))&&(!topic.value||r.category===topic.value)&&(!audience.value||(r.audiences||[]).includes(audience.value))&&engine.match(r,query,r.searchIndex);
+  return (sameArea||nationalMatch)&&matchesGroup(r,g)&&(!topic.value||r.category===topic.value)&&(!audience.value||(r.audiences||[]).includes(audience.value))&&engine.match(r,query,r.searchIndex);
  }
  function guidance(query,dir){
   const panel=$('need-guidance');panel.replaceChildren();panel.hidden=!query.needIds.length;
@@ -112,7 +131,6 @@
   }
   for(const p of shapes){p.classList.toggle('is-selected',p.dataset.mapShape===area.value);p.classList.toggle('no-matches',!counts[p.dataset.mapShape]);}
   for(const b of activityButtons)b.setAttribute('aria-pressed',String(b.dataset.activity===activity&&!topic.value));
-  for(const b of quickButtons)b.setAttribute('aria-pressed',String(b.dataset.quickTopic===topic.value));
   topic.options[0].textContent=activity==='all'?'All types':'All in this choice';
  }
  function selectedChoices(){
@@ -167,6 +185,7 @@
    const value=JSON.parse(await window.CNWLAssets.text('assets/directory.json'));if(!Array.isArray(value.resources)||!Array.isArray(value.directories))throw new Error('The directory is incomplete.');
    const synonyms={'Sport and movement':'sports exercise fitness gyms clubs groups beginners active physical activity','Nature and outdoors':'outdoor outdoors gardens gardening walking walks green spaces','Arts and creativity':'arts art craft crafts creative music singing dance hobbies','Social connection and activities':'social groups friendship hobbies loneliness meet company','Faith and belief communities':'faith belief religion worship spiritual spirituality'};
    for(const r of value.resources){
+    r.supportFacets=supportFacets(r);
     const resourceWords=[r.name,r.description,...(r.tags||[])].join(' ');
     const aliases=(/citizens advice/i.test(r.name)?'cab citizens advice bureau ':'')+((r.audiences||[]).includes('neurodivergent')?'neurodiversity neurodivergent ':'')+(/board[ -]?games?/i.test(resourceWords)?'boardgame boardgames board game board games tabletop games gaming ':'')+(/mosque|masjid/i.test(resourceWords)?'mosque mosques masjid muslim islam ':'')+(/church|christian/i.test(resourceWords)?'church churches christian ':'')+(/synagogue|jewish/i.test(resourceWords)?'synagogue synagogues jewish ':'')+(/gurdwara|gurudwara|sikh/i.test(resourceWords)?'gurdwara gurdwaras gurudwara gurudwaras sikh ':'')+(/temple|mandir/i.test(resourceWords)?'temple temples mandir mandirs ':'')+(/quaker/i.test(resourceWords)?'quaker quakers society of friends ':'')+(/humanist/i.test(resourceWords)?'humanist humanists humanism ':'')+(/caf[eé]/i.test(resourceWords)?'cafe cafes coffee shop ':'')+(/\bclubs?\b/i.test(resourceWords)?'club clubs social club social clubs ':'');
     r.searchText=normalise([r.name,r.category,r.description,r.who,r.access,r.check,aliases,synonyms[r.category]||'',...(r.audiences||[]).map(id=>audiences.find(a=>a[0]===id)?.[1]||id),...(r.tags||[])].join(' '));r.searchTokens=new Set(r.searchText.split(/[^a-z0-9]+/).filter(Boolean));
@@ -174,14 +193,14 @@
    for(const r of value.resources)r.searchIndex=engine.index(r);
    data=value;area.value=pendingArea;
    topic.replaceChildren(new Option('All types',''));for(const cat of [...new Set(data.resources.map(r=>r.category))].sort())topic.append(new Option(cat,cat));
-   for(const n of [area,topic,search,audience,$('clear-filters'),$('browse-all-areas'),...activityButtons,...areaButtons,...quickButtons])n.disabled=false;
-   $('browse-all-areas').textContent='Or browse all '+data.resources.length+' listings →';
+   for(const n of [area,topic,search,audience,$('clear-filters'),$('browse-all-areas'),...activityButtons,...areaButtons])n.disabled=false;
+   $('browse-all-areas').textContent='Or browse all '+data.resources.length+' listings →';$('directory-coverage').textContent=data.resources.length+' resources';
    areaChanged();
   }catch(error){$('resource-count').textContent='The directory could not be loaded.';$('directory-loading-error').hidden=false;console.error('Directory load failed:',error);}
   finally{$('resource-list').removeAttribute('aria-busy');loading=null;}})();return loading;
  }
  const maybeLoad=()=>{if(location.hash==='#support'||$('support').classList.contains('active'))load();};
- window.CNWLResourceDirectory={async getData(){await load();return data;},getSearchCatalog(){const group=groups.find(g=>g.id===activity);return group?.categories?{...data,resources:data.resources.filter(r=>group.categories.includes(r.category))}:data;},setInferredArea(id){pendingArea=id;area.value=id;areaChanged();},search(){clearTimeout(timer);shown=12;render();showResults();},reset(){reset();},setArea(id){pendingArea=metadata.directories.some(d=>d.id===id)?id:'';area.value=pendingArea;if(data){search.value='';topic.value='';activity='all';audience.value='';areaChanged();}}};
+ window.CNWLResourceDirectory={async getData(){await load();return data;},getSearchCatalog(){const group=groups.find(g=>g.id===activity);return data?{...data,resources:data.resources.filter(r=>matchesGroup(r,group))}:data;},setInferredArea(id){pendingArea=id;area.value=id;areaChanged();},search(){clearTimeout(timer);shown=12;render();showResults();},reset(){reset();},setArea(id){pendingArea=metadata.directories.some(d=>d.id===id)?id:'';area.value=pendingArea;if(data){search.value='';topic.value='';activity='all';audience.value='';areaChanged();}}};
  area.addEventListener('change',()=>{pendingArea=area.value;areaChanged();});
  topic.addEventListener('change',()=>{activity='all';shown=12;render();});
  audience.addEventListener('change',()=>{shown=12;render();});

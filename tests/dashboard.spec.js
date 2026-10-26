@@ -7,7 +7,7 @@ test('wizard, borough map and support icons share the opening dashboard',async({
  await page.goto('/');await page.locator('nav[aria-label="Main navigation"]').getByRole('link',{name:'Find support',exact:true}).click();await expect(page.locator('#service-search')).toBeEnabled();
  await expect(page.locator('.wizard-panel')).toBeVisible();await expect(page.locator('#borough-map')).toBeVisible();await expect(page.locator('#activity-choices')).toBeVisible();
  const workforce=page.locator('#workforce-advice-link');await expect(workforce).toBeVisible();await expect(workforce).toHaveAttribute('href','https://map.lxportal.space/');await expect(workforce).toHaveAttribute('target','_blank');await expect(workforce).toContainText('on behalf of the service user');await expect(workforce).toContainText('Not a referral process.');
- await expect(page.locator('[data-search-mode]')).toHaveCount(0);await expect(page.locator('#activity-choices > button')).toHaveCount(14);
+ await expect(page.locator('[data-search-mode]')).toHaveCount(0);await expect(page.locator('#activity-choices > button')).toHaveCount(19);
  if(!isMobile){
   const wizard=await page.locator('.wizard-panel').boundingBox(),map=await page.locator('.support-area').boundingBox(),types=await page.locator('.support-types').boundingBox();
   expect(Math.abs(wizard.y-map.y)).toBeLessThan(2);expect(map.x).toBeGreaterThan(wizard.x+wizard.width);expect(types.x).toBeGreaterThan(map.x+map.width);
@@ -33,7 +33,34 @@ test('a support icon and borough browse locally and clear together',async({page}
  const calls=await mockNavigator(page);await openSupport(page);await page.locator('[data-activity="housing"]').press('Enter');await page.locator('#borough-map [data-area="brent"]').click();
  await expect(page.locator('#directory-explorer')).toBeVisible();await expect(page.locator('#resource-list')).toContainText('Brent housing and homelessness');
  await expect(page.locator('[data-activity="housing"]')).toHaveAttribute('aria-pressed','true');await expect(page.locator('#area')).toHaveValue('brent');
- expect(calls).toHaveLength(0);await page.locator('#clear-filters').click();await expect(page.locator('#resource-count')).toContainText('786 listings');await expect(page.locator('[data-activity="all"]')).toHaveAttribute('aria-pressed','true');
+ expect(calls).toHaveLength(0);await page.locator('#clear-filters').click();await expect(page.locator('#resource-count')).toContainText(records.length+' listings');await expect(page.locator('[data-activity="all"]')).toHaveAttribute('aria-pressed','true');
+});
+test('practical filters are directly available as icons and keep the borough choice',async({page})=>{
+ const calls=await mockNavigator(page);await openSupport(page);await page.locator('#area').selectOption('harrow');
+ await expect(page.locator('#support-more-filters')).not.toHaveAttribute('open','');
+ for(const [id,category] of [['money','Money and benefits'],['legal','Legal advice and rights'],['addictions','Alcohol and drug support']]){
+  const icon=page.locator('[data-activity="'+id+'"]');await expect(icon).toBeVisible();await icon.click();
+  await expect(icon).toHaveAttribute('aria-pressed','true');await expect(page.locator('#area')).toHaveValue('harrow');
+  const cards=page.locator('#resource-list article');await expect(cards.first()).toBeVisible();
+  for(const label of await cards.locator('.category').allTextContents())expect(label).toContain(category);
+ }
+ await page.locator('#clear-filters').click();await expect(page.locator('#resource-count')).toContainText(records.length+' listings');expect(calls).toHaveLength(0);
+});
+test('wellbeing icons find new local services and include clearly labelled national options',async({page})=>{
+ const calls=await mockNavigator(page);await openSupport(page);
+ for(const [type,area,query,name] of [
+  ['relax','harrow','Soham','Soham Yoga'],
+  ['therapy','ealing','Ealing Abbey','Ealing Abbey Counselling Service'],
+  ['peers','milton-keynes','Man Cave','The Man Cave UK'],
+  ['therapy','ealing','find talking therapies','NHS — find talking therapies']
+ ]){
+  await page.locator('#navigator-reset').click();await page.locator('#area').selectOption(area);await page.locator('[data-activity="'+type+'"]').click();
+  await page.locator('#service-search').fill(query);await page.locator('#navigator-local').click();
+  await expect(page.locator('#resource-list')).toContainText(name);
+ }
+ await expect(page.locator('#resource-list .category').first()).toContainText('National');
+ await page.locator('#clear-filters').click();await expect(page.locator('#resource-count')).toContainText(records.length+' listings');
+ await expect(page.locator('#service-search')).toHaveValue('');await expect(page.locator('[data-activity="all"]')).toHaveAttribute('aria-pressed','true');expect(calls).toHaveLength(0);
 });
 test('the compact wizard keeps a local text search available',async({page})=>{
  const calls=await mockNavigator(page);await openSupport(page);await page.locator('#area').selectOption('camden');await page.locator('#service-search').fill('board games');await page.locator('#navigator-local').click();

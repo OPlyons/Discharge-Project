@@ -21930,6 +21930,2988 @@
         "carers",
         "rights"
       ]
+    },
+    {
+      "id": "brent-our-parks-library-yoga",
+      "directoryId": "brent",
+      "name": "Our Parks — Willesden Library yoga",
+      "category": "Sport and movement",
+      "description": "Gentle group yoga at Willesden Library, with movement adapted to different abilities.",
+      "who": "People wanting a gentle introduction or return to activity in Willesden.",
+      "access": "Register with Our Parks, then book a place from the Willesden Library timetable.",
+      "check": "Free. Check upcoming sessions and any access needs before attending.",
+      "url": "https://ourparks.org.uk/borough/willesden-library",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "gentle movement",
+        "relaxation",
+        "Willesden",
+        "free",
+        "beginners"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://ourparks.org.uk/borough/willesden-library",
+      "sourceOwner": "Our Parks",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "brent-moreyoga-wembley",
+      "directoryId": "brent",
+      "name": "MoreYoga — Wembley Park studio",
+      "category": "Sport and movement",
+      "description": "Studio yoga with beginner classes, slower sessions and more active styles.",
+      "who": "People looking for yoga in Wembley Park.",
+      "access": "Use the Wembley Park timetable to choose and book a class.",
+      "check": "Paid classes and memberships. Check the full price, minimum commitment and cancellation terms.",
+      "url": "https://www.moreyoga.co.uk/yoga-studio-london/wembley-park",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "studio",
+        "Wembley Park",
+        "beginners",
+        "meditation",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.moreyoga.co.uk/yoga-studio-london/wembley-park",
+      "sourceOwner": "MoreYoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "brent-reconnect-yoga",
+      "directoryId": "brent",
+      "name": "Re:Connect Studio — Queen’s Park hot yoga",
+      "category": "Sport and movement",
+      "description": "Independent studio offering hot yoga and other group movement classes in Queen’s Park.",
+      "who": "People interested in heated studio yoga near Queen’s Park and Kensal Rise.",
+      "access": "Book through the studio timetable or contact reception about a suitable first class.",
+      "check": "Paid. All classes use a heated room; check suitability, current prices and cancellation terms.",
+      "url": "https://www.reconnectstudio.co.uk/",
+      "phone": "020 3336 8463",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "hot yoga",
+        "studio",
+        "Queen’s Park",
+        "Kensal Rise",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.reconnectstudio.co.uk/",
+      "sourceOwner": "Re:Connect Studio",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "brent-wembley-inner-space",
+      "directoryId": "brent",
+      "name": "Inner Space Wembley — free meditation",
+      "category": "Mental health and wellbeing",
+      "description": "Guided meditation, quiet reflection and self-development sessions from the Brahma Kumaris charity.",
+      "who": "Beginners and experienced meditators in Wembley; some sessions are also online.",
+      "access": "See the event calendar for current in-person and online sessions.",
+      "check": "Free; donations welcome. Sessions use the charity’s spiritual approach to meditation.",
+      "url": "https://wembley.innerspace.org/",
+      "phone": "020 8903 1911",
+      "picture": "community",
+      "tags": [
+        "meditation",
+        "relaxation",
+        "wellbeing",
+        "holistic wellbeing",
+        "Wembley",
+        "free",
+        "spiritual"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://wembley.innerspace.org/",
+      "sourceOwner": "Inner Space Wembley / Brahma Kumaris",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "wellbeing"
+      ],
+      "coverage": "528 High Road, Wembley; selected online sessions."
+    },
+    {
+      "id": "brent-global-cooperation-meditation",
+      "directoryId": "brent",
+      "name": "Global Co-operation House — meditation and quiet room",
+      "category": "Mental health and wellbeing",
+      "description": "Meditation courses, reflective activities and a quiet room in Willesden Green.",
+      "who": "People interested in the Brahma Kumaris approach to meditation and spiritual wellbeing.",
+      "access": "Browse the current programme or contact the centre about beginner courses and visiting.",
+      "check": "Activities are free, supported by donations. Check booking requirements for each event.",
+      "url": "https://globalcooperationhouse.org/",
+      "phone": "020 8727 3350",
+      "picture": "community",
+      "tags": [
+        "meditation",
+        "relaxation",
+        "wellbeing",
+        "holistic wellbeing",
+        "Willesden Green",
+        "quiet room",
+        "free",
+        "spiritual"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://gch.brahmakumaris.uk/meditation",
+      "sourceOwner": "Brahma Kumaris / Global Co-operation House",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "harrow-soham-yoga",
+      "directoryId": "harrow",
+      "name": "Soham Yoga — yoga and meditation",
+      "category": "Sport and movement",
+      "description": "Community yoga and meditation with beginner, gentler and online options.",
+      "who": "People in Harrow, North Harrow and nearby areas; beginners welcome.",
+      "access": "Check the timetable or contact Soham about a suitable class.",
+      "check": "Paid classes and passes; ask about current concessions and community-funded places.",
+      "url": "https://sohamyoga.co.uk/",
+      "phone": "07455 700786",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "meditation",
+        "holistic wellbeing",
+        "relaxation",
+        "North Harrow",
+        "beginners",
+        "online",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://sohamyoga.co.uk/",
+      "sourceOwner": "Soham Yoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "harrow-well-woman-yoga",
+      "directoryId": "harrow",
+      "name": "Well Woman Yoga — Harrow Arts Centre",
+      "category": "Sport and movement",
+      "description": "Women-only group yoga with breathing, meditation and relaxation at Harrow Arts Centre.",
+      "who": "Women wanting an all-levels yoga class in Hatch End.",
+      "access": "Contact the teacher using the class page to ask about availability and book.",
+      "check": "Paid; the page lists drop-in and term prices. Confirm current timetable and any adaptations.",
+      "url": "https://harrowarts.com/classes/well-woman-yoga-ladies-only/",
+      "phone": "07944 557798",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "women",
+        "meditation",
+        "relaxation",
+        "Hatch End",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://harrowarts.com/classes/well-woman-yoga-ladies-only/",
+      "sourceOwner": "Harrow Arts Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "women"
+      ],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "harrow-need-to-talk-counselling",
+      "directoryId": "harrow",
+      "name": "Need to Talk — affordable counselling",
+      "category": "Mental health and wellbeing",
+      "description": "Charity counselling for adults, with individual, couple and family options.",
+      "who": "Adults in Harrow seeking help with emotional difficulties, relationships or life changes.",
+      "access": "Use “Apply for Counselling” on the contact page to ask about an assessment.",
+      "check": "Low-cost, paid service. Confirm the fee, session format and current availability; the postal address is not a session venue.",
+      "url": "https://needtotalk.london/contact/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "affordable",
+        "anxiety",
+        "relationships",
+        "bereavement",
+        "Harrow"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://needtotalk.london/contact/",
+      "sourceOwner": "Need to Talk Counselling Services",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "harrow-dawn-counselling",
+      "directoryId": "harrow",
+      "name": "DAWN Charitable Trust — multilingual counselling",
+      "category": "Mental health and wellbeing",
+      "description": "Culturally sensitive counselling in several languages, with women-only and gender-neutral appointment options.",
+      "who": "Harrow residents seeking individual, relationship or family counselling; ask about age and language options.",
+      "access": "Contact DAWN to discuss counselling, language needs and appointment options.",
+      "check": "Paid on a sliding scale; confirm fees and current availability. Women-only sessions run at specified times.",
+      "url": "https://www.dawncharitabletrust.org.uk/counselling-services/",
+      "phone": "020 8427 6796",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "multilingual",
+        "South Asian",
+        "women",
+        "relationships",
+        "family",
+        "Harrow"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.dawncharitabletrust.org.uk/counselling-services/",
+      "sourceOwner": "DAWN Charitable Trust",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "women",
+        "men",
+        "culture-faith",
+        "relationships"
+      ],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "harrow-bereavement-care-groups",
+      "directoryId": "harrow",
+      "name": "Bereavement Care — listening and support groups",
+      "category": "Mental health and wellbeing",
+      "description": "Free one-to-one listening and groups where bereaved people can share their experiences.",
+      "who": "People and families affected by bereavement in Harrow, Hillingdon and nearby communities.",
+      "access": "Phone or use the contact form to discuss the support and local groups available.",
+      "check": "Free. Check the current group venue, access arrangements and availability.",
+      "url": "https://bereavementcareandsupport.co.uk/",
+      "phone": "020 8427 5720",
+      "picture": "people",
+      "tags": [
+        "bereavement",
+        "grief",
+        "loss",
+        "support groups",
+        "peer support",
+        "listening",
+        "Harrow",
+        "Hillingdon",
+        "free"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://bereavementcareandsupport.co.uk/",
+      "sourceOwner": "Bereavement Care",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ],
+      "coverage": "Harrow, Hillingdon and nearby communities; ask the charity which local group is suitable."
+    },
+    {
+      "id": "hillingdon-yoga-anna",
+      "directoryId": "hillingdon",
+      "name": "Yoga with Anna — Ruislip classes",
+      "category": "Sport and movement",
+      "description": "Group yoga at The Stables in Ruislip, including options for beginners.",
+      "who": "People in Ruislip interested in group yoga; pregnancy-related options are also listed.",
+      "access": "Contact the teacher through the council listing to check the current class and book.",
+      "check": "Ask about fees, availability and a suitable class for your needs.",
+      "url": "https://www.hillingdon.gov.uk/article/8152/Yoga-with-Anna",
+      "phone": "07876 626465",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "beginners",
+        "Ruislip",
+        "The Stables",
+        "pregnancy",
+        "relaxation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.hillingdon.gov.uk/article/8152/Yoga-with-Anna",
+      "sourceOwner": "Hillingdon Council",
+      "verificationStatus": "Council website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "hillingdon-hotpodyoga-ruislip",
+      "directoryId": "hillingdon",
+      "name": "Hotpod Yoga — Ruislip Manor",
+      "category": "Sport and movement",
+      "description": "Heated studio yoga with slower and more active class options.",
+      "who": "People aged 16+ interested in hot yoga in Ruislip Manor.",
+      "access": "Use the studio timetable to book; tell the teacher if it is your first visit.",
+      "check": "Paid. Heated to 37°C; the provider excludes pregnancy and under-16s and advises checking medical suitability when needed.",
+      "url": "https://hotpodyoga.com/studios/ruislip/",
+      "phone": "07931 704568",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "hot yoga",
+        "studio",
+        "Ruislip Manor",
+        "paid",
+        "relaxation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://hotpodyoga.com/studios/ruislip/",
+      "sourceOwner": "Hotpod Yoga Ruislip",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "hillingdon-moreyoga-uxbridge",
+      "directoryId": "hillingdon",
+      "name": "MoreYoga — Uxbridge studio",
+      "category": "Sport and movement",
+      "description": "Studio yoga in central Uxbridge, with a choice of slower and more active styles.",
+      "who": "People looking for yoga near Uxbridge station.",
+      "access": "Check the Uxbridge timetable and book a suitable session online.",
+      "check": "Paid classes and memberships. Confirm the total cost, minimum commitment and cancellation terms before joining.",
+      "url": "https://www.moreyoga.co.uk/yoga-london/uxbridge-studio",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "studio",
+        "Uxbridge",
+        "relaxation",
+        "beginners",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.moreyoga.co.uk/yoga-london/uxbridge-studio",
+      "sourceOwner": "MoreYoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ],
+      "coverage": "1–3 Bakers Road, Uxbridge."
+    },
+    {
+      "id": "hillingdon-mind-counselling",
+      "directoryId": "hillingdon",
+      "name": "Mind in Hillingdon — free and paid counselling",
+      "category": "Mental health and wellbeing",
+      "description": "Individual counselling in Uxbridge or online, with free and paid access routes.",
+      "who": "Adults 18+. The free route has Hillingdon residency, GP and income criteria; the paid route accepts other areas.",
+      "access": "Read the two counselling options, then use the relevant self-referral form or phone for advice.",
+      "check": "The charity checks eligibility for free sessions. Paid assessment and sessions currently cost £40 each; check before applying.",
+      "url": "https://www.mindinhillingdon.org.uk/our-services/counselling/",
+      "phone": "01895 271559",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "online",
+        "low income",
+        "Uxbridge",
+        "free",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.mindinhillingdon.org.uk/our-services/counselling/",
+      "sourceOwner": "Mind in Hillingdon",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "hillingdon-link-counselling",
+      "directoryId": "hillingdon",
+      "name": "LINK — young people’s counselling",
+      "category": "Mental health and wellbeing",
+      "description": "One-to-one counselling online and in Hillingdon community settings.",
+      "who": "Young people aged 13–24 who live, work or study in Hillingdon and meet the programme criteria.",
+      "access": "Use the council’s targeted-programmes page to ask about LINK and the self-referral route.",
+      "check": "Free. The council checks suitability and consent; a place is confirmed after review.",
+      "url": "https://pre.hillingdon.gov.uk/youth-offer/targeted-programmes",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "young adults",
+        "young people",
+        "Hillingdon",
+        "free",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://pre.hillingdon.gov.uk/youth-offer/targeted-programmes",
+      "sourceOwner": "Hillingdon Council",
+      "verificationStatus": "Council website checked",
+      "audiences": [
+        "young-adults"
+      ],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "hillingdon-hospice-illness-counselling",
+      "directoryId": "hillingdon",
+      "name": "Harlington Hospice — counselling during serious illness",
+      "category": "Mental health and wellbeing",
+      "description": "Counselling for people facing a serious or terminal illness and those close to them.",
+      "who": "Adults 18+ living in Hillingdon or registered with a Hillingdon GP, affected by serious illness.",
+      "access": "Contact the hospice or follow its counselling page to ask about a self-referral.",
+      "check": "Free. Ask the team whether the service fits the person’s circumstances and about current availability.",
+      "url": "https://www.harlingtonhospice.org/counselling/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "serious illness",
+        "terminal illness",
+        "family",
+        "carers",
+        "Hillingdon",
+        "free"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.harlingtonhospice.org/counselling/",
+      "sourceOwner": "Harlington Hospice",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "carers",
+        "relationships"
+      ],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "ealing-yoga-meditation-centre",
+      "directoryId": "ealing",
+      "name": "Ealing Yoga, Meditation and Philosophy Centre",
+      "category": "Sport and movement",
+      "description": "Charity classes combining yoga, breathing, relaxation and meditation at Ealing’s Friends Meeting House.",
+      "who": "People interested in yoga and meditation, including mixed-ability classes and beginners.",
+      "access": "Check the current class schedule or contact the centre about joining.",
+      "check": "Paid classes; ask about drop-in, course and member prices. Classes include spiritual and philosophical study.",
+      "url": "https://ealingyogamedpc.org.uk/",
+      "phone": "07918 622995",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "meditation",
+        "relaxation",
+        "holistic wellbeing",
+        "Ealing",
+        "beginners",
+        "spiritual",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://ealingyogamedpc.org.uk/",
+      "sourceOwner": "Ealing Yoga, Meditation and Philosophy Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "ealing-terri-yoga",
+      "directoryId": "ealing",
+      "name": "Terri Yoga — Northfields and Ealing classes",
+      "category": "Sport and movement",
+      "description": "Group yoga indoors in Northfields, online and seasonally in local parks.",
+      "who": "People looking for group movement in Ealing; contact the teacher about a suitable level.",
+      "access": "Book a listed class or contact Terri to discuss joining.",
+      "check": "Paid. The teacher offers some free spaces when classes are not full for people unable to afford them; ask first.",
+      "url": "https://www.terriyoga.co.uk/book-online",
+      "phone": "07815 148385",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Northfields",
+        "Ealing",
+        "online",
+        "low income",
+        "paid",
+        "relaxation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.terriyoga.co.uk/book-online",
+      "sourceOwner": "Terri Yoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "ealing-yoga-tastic",
+      "directoryId": "ealing",
+      "name": "yoga-tastic — Pitshanger and Northfields",
+      "category": "Sport and movement",
+      "description": "Local yoga classes and beginner courses including breathing, relaxation and meditation.",
+      "who": "People seeking yoga in Pitshanger or Northfields, with an online class option.",
+      "access": "Contact the teacher to check the right class and current booking options.",
+      "check": "Paid, usually booked for a term. Ask about a trial or available drop-in place before paying.",
+      "url": "https://www.yoga-tastic.co.uk/yoga-classes-in-ealing",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "beginners",
+        "Pitshanger",
+        "Northfields",
+        "online",
+        "meditation",
+        "relaxation",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.yoga-tastic.co.uk/yoga-classes-in-ealing",
+      "sourceOwner": "yoga-tastic",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "ealing-abbey-counselling",
+      "directoryId": "ealing",
+      "name": "Ealing Abbey Counselling Service — low-cost therapy",
+      "category": "Mental health and wellbeing",
+      "description": "Charity counselling and psychotherapy with fees based on income.",
+      "who": "Adults seeking counselling. Priority is given to Ealing borough residents; neighbouring areas depend on capacity.",
+      "access": "Phone to discuss an assessment. If recently supported by a mental health team, ask that team about the written information required.",
+      "check": "Paid assessment and weekly sessions on a sliding scale. The service checks suitability and availability.",
+      "url": "https://www.eacs.org.uk/services/assessment-service",
+      "phone": "020 8998 3361",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "psychotherapy",
+        "talking therapy",
+        "low cost",
+        "Ealing",
+        "relationships"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.eacs.org.uk/services/assessment-service",
+      "sourceOwner": "Ealing Abbey Counselling Service",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "ealing-metanoia-counselling",
+      "directoryId": "ealing",
+      "name": "Metanoia — low-cost counselling and psychotherapy",
+      "category": "Mental health and wellbeing",
+      "description": "Counselling and psychotherapy with supervised practitioners in training, in Ealing and online.",
+      "who": "People seeking an assessed low-cost talking therapy service.",
+      "access": "Use the clinic contact form, email or phone to ask about an initial assessment.",
+      "check": "Paid; assessment and session fees have reduced rates depending on circumstances. Ask about cost and availability.",
+      "url": "https://www.metanoia.ac.uk/therapy/metanoia-counselling-and-psychotherapy-service/",
+      "phone": "020 8832 3080",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "psychotherapy",
+        "talking therapy",
+        "low cost",
+        "Ealing",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.metanoia.ac.uk/therapy/metanoia-counselling-and-psychotherapy-service/",
+      "sourceOwner": "Metanoia Institute",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "ealing-cape-psychotherapy",
+      "directoryId": "ealing",
+      "name": "CAPE — therapy for complex mental health needs",
+      "category": "Mental health and wellbeing",
+      "description": "Charity psychotherapy and psychological support for people with long-term or complex mental health difficulties.",
+      "who": "Adults living in Ealing with severe or enduring mental health needs.",
+      "access": "Ask the care team about CAPE’s approved referral partners, or contact CAPE to understand access.",
+      "check": "CAPE currently accepts partner referrals only, not self-referrals. Check availability and any costs with the service.",
+      "url": "https://mycape.org.uk/psychotherapy/",
+      "phone": "020 8896 2552",
+      "picture": "talk",
+      "tags": [
+        "psychotherapy",
+        "talking therapy",
+        "complex mental health",
+        "Ealing",
+        "charity",
+        "partner referral"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://mycape.org.uk/psychotherapy/",
+      "sourceOwner": "CAPE",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "ealing-living-well-hiv",
+      "directoryId": "ealing",
+      "name": "Living Well — HIV peer support and counselling",
+      "category": "Mental health and wellbeing",
+      "description": "Peer mentoring, counselling and wellbeing workshops for people living with or affected by HIV.",
+      "who": "Eligible Ealing residents affected by HIV; the team can explain funded access.",
+      "access": "Phone or use “Sign Up” on the provider website to discuss the support available.",
+      "check": "Free for eligible residents. Ask about current options, access criteria and session format.",
+      "url": "https://www.livingwellcic.com/ealing/",
+      "phone": "020 3137 3373",
+      "picture": "people",
+      "tags": [
+        "HIV",
+        "peer support",
+        "peer mentoring",
+        "counselling",
+        "talking therapy",
+        "wellbeing",
+        "Ealing",
+        "free"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.livingwellcic.com/ealing/",
+      "sourceOwner": "Living Well CIC",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support",
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "ealing-asian-family-counselling",
+      "directoryId": "ealing",
+      "name": "Asian Family Counselling Service — Southall",
+      "category": "Mental health and wellbeing",
+      "description": "Culturally sensitive individual, couple and family counselling in several South Asian languages.",
+      "who": "South Asian people aged over 16, including couples where one partner is South Asian.",
+      "access": "Contact the Southall office by phone or email to discuss an appointment.",
+      "check": "Low-cost paid service. Confirm the fee, language, session format and current availability.",
+      "url": "https://asianfamilycounselling.org/about-us/",
+      "phone": "020 3876 8978",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "South Asian",
+        "multilingual",
+        "relationships",
+        "family",
+        "Southall"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://asianfamilycounselling.org/about-us/",
+      "sourceOwner": "Asian Family Counselling Service",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "culture-faith",
+        "relationships",
+        "young-adults"
+      ],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "ealing-bereft-counselling",
+      "directoryId": "ealing",
+      "name": "Bereft — bereavement counselling",
+      "category": "Mental health and wellbeing",
+      "description": "Charity counselling offering space to talk through grief after someone has died.",
+      "who": "People aged 16+ living in the London Borough of Ealing.",
+      "access": "Phone the team or use the assessment questions linked from the contact page.",
+      "check": "A per-session donation is requested according to what you can afford; inability to donate does not exclude someone. Ask about availability.",
+      "url": "https://bereftbereavementsupport.co.uk/contact-us/",
+      "phone": "020 8896 2800",
+      "picture": "talk",
+      "tags": [
+        "bereavement",
+        "grief",
+        "loss",
+        "counselling",
+        "talking therapy",
+        "Ealing",
+        "donation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://bereftbereavementsupport.co.uk/contact-us/",
+      "sourceOwner": "Bereft Bereavement Support",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "camden-women-health",
+      "directoryId": "camden",
+      "name": "Women + Health — counselling and wellbeing",
+      "category": "Mental health and wellbeing",
+      "description": "A Camden charity offering talking therapies, yoga, relaxation and community wellbeing sessions.",
+      "who": "Adults; most services are for women, with some designated services for men. Ask which sessions are suitable.",
+      "access": "Use the booking page or contact the team; counselling enquiries can go to counselling@women-and-health.org.",
+      "check": "Paid counselling uses a sliding scale. Group activities may be free, low cost or donation based; check the session price and current venue.",
+      "url": "https://www.womenandhealth.org.uk/",
+      "phone": "020 7482 2786",
+      "picture": "people",
+      "tags": [
+        "women",
+        "counselling",
+        "talking therapies",
+        "yoga",
+        "chair yoga",
+        "meditation",
+        "holistic wellbeing",
+        "relaxation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.womenandhealth.org.uk/",
+      "sourceOwner": "Women + Health",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "women"
+      ],
+      "facets": [
+        "yoga",
+        "wellbeing",
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "camden-cpu-psychotherapy",
+      "directoryId": "camden",
+      "name": "CPU London — charitable psychotherapy",
+      "category": "Mental health and wellbeing",
+      "description": "Individual and group psychotherapy for Londoners who cannot afford private treatment.",
+      "who": "Adults across London on low incomes or benefits; dedicated funded places also support people aged 18–25.",
+      "access": "Phone the charity to ask about its application process and current places; people can contact it themselves.",
+      "check": "Free and supported places depend on assessment and availability. Sessions are mainly in person in Camden or Islington and involve a regular commitment.",
+      "url": "https://www.cpu-london.com/what-we-offer-1",
+      "phone": "020 7267 3881",
+      "picture": "people",
+      "tags": [
+        "psychotherapy",
+        "counselling",
+        "talking therapies",
+        "low income",
+        "charity",
+        "young adults"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.cpu-london.com/what-we-offer-1",
+      "sourceOwner": "CPU London",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "young-adults"
+      ],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "camden-highgate-counselling",
+      "directoryId": "camden",
+      "name": "Highgate Counselling Centre",
+      "category": "Mental health and wellbeing",
+      "description": "A charity offering individual, couple and family counselling in Highgate and online.",
+      "who": "Individuals, couples and families seeking counselling.",
+      "access": "Read Getting started and complete the registration forms, or contact the centre for help.",
+      "check": "An initial consultation has a charge; ongoing contributions are agreed using income and circumstances. Ask about current fees, availability and access needs.",
+      "url": "https://highgatecounselling.org.uk/registration-and-cost/",
+      "phone": "020 8883 5427",
+      "picture": "people",
+      "tags": [
+        "counselling",
+        "talking therapies",
+        "psychodynamic",
+        "couples",
+        "family",
+        "charity",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://highgatecounselling.org.uk/registration-and-cost/",
+      "sourceOwner": "Highgate Counselling Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "relationships"
+      ],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "camden-gestalt-low-cost",
+      "directoryId": "camden",
+      "name": "The Gestalt Centre — low-cost therapy",
+      "category": "Mental health and wellbeing",
+      "description": "Weekly counselling and psychotherapy with supervised senior trainees, in Camden or online.",
+      "who": "People on lower incomes who would struggle to pay private therapy fees.",
+      "access": "Use the low-cost therapy form or email therapy.scheme@gestaltcentre.org.uk.",
+      "check": "Paid service: published fees are £25–£50 per session. Places are limited, with a waiting list and a weekly commitment. Ask whether the service fits the person’s needs.",
+      "url": "https://gestaltcentre.org.uk/low-cost-therapy-scheme/",
+      "phone": "020 7383 5610",
+      "picture": "people",
+      "tags": [
+        "counselling",
+        "psychotherapy",
+        "talking therapies",
+        "low cost",
+        "low income",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://gestaltcentre.org.uk/low-cost-therapy-scheme/",
+      "sourceOwner": "The Gestalt Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "camden-brandon-therapy",
+      "directoryId": "camden",
+      "name": "Brandon Centre — young-adult counselling",
+      "category": "Mental health and wellbeing",
+      "description": "Free counselling and psychotherapy with a charity supporting young people in Camden and Islington.",
+      "who": "People aged 16–24 who live or have a GP in Camden or Islington.",
+      "access": "Phone or email counselling@brandoncentre.org.uk to ask for the self-referral form. Help completing paperwork is available.",
+      "check": "Free, subject to assessment and availability. Ask about in-person or video sessions and access requirements.",
+      "url": "https://brandon-centre.org.uk/services/counselling-psychotherapy",
+      "phone": "020 7267 1321",
+      "picture": "people",
+      "tags": [
+        "young adults",
+        "counselling",
+        "psychotherapy",
+        "talking therapies",
+        "free",
+        "charity"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://brandon-centre.org.uk/services/counselling-psychotherapy",
+      "sourceOwner": "Brandon Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "young-adults"
+      ],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "camden-brandon-mindful-movers",
+      "directoryId": "camden",
+      "name": "Brandon Centre — Mindful Movers yoga",
+      "category": "Sport and movement",
+      "description": "A six-week group programme combining yoga and relaxation for young people.",
+      "who": "Young people aged 16–24 in Camden and Islington; people aged 25 should check with the team.",
+      "access": "Email yoga@brandoncentre.org.uk to ask about the next group or use the young person’s sign-up form.",
+      "check": "A funded programme with termly groups. Confirm costs, venue, suitability and available spaces. Published age limits vary, so check with the team if aged 25.",
+      "url": "https://brandon-centre.org.uk/services/therapeutic-yoga",
+      "phone": "",
+      "picture": "people",
+      "tags": [
+        "young adults",
+        "yoga",
+        "mindful movers",
+        "relaxation",
+        "charity",
+        "wellbeing"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://brandon-centre.org.uk/services/therapeutic-yoga",
+      "sourceOwner": "Brandon Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "young-adults"
+      ],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "camden-home-wellness",
+      "directoryId": "camden",
+      "name": "HOME Wellness — Primrose Hill yoga",
+      "category": "Sport and movement",
+      "description": "A paid studio offering yoga, Pilates, tai chi and wellbeing classes in Primrose Hill.",
+      "who": "People looking for studio classes, including options at different levels.",
+      "access": "Browse the class timetable and book through the website; ask reception for a suitable first class.",
+      "check": "Paid classes and memberships. Check current prices, class level and cancellation terms; concessions for some younger participants are advertised.",
+      "url": "https://homewellness.uk/",
+      "phone": "020 4553 3344",
+      "picture": "people",
+      "tags": [
+        "yoga studio",
+        "Pilates",
+        "tai chi",
+        "qigong",
+        "relaxation",
+        "wellbeing",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://homewellness.uk/",
+      "sourceOwner": "HOME Wellness",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "camden-moreyoga-kentish-town",
+      "directoryId": "camden",
+      "name": "MoreYoga — Kentish Town",
+      "category": "Sport and movement",
+      "description": "A yoga studio at Holmes Studios with slower, restorative, beginner and more active class options.",
+      "who": "People interested in paid yoga classes in Kentish Town.",
+      "access": "Choose a suitable class on the local timetable and book online.",
+      "check": "Paid studio. Introductory membership offers have ongoing charges and minimum terms; check the full price and cancellation rules before paying.",
+      "url": "https://www.moreyoga.co.uk/yoga-studio-london/kentish-town",
+      "phone": "",
+      "picture": "people",
+      "tags": [
+        "yoga studio",
+        "beginners",
+        "restorative",
+        "yin",
+        "wellbeing",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.moreyoga.co.uk/yoga-studio-london/kentish-town",
+      "sourceOwner": "MoreYoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "camden-yoga-with-charli",
+      "directoryId": "camden",
+      "name": "Yoga with Charli — Belsize and Hampstead",
+      "category": "Sport and movement",
+      "description": "Small group yoga at Belsize Community Library and the RFC Rec Club, with some online options.",
+      "who": "Adults seeking local yoga; slower beginner and mixed-level classes are listed.",
+      "access": "View class levels and book a place through the website; contact the teacher about suitability or access.",
+      "check": "Paid classes, with single sessions and class packs. Check current prices, venue and cancellation rules.",
+      "url": "https://yogawithcharli.com/belsizeparkandhampsteadyogaclasses/",
+      "phone": "07740 300557",
+      "picture": "people",
+      "tags": [
+        "yoga",
+        "beginners",
+        "slow flow",
+        "Belsize",
+        "Hampstead",
+        "wellbeing",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://yogawithcharli.com/belsizeparkandhampsteadyogaclasses/",
+      "sourceOwner": "Yoga with Charli",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "camden-likewise-community",
+      "directoryId": "camden",
+      "name": "Likewise — community wellbeing programme",
+      "category": "Social connection and activities",
+      "description": "A community hub offering friendly activities, creative groups, cooking, gardening and occasional wellbeing days.",
+      "who": "Adults aged 18+ looking for connection and wellbeing activities in Camden.",
+      "access": "Check the activity programme or call 020 7278 4437. Drop-in sessions do not require advance registration; other activities may need a place booked.",
+      "check": "Most activities are free. Confirm the timetable and any costs; the separate one-to-one support service has its own access process.",
+      "url": "https://likewise.org.uk/activity-programme/",
+      "phone": "020 7278 4437",
+      "picture": "people",
+      "tags": [
+        "community",
+        "wellbeing",
+        "relaxation",
+        "mindful colouring",
+        "games",
+        "gardening",
+        "social connection"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://form.jotform.com/260123368943357",
+      "sourceOwner": "Likewise",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "camden-mind-free-peer-groups",
+      "directoryId": "camden",
+      "name": "Mind in Camden — free peer support groups",
+      "category": "Mental health and wellbeing",
+      "description": "Facilitated groups where people share experiences of anxiety, low mood or hearing voices; a women’s hearing-voices group is also available.",
+      "who": "Adults, including people who do not live in Camden. A diagnosis is not required.",
+      "access": "Use the group joining form or email phoenix@mindincamden.org.uk to discuss the right group before attending.",
+      "check": "Free. Check which groups have spaces: some groups may be full. Peer support is different from talking therapy.",
+      "url": "https://www.mindincamden.org.uk/services/free-support-groups",
+      "phone": "",
+      "picture": "people",
+      "tags": [
+        "peer support",
+        "anxiety",
+        "low mood",
+        "hearing voices",
+        "women",
+        "charity",
+        "free"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.mindincamden.org.uk/services/free-support-groups",
+      "sourceOwner": "Mind in Camden",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "women"
+      ],
+      "facets": [
+        "peer-support"
+      ]
+    },
+    {
+      "id": "camden-cciwbs-bereavement",
+      "directoryId": "camden",
+      "name": "CCIWBS — bereavement counselling",
+      "category": "Mental health and wellbeing",
+      "description": "A charity offering individual and group bereavement counselling, with separate grief walks for social connection.",
+      "who": "Bereaved adults; funded counselling is listed for people living or working in Camden and Islington, with paid routes for the City and Westminster.",
+      "access": "Phone to discuss the available service or use its individual or group application form.",
+      "check": "Individual counselling applications start six months after the death; group counselling starts after 12 months. Free and paid places depend on area, funding and assessment.",
+      "url": "https://www.bereavement-counselling.org/referral-available-services",
+      "phone": "020 7284 0090",
+      "picture": "people",
+      "tags": [
+        "bereavement",
+        "grief",
+        "loss",
+        "counselling",
+        "talking therapies",
+        "charity"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.bereavement-counselling.org/ourservices",
+      "sourceOwner": "Camden City Islington and Westminster Bereavement Service",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "westminster-caravan-counselling",
+      "directoryId": "westminster",
+      "name": "The Caravan — free listening and counselling",
+      "category": "Mental health and wellbeing",
+      "description": "A charity drop-in offering a listening space and emotional support, with counselling by arrangement.",
+      "who": "Adults seeking someone to talk to, in Piccadilly or by phone.",
+      "access": "Visit the green caravan at St James’s Church, Piccadilly, or phone the service. No advance booking for the initial drop-in.",
+      "check": "Free; donations are welcome. Check opening times and physical access. You may need to wait or try again when a counsellor is available.",
+      "url": "https://thecaravan.org.uk/services/",
+      "phone": "020 7183 1802",
+      "picture": "people",
+      "tags": [
+        "listening",
+        "emotional support",
+        "counselling",
+        "talking therapies",
+        "free",
+        "charity",
+        "phone"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://thecaravan.org.uk/services/",
+      "sourceOwner": "The Caravan / Centre for Counselling and Psychotherapy Education",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "westminster-ccpe-low-cost",
+      "directoryId": "westminster",
+      "name": "CCPE — low-cost counselling clinic",
+      "category": "Mental health and wellbeing",
+      "description": "Weekly counselling and psychotherapy with supervised trainees through a charitable education centre in Little Venice.",
+      "who": "Adults aged 18+ who want to explore lower-cost therapy.",
+      "access": "Email info@ccpe.org.uk to request an assessment for the low-cost clinic.",
+      "check": "Paid service: the published low-cost assessment is £30, with weekly fees from £35. Confirm fees, availability and whether the service is suitable.",
+      "url": "https://ccpe.org.uk/",
+      "phone": "",
+      "picture": "people",
+      "tags": [
+        "counselling",
+        "psychotherapy",
+        "talking therapies",
+        "low cost",
+        "Little Venice",
+        "charity"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://ccpe.org.uk/",
+      "sourceOwner": "Centre for Counselling and Psychotherapy Education",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "westminster-iyengar-yoga",
+      "directoryId": "westminster",
+      "name": "Iyengar Yoga London — Maida Vale",
+      "category": "Sport and movement",
+      "description": "A charitable yoga centre with beginner courses, studio and online classes, and concession places.",
+      "who": "Beginners and experienced adults; different classes have different experience or age requirements.",
+      "access": "Use the beginner course or class timetable to book, or contact the centre about a first class and concessions.",
+      "check": "Paid classes. Selected open-access classes have concession prices for eligible visitors without membership; proof of eligibility is required. Check current details.",
+      "url": "https://iyengaryogalondon.co.uk/yoga-class-concessions/",
+      "phone": "020 7624 3080",
+      "picture": "people",
+      "tags": [
+        "yoga",
+        "yoga studio",
+        "beginners",
+        "charity",
+        "concessions",
+        "low income",
+        "wellbeing"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://iyengaryogalondon.co.uk/yoga-class-concessions/",
+      "sourceOwner": "Iyengar Yoga London",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "westminster-indaba-yoga",
+      "directoryId": "westminster",
+      "name": "Indaba Yoga — Marylebone",
+      "category": "Sport and movement",
+      "description": "A paid yoga studio offering in-person and online classes in a range of styles.",
+      "who": "People seeking yoga in Marylebone; ask about a suitable level before booking.",
+      "access": "Browse the schedule and book online; email welcome@indabayoga.com with questions.",
+      "check": "Paid classes, packs and memberships. Check the current price and minimum term; some memberships have cancellation charges.",
+      "url": "https://indabayoga.com/prices",
+      "phone": "",
+      "picture": "people",
+      "tags": [
+        "yoga studio",
+        "Marylebone",
+        "yoga",
+        "wellbeing",
+        "paid",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://indabayoga.com/prices",
+      "sourceOwner": "Indaba Yoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "westminster-buddhist-centre-meditation",
+      "directoryId": "westminster",
+      "name": "West London Buddhist Centre — meditation and yoga",
+      "category": "Mental health and wellbeing",
+      "description": "Meditation drop-ins, courses and yoga at an accessible Royal Oak centre, plus some online sessions.",
+      "who": "People of any faith or no faith, including beginners.",
+      "access": "Choose a drop-in or course from the calendar; book yoga through the yoga page or ask the centre for advice.",
+      "check": "Meditation classes are donation based; courses use a sliding scale. Yoga and workshops have separate prices. Ask about affordability and access needs.",
+      "url": "https://www.westlondonbuddhistcentre.com/about-us",
+      "phone": "020 7727 9382",
+      "picture": "people",
+      "tags": [
+        "meditation",
+        "mindfulness",
+        "yoga",
+        "holistic wellbeing",
+        "relaxation",
+        "Buddhist",
+        "Royal Oak",
+        "donation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.westlondonbuddhistcentre.com/about-us",
+      "sourceOwner": "West London Buddhist Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "westminster-marylebone-psychodynamic",
+      "directoryId": "westminster",
+      "name": "Marylebone Psychodynamic — low-cost clinic",
+      "category": "Mental health and wellbeing",
+      "description": "Weekly psychodynamic psychotherapy with supervised trainees, in central London or online.",
+      "who": "Adults seeking a lower-cost regular therapy option.",
+      "access": "Contact the practice for an initial telephone conversation; people can approach the service themselves.",
+      "check": "Paid therapy and assessment, with fees agreed by income. Check current fees, suitability and availability before committing to weekly sessions.",
+      "url": "https://marylebonepsychodynamic.org/training-clinic/",
+      "phone": "020 3576 1437",
+      "picture": "people",
+      "tags": [
+        "psychotherapy",
+        "psychodynamic",
+        "counselling",
+        "talking therapies",
+        "low cost",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://marylebonepsychodynamic.org/training-clinic/",
+      "sourceOwner": "Marylebone Psychodynamic",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "westminster-allkind-rise",
+      "directoryId": "westminster",
+      "name": "Allkind RISE — low-cost counselling",
+      "category": "Mental health and wellbeing",
+      "description": "A mental health charity’s talking therapy service, with appointments in Westminster or online.",
+      "who": "Adults aged 18+ across London. The service assesses whether its support is suitable.",
+      "access": "Use the service’s self-contact form or email risecounselling@allkind.org.uk; phone for help deciding whether to apply.",
+      "check": "Paid: £50 assessment, then £35 or £45 per session. RISE lists limits including current or past psychosis, specialist needs and therapy elsewhere; discuss fit with the team.",
+      "url": "https://allkind.org.uk/adult-services/rise-low-cost-counselling/",
+      "phone": "020 7259 8134",
+      "picture": "people",
+      "tags": [
+        "counselling",
+        "talking therapies",
+        "charity",
+        "low cost",
+        "online",
+        "Westminster"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://allkind.org.uk/adult-services/rise-low-cost-counselling/",
+      "sourceOwner": "Allkind",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "kensington-chelsea-life-centre",
+      "directoryId": "kensington-chelsea",
+      "name": "The Life Centre — Notting Hill yoga",
+      "category": "Sport and movement",
+      "description": "A paid yoga and Pilates studio offering classes and wellbeing workshops in Notting Hill.",
+      "who": "Beginners and experienced participants seeking studio or live online classes.",
+      "access": "Choose a suitable class and book online, or contact reception for help.",
+      "check": "Paid. Concessions are advertised on some class packs for eligible groups; check current prices, proof needed and membership terms.",
+      "url": "https://thelifecentre.com/locations/notting-hill",
+      "phone": "020 7221 4602",
+      "picture": "people",
+      "tags": [
+        "yoga studio",
+        "yoga",
+        "Pilates",
+        "meditation",
+        "holistic wellbeing",
+        "concessions",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://thelifecentre.com/locations/notting-hill",
+      "sourceOwner": "The Life Centre",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "kensington-chelsea-sangye-yoga",
+      "directoryId": "kensington-chelsea",
+      "name": "Sangyé Yoga — community and studio classes",
+      "category": "Sport and movement",
+      "description": "Yoga and meditation in North Kensington, including a free or donation-based community class alongside paid sessions.",
+      "who": "People seeking yoga, including beginner-level classes; ask which session is suitable.",
+      "access": "Use the online timetable to book, or contact the studio about its community class.",
+      "check": "Community class is free or by optional donation. Other classes are paid, with some concessions; confirm the current timetable and prices.",
+      "url": "https://www.sangyeyoga.com/classes/prices/",
+      "phone": "020 8960 3999",
+      "picture": "people",
+      "tags": [
+        "yoga studio",
+        "yoga",
+        "community yoga",
+        "meditation",
+        "donation",
+        "free",
+        "concessions",
+        "wellbeing"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.sangyeyoga.com/classes/prices/",
+      "sourceOwner": "Sangyé Yoga School",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "kensington-chelsea-help-counselling",
+      "directoryId": "kensington-chelsea",
+      "name": "Help Counselling — affordable talking therapy",
+      "category": "Mental health and wellbeing",
+      "description": "A charity offering short- and longer-term counselling in west London and online.",
+      "who": "Adults aged 18+; no GP referral is needed to contact the service.",
+      "access": "Contact the client team or use the website to ask about counselling and an assessment.",
+      "check": "Paid, with income-based fees and some concessions. Check the current session fee, location and suitability; this is not an urgent service.",
+      "url": "https://helpcounselling.com/counselling-services/",
+      "phone": "020 7074 0119",
+      "picture": "people",
+      "tags": [
+        "counselling",
+        "talking therapies",
+        "charity",
+        "low cost",
+        "online",
+        "Notting Hill"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://helpcounselling.com/counselling-services/",
+      "sourceOwner": "Help Counselling",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "milton-keynes-yogalily",
+      "directoryId": "milton-keynes",
+      "name": "Yogalily Studio — yoga, Tai Chi and Qigong",
+      "category": "Sport and movement",
+      "description": "Yoga, Pilates, Tai Chi and Qigong classes in Milton Keynes, including beginner courses and chair-based Tai Chi.",
+      "who": "People seeking studio or online movement classes; ask which class fits your needs.",
+      "access": "Use the timetable to book, or contact the studio about beginners and chair-based sessions.",
+      "check": "Paid classes. Check current prices, access needs and cancellation terms before booking.",
+      "url": "https://yogalily.com/",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Tai Chi",
+        "Qigong",
+        "Pilates",
+        "chair exercise",
+        "beginners",
+        "relaxation",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://yogalily.com/",
+      "sourceOwner": "Yogalily Studio",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "milton-keynes-elli-yoga",
+      "directoryId": "milton-keynes",
+      "name": "Elli Yoga — Bow Brickhill community yoga",
+      "category": "Sport and movement",
+      "description": "Small group yoga classes at Bow Brickhill Community Hall, with options to take part at your own pace.",
+      "who": "People looking for a small, informal yoga class in Milton Keynes.",
+      "access": "Book a class on the website, or email info@elli.yoga with questions before attending.",
+      "check": "Paid classes. Check current price, venue access and the next available session.",
+      "url": "https://www.elli.yoga/",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "community yoga",
+        "Bow Brickhill",
+        "movement",
+        "relaxation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.elli.yoga/",
+      "sourceOwner": "Elli Yoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "milton-keynes-moon-stars-yoga",
+      "directoryId": "milton-keynes",
+      "name": "Moon and Stars Yoga — Stony Stratford",
+      "category": "Sport and movement",
+      "description": "Group Vinyasa and restorative yoga, including beginner-friendly sessions in Stony Stratford.",
+      "who": "People seeking a local group yoga class, including beginners.",
+      "access": "Use the yoga lessons page or contact the teacher to book and confirm the current venue.",
+      "check": "Paid classes. Confirm price, timetable and suitability before booking; sessions may use scented oils and candles.",
+      "url": "https://www.moonandstarsyoga.co.uk/yoga-lessons/",
+      "phone": "07551 010503",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "restorative yoga",
+        "Vinyasa",
+        "Stony Stratford",
+        "beginners"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.moonandstarsyoga.co.uk/yoga-lessons/",
+      "sourceOwner": "Moon and Stars Yoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "milton-keynes-poplar-yoga",
+      "directoryId": "milton-keynes",
+      "name": "Poplar Osteopathy Clinic — yoga classes in Bletchley",
+      "category": "Sport and movement",
+      "description": "Mixed-ability group yoga and individual yoga sessions in Bletchley.",
+      "who": "People able to get up and down from the floor unaided; contact the teacher about kneeling or access needs.",
+      "access": "Book through the yoga page or phone the clinic to discuss a suitable class.",
+      "check": "Paid classes. Check current fees. The group includes floor work and kneeling; ask before attending if this is difficult.",
+      "url": "https://poplarosteopathy.co.uk/yoga-osteopathy-milton-keynes/",
+      "phone": "01908 382989",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Bletchley",
+        "movement",
+        "beginners",
+        "relaxation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://poplarosteopathy.co.uk/yoga-osteopathy-milton-keynes/",
+      "sourceOwner": "Poplar Osteopathy Clinic",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "milton-keynes-samatha-meditation",
+      "directoryId": "milton-keynes",
+      "name": "Samatha Meditation Centre — Great Holm",
+      "category": "Mental health and wellbeing",
+      "description": "Group breathing meditation classes in a Buddhist tradition, with sessions for beginners.",
+      "who": "New and experienced meditators; people under 18 need written parental consent.",
+      "access": "Contact the teacher named beside the relevant class on the website before joining.",
+      "check": "No fixed charge; donations welcome. Check course start dates and ask about sitting on a chair if needed.",
+      "url": "https://samatha.org/what-we-offer/classes/milton-keynes-samatha-meditation-centre",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "meditation",
+        "mindfulness",
+        "breathing",
+        "Buddhist",
+        "Great Holm",
+        "beginners",
+        "donations"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://samatha.org/what-we-offer/classes/milton-keynes-samatha-meditation-centre",
+      "sourceOwner": "Samatha Trust",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "milton-keynes-west-bletchley-counselling",
+      "directoryId": "milton-keynes",
+      "name": "West Bletchley Wellbeing & Counselling Service",
+      "category": "Mental health and wellbeing",
+      "description": "Community counselling for issues such as stress, loss, relationships and life changes.",
+      "who": "Residents of West Bletchley, Bletchley and Fenny Stratford council areas, with paid options for other Milton Keynes residents.",
+      "access": "Phone or use the contact form to ask about counselling and the route for your council area.",
+      "check": "No charge for residents of the named council areas; paid options elsewhere. The service checks suitability and availability.",
+      "url": "https://wbwbcounselling.org.uk/",
+      "phone": "01908 370860",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "West Bletchley",
+        "Bletchley",
+        "Fenny Stratford",
+        "bereavement",
+        "stress"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://wbwbcounselling.org.uk/",
+      "sourceOwner": "West Bletchley Wellbeing & Counselling Service",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "milton-keynes-man-cave-peer",
+      "directoryId": "milton-keynes",
+      "name": "The Man Cave UK — men’s peer support in Milton Keynes",
+      "category": "Mental health and wellbeing",
+      "description": "Volunteer-led talking groups where men share experiences and support each other. Meetings are listed for central Milton Keynes, Newport Pagnell and Bletchley.",
+      "who": "People who identify as men, aged over 18.",
+      "access": "Check the current meeting page, then attend an open meeting. No registration or professional referral is needed.",
+      "check": "No attendance fee; donations welcome. This is mutual peer support, rather than counselling. Check times and venue access first.",
+      "url": "https://www.themancaveuk.co.uk/contact/",
+      "phone": "",
+      "picture": "people",
+      "tags": [
+        "peer support",
+        "men",
+        "talking group",
+        "Newport Pagnell",
+        "Bletchley",
+        "mental wellbeing"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.themancaveuk.co.uk/contact/",
+      "sourceOwner": "The Man Cave UK",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "men"
+      ],
+      "facets": [
+        "peer-support"
+      ]
+    },
+    {
+      "id": "milton-keynes-rethink-community-inclusion",
+      "directoryId": "milton-keynes",
+      "name": "Rethink — Recovery College Community Inclusion Service",
+      "category": "Mental health and wellbeing",
+      "description": "Community support and wellbeing hubs, with activities such as yoga, walking, arts, cooking and mindfulness.",
+      "who": "Adults experiencing mental distress in Milton Keynes; carers can take part in some activities.",
+      "access": "Email rccis@rethink.org to ask about current wellbeing hubs, access drop-ins and any entry requirements.",
+      "check": "Ask which activities are open to you, whether booking or assessment is needed, and any costs. Individual support has a separate access process.",
+      "url": "https://www.rethink.org/help-in-your-area/services/community-support/milton-keynes-recovery-college-community-service/",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "recovery college",
+        "wellbeing hub",
+        "yoga",
+        "mindfulness",
+        "community support",
+        "walking",
+        "carers"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.rethink.org/help-in-your-area/services/community-support/milton-keynes-recovery-college-community-service/",
+      "sourceOwner": "Rethink Mental Illness",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "wellbeing",
+        "yoga"
+      ]
+    },
+    {
+      "id": "milton-keynes-willen-bereavement",
+      "directoryId": "milton-keynes",
+      "name": "Willen Hospice — bereavement support",
+      "category": "Mental health and wellbeing",
+      "description": "Bereavement support that may include facilitated groups, support phone calls or counselling.",
+      "who": "People whose loved one was cared for by Willen Hospice.",
+      "access": "Call the Psychology and Counselling team or use the hospice’s online request form to discuss support.",
+      "check": "The hospice checks what support it can offer. Ask about current availability, any costs and group arrangements.",
+      "url": "https://willen-hospice.org.uk/get-help/for-loved-ones/bereavement-support/",
+      "phone": "01908 973264",
+      "picture": "talk",
+      "tags": [
+        "bereavement",
+        "grief",
+        "counselling",
+        "hospice",
+        "loss",
+        "support group"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://willen-hospice.org.uk/get-help/for-loved-ones/bereavement-support/",
+      "sourceOwner": "Willen Hospice",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "surrey-vayu-yoga-guildford",
+      "directoryId": "surrey",
+      "name": "Vayu Yoga — Guildford studio",
+      "category": "Sport and movement",
+      "description": "Yoga and Pilates classes, beginner courses and workshops at an independent Guildford studio.",
+      "who": "Beginners and experienced participants; check individual class styles and access.",
+      "access": "Use the timetable to book or contact info@vayu-yoga.co.uk about a suitable class.",
+      "check": "Paid classes and courses. Check current prices, venue access and cancellation terms before booking.",
+      "url": "https://www.vayu-yoga.co.uk/home-1",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Pilates",
+        "Guildford",
+        "beginners",
+        "wellbeing",
+        "holistic"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.vayu-yoga.co.uk/home-1",
+      "sourceOwner": "Vayu Yoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "surrey-guildford-yoga",
+      "directoryId": "surrey",
+      "name": "GuildfordYoga — Guildford, Bramley and online",
+      "category": "Sport and movement",
+      "description": "Small mixed-ability yoga classes in community venues, with online sessions also listed.",
+      "who": "People looking for mixed-ability yoga in Guildford or Bramley, or online.",
+      "access": "Check the weekly timetable, book online or contact the teacher about pay-as-you-go and concessions.",
+      "check": "Paid classes; concessions may be available. Check the timetable for term breaks and confirm venue access.",
+      "url": "https://guildfordyoga.co.uk/guildfordyoga-weekly-class-timetable/",
+      "phone": "07932 712644",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Guildford",
+        "Bramley",
+        "online",
+        "mixed ability",
+        "concessions"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://guildfordyoga.co.uk/guildfordyoga-weekly-class-timetable/",
+      "sourceOwner": "GuildfordYoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "surrey-yogashala-buckland",
+      "directoryId": "surrey",
+      "name": "YogaShala — Buckland Park Lake",
+      "category": "Sport and movement",
+      "description": "Yoga classes near Reigate, including a beginner course and mixed yoga sessions beside Buckland Park Lake.",
+      "who": "Beginners and other people seeking yoga classes near Reigate and Dorking.",
+      "access": "Choose a class on the website and use its booking link; ask the teacher if unsure which session to try.",
+      "check": "Check the current course or drop-in charge, access and booking terms. Places and beginner-course dates vary.",
+      "url": "https://www.yogashala.club/classes",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Buckland",
+        "Reigate",
+        "Dorking",
+        "beginners",
+        "meditation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.yogashala.club/classes",
+      "sourceOwner": "YogaShala",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "surrey-yoga-with-jasma",
+      "directoryId": "surrey",
+      "name": "Yoga with Jasma — Guildford Institute",
+      "category": "Sport and movement",
+      "description": "Small group Hatha-based yoga classes with movement, breathing and guided relaxation.",
+      "who": "People seeking local yoga, including beginners; check the class level with the teacher.",
+      "access": "Email namaste@yogawithjasma.co.uk or use the class page to ask about places and booking.",
+      "check": "Paid classes. Confirm the current price, venue access and what equipment to bring.",
+      "url": "https://www.yogawithjasma.co.uk/yogaclassesguildford",
+      "phone": "07932 733249",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Guildford Institute",
+        "Hatha",
+        "guided relaxation",
+        "breathing",
+        "beginners"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.yogawithjasma.co.uk/yogaclassesguildford",
+      "sourceOwner": "Yoga with Jasma",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "surrey-sarra-yoga",
+      "directoryId": "surrey",
+      "name": "Sarra Yoga — Cranleigh and online",
+      "category": "Sport and movement",
+      "description": "Iyengar yoga classes, including beginner and slower-paced sessions at Cranleigh venues and online.",
+      "who": "Beginners and other yoga participants; older beginners are welcomed in named slower-paced classes.",
+      "access": "Choose a class on the timetable or email sarra@sarrayoga.co.uk for booking help.",
+      "check": "Paid classes. Confirm the class level, location, current price and any access needs before booking.",
+      "url": "https://sarrayoga.co.uk/classes/",
+      "phone": "07734 778758",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Iyengar",
+        "Cranleigh",
+        "beginners",
+        "slower pace",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://sarrayoga.co.uk/classes/",
+      "sourceOwner": "Sarra Yoga",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ]
+    },
+    {
+      "id": "surrey-counselling-partnership",
+      "directoryId": "surrey",
+      "name": "The Counselling Partnership — affordable counselling",
+      "category": "Mental health and wellbeing",
+      "description": "Charitable one-to-one counselling in North Surrey and online.",
+      "who": "Adults aged 18 and over; not a couples or under-18 service.",
+      "access": "Contact the charity through its enquiry form, email or phone. No GP referral is needed.",
+      "check": "Contributions are requested, including an initial consultation charge. Discuss reduced contributions if on a low income; confirm costs before starting.",
+      "url": "https://www.thecounsellingpartnership.org/faq",
+      "phone": "07494 893443",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "Walton-on-Thames",
+        "North Surrey",
+        "low cost",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.thecounsellingpartnership.org/faq",
+      "sourceOwner": "The Counselling Partnership",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "surrey-connect-counselling",
+      "directoryId": "surrey",
+      "name": "Connect Counselling — Camberley",
+      "category": "Mental health and wellbeing",
+      "description": "Charitable individual counselling, offered face to face in Camberley or online.",
+      "who": "People seeking individual counselling; the charity checks suitability at an initial appointment.",
+      "access": "Use the website’s “Refer Yourself” form or phone to ask about counselling.",
+      "check": "Subsidised fees reflect financial circumstances. Agree the assessment and ongoing fees before starting.",
+      "url": "https://connectcounselling.org.uk/services/",
+      "phone": "01276 24210",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "talking therapy",
+        "Camberley",
+        "low cost",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://connectcounselling.org.uk/services/",
+      "sourceOwner": "Connect Counselling",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "surrey-dhc-talking-therapies",
+      "directoryId": "surrey",
+      "name": "DHC Talking Therapies — NHS Surrey",
+      "category": "Mental health and wellbeing",
+      "description": "NHS talking therapy options including individual support, group courses and guided online CBT.",
+      "who": "People aged 17 and over registered with a Surrey GP.",
+      "access": "Call DHC or follow its self-referral route to request support yourself. A GP referral is not required.",
+      "check": "Free NHS service. The team assesses which support fits; contact them about access needs and current availability.",
+      "url": "https://dhctalkingtherapies.co.uk/self-referral/",
+      "phone": "01483 906392",
+      "picture": "talk",
+      "tags": [
+        "NHS",
+        "talking therapies",
+        "CBT",
+        "counselling",
+        "Surrey GP",
+        "self referral",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://dhctalkingtherapies.co.uk/self-referral/",
+      "sourceOwner": "DHC Talking Therapies",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ]
+    },
+    {
+      "id": "surrey-peertalk-guildford-farnham",
+      "directoryId": "surrey",
+      "name": "PeerTalk — Guildford and Farnham support groups",
+      "category": "Mental health and wellbeing",
+      "description": "Charity peer groups for sharing experiences of depression, anxiety and emotional distress, facilitated by trained volunteers.",
+      "who": "Adults aged 18 and over.",
+      "access": "Check the current Guildford or Farnham meeting details and turn up. No appointment or referral is needed.",
+      "check": "Free peer support. You can listen without sharing. Check venue and time before travelling; older directories may show a previous Guildford venue.",
+      "url": "https://peertalk.org.uk/peertalk-support-groups/",
+      "phone": "07719 562617",
+      "picture": "people",
+      "tags": [
+        "peer support",
+        "depression",
+        "anxiety",
+        "Guildford",
+        "Farnham",
+        "talking group",
+        "emotional distress"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://peertalk.org.uk/peertalk-support-groups/",
+      "sourceOwner": "PeerTalk",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ]
+    },
+    {
+      "id": "surrey-heartbeat-woking-peer",
+      "directoryId": "surrey",
+      "name": "HeartBeat Support Woking",
+      "category": "Physical health and care",
+      "description": "Peer support, talks and social events for people affected by heart problems in Woking and nearby areas.",
+      "who": "People with heart problems, with partners, carers, family and interested local residents welcomed.",
+      "access": "Use the contact page or membership details to ask about the next meeting.",
+      "check": "Small meeting admission charges apply. Venues vary by season; confirm the current location and access needs.",
+      "url": "https://heartbeatsupportwoking.org.uk/about-us/",
+      "phone": "",
+      "picture": "people",
+      "tags": [
+        "peer support",
+        "heart conditions",
+        "cardiac",
+        "Woking",
+        "carers",
+        "social meetings"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://heartbeatsupportwoking.org.uk/about-us/",
+      "sourceOwner": "HeartBeat Support Woking",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ]
+    },
+    {
+      "id": "surrey-brigitte-bereavement-groups",
+      "directoryId": "surrey",
+      "name": "The Brigitte Trust — bereavement support groups",
+      "category": "Mental health and wellbeing",
+      "description": "Structured bereavement groups with a professional facilitator and opportunities to share experiences with others.",
+      "who": "People in Surrey struggling with grief.",
+      "access": "Contact the service manager to register interest in a group you can reach.",
+      "check": "Free courses. Places are limited, and locations and start dates vary; check the next available group.",
+      "url": "https://www.brigittetrust.org/our-services/bereavement-support/",
+      "phone": "07469 932192",
+      "picture": "people",
+      "tags": [
+        "bereavement",
+        "grief",
+        "loss",
+        "support group",
+        "mutual support",
+        "Surrey"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.brigittetrust.org/our-services/bereavement-support/",
+      "sourceOwner": "The Brigitte Trust",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ]
+    },
+    {
+      "id": "surrey-headway-online-coffee",
+      "directoryId": "surrey",
+      "name": "Headway Surrey — online coffee mornings",
+      "category": "Disability and neurodiversity",
+      "description": "Informal Zoom coffee mornings for people living with brain injury to chat and share experiences.",
+      "who": "Brain injury survivors living in Surrey; family members and carers are also welcomed.",
+      "access": "Contact Headway Surrey for the joining link and next online session.",
+      "check": "Free online coffee mornings. A device and internet access are needed; you can join in or listen quietly. Other Headway services may have fees.",
+      "url": "https://headwaysurrey.org/get-involved/coffee-mornings-on-zoom/",
+      "phone": "01483 454433",
+      "picture": "people",
+      "tags": [
+        "brain injury",
+        "acquired brain injury",
+        "peer support",
+        "online coffee morning",
+        "carers",
+        "Zoom"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://headwaysurrey.org/get-involved/coffee-mornings-on-zoom/",
+      "sourceOwner": "Headway Surrey",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "disabled",
+        "carers"
+      ],
+      "facets": [
+        "peer-support"
+      ]
+    },
+    {
+      "id": "wider-nhs-talking-therapies-finder",
+      "directoryId": "wider-support",
+      "name": "NHS — find talking therapies",
+      "category": "Mental health and wellbeing",
+      "description": "Find the local NHS service for anxiety and depression and its self-contact route.",
+      "who": "People in England aged 18 and over; some areas accept ages 16–17.",
+      "access": "Use the NHS finder with the person’s GP surgery, then check the local service’s contact options. The person can contact it themselves.",
+      "check": "Free NHS service. An assessment decides suitability; waiting times vary. A caller can help find the contact without making a professional referral.",
+      "url": "https://www.nhs.uk/nhs-services/mental-health-services/find-nhs-talking-therapies-for-anxiety-and-depression/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "talking therapies",
+        "counselling",
+        "CBT",
+        "anxiety",
+        "depression",
+        "free",
+        "self contact"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.nhs.uk/nhs-services/mental-health-services/find-nhs-talking-therapies-for-anxiety-and-depression/",
+      "sourceOwner": "NHS",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ],
+      "national": true,
+      "coverage": "England; local access criteria apply."
+    },
+    {
+      "id": "wider-bacp-therapist-directory",
+      "directoryId": "wider-support",
+      "name": "BACP — counsellor and therapist finder",
+      "category": "Mental health and wellbeing",
+      "description": "Search registered or accredited BACP therapists by location and the support wanted.",
+      "who": "People exploring private counselling or psychotherapy in the UK.",
+      "access": "Search the directory, read a therapist’s profile and contact them directly.",
+      "check": "Browsing is free. Therapy is usually paid; ask about fees, reduced rates, accessibility and availability before booking.",
+      "url": "https://www.bacp.co.uk/search/Therapists",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "psychotherapy",
+        "talking therapies",
+        "therapist finder",
+        "paid",
+        "reduced rates"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.bacp.co.uk/search/Therapists",
+      "sourceOwner": "British Association for Counselling and Psychotherapy",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-ukcp-therapist-directory",
+      "directoryId": "wider-support",
+      "name": "UKCP — psychotherapist finder",
+      "category": "Mental health and wellbeing",
+      "description": "Find UKCP-accredited psychotherapists offering in-person, online or telephone sessions.",
+      "who": "People seeking private psychotherapy, with different ages and needs covered by individual practitioners.",
+      "access": "Search by postcode, issue, language or session type and contact the practitioner.",
+      "check": "Private therapy is usually paid. Ask about current fees and any lower-cost places; the directory does not book or fund sessions.",
+      "url": "https://www.psychotherapy.org.uk/find-a-therapist/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "psychotherapy",
+        "counselling",
+        "talking therapies",
+        "therapist finder",
+        "paid",
+        "online",
+        "telephone"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.psychotherapy.org.uk/find-a-therapist/",
+      "sourceOwner": "UK Council for Psychotherapy",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-baatn-therapist-directory",
+      "directoryId": "wider-support",
+      "name": "BAATN — Black, African, Asian and Caribbean therapist finder",
+      "category": "Mental health and wellbeing",
+      "description": "Find counsellors, psychotherapists and psychologists of Black, African, Asian and Caribbean heritage.",
+      "who": "People looking for culturally informed therapy and a therapist from these heritage groups.",
+      "access": "Search by location or specialism and use the individual therapist’s contact details.",
+      "check": "Directory access is free. Practitioners set their own fees; ask about reduced rates, qualifications and current availability.",
+      "url": "https://www.baatn.org.uk/find-a-psych-therapist/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "counselling",
+        "psychotherapy",
+        "talking therapies",
+        "Black",
+        "African",
+        "Asian",
+        "Caribbean",
+        "culturally informed",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.baatn.org.uk/find-a-psych-therapist/",
+      "sourceOwner": "The Black, African and Asian Therapy Network",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "culture-faith"
+      ],
+      "facets": [
+        "talking-therapies"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-pink-therapy-directory",
+      "directoryId": "wider-support",
+      "name": "Pink Therapy — LGBTQ+ affirmative therapist finder",
+      "category": "Mental health and wellbeing",
+      "description": "Find therapists who work with gender, sexuality and relationship diversity.",
+      "who": "LGBTQ+ people and others seeking gender, sex and relationship diversity affirmative therapy.",
+      "access": "Use Find a Therapist on the website, then contact a practitioner directly.",
+      "check": "Independent practitioners charge their own fees. Check fees, qualifications, concessions and availability before booking.",
+      "url": "https://www.pinktherapy.com/getting-therapy",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "LGBTQ+",
+        "LGBTQIA+",
+        "trans",
+        "non-binary",
+        "sexuality",
+        "relationships",
+        "counselling",
+        "talking therapies",
+        "paid"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.pinktherapy.com/getting-therapy",
+      "sourceOwner": "Pink Therapy",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "lgbtq",
+        "trans",
+        "relationships"
+      ],
+      "facets": [
+        "talking-therapies"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-free-psychotherapy-network",
+      "directoryId": "wider-support",
+      "name": "Free Psychotherapy Network — low-income therapy directory",
+      "category": "Mental health and wellbeing",
+      "description": "A network of therapists offering some no-fee psychotherapy places for people on low incomes.",
+      "who": "People on low incomes or benefits seeking psychotherapy.",
+      "access": "Choose a therapist from the geographical directory and contact them to ask whether a free place is available.",
+      "check": "Free places are limited and not guaranteed. Check professional registration, location or online options and any waiting list with the therapist.",
+      "url": "https://freepsychotherapynetwork.com/find-an-therapist/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "free",
+        "low income",
+        "benefits",
+        "psychotherapy",
+        "counselling",
+        "talking therapies"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://freepsychotherapynetwork.com/find-an-therapist/",
+      "sourceOwner": "Free Psychotherapy Network",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies"
+      ],
+      "national": true,
+      "coverage": "UK directory; coverage and no-fee vacancies vary by therapist."
+    },
+    {
+      "id": "wider-anxiety-uk-therapy-groups",
+      "directoryId": "wider-support",
+      "name": "Anxiety UK — talking therapy and support groups",
+      "category": "Mental health and wellbeing",
+      "description": "A charity offering online talking therapy and groups to share experiences of anxiety.",
+      "who": "Adults over 18 seeking anxiety therapy; check the audience for each support group.",
+      "access": "Explore the therapy application or the anxiety support group booking links on the charity’s website.",
+      "check": "Paid membership and therapy fees apply. Therapy fees depend on household income. Group access can depend on membership; check the chosen booking and costs.",
+      "url": "https://www.anxietyuk.org.uk/get-help/access-therapy/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "anxiety",
+        "panic",
+        "counselling",
+        "talking therapies",
+        "peer support",
+        "online groups",
+        "paid",
+        "income based fees"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.anxietyuk.org.uk/get-help/access-therapy/",
+      "sourceOwner": "Anxiety UK",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "talking-therapies",
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-ocd-action-online-groups",
+      "directoryId": "wider-support",
+      "name": "OCD Action — online peer-support groups",
+      "category": "Mental health and wellbeing",
+      "description": "Volunteer-led groups for sharing experiences of OCD and related conditions.",
+      "who": "UK residents affected by OCD or related conditions, including loved ones; age and theme vary by group.",
+      "access": "Choose an open group and complete the website’s sign-up form. Sessions use Zoom; cameras can be off.",
+      "check": "Free. No formal diagnosis is required. Some groups are full and registration is checked before joining.",
+      "url": "https://ocdaction.org.uk/online-support-groups/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "OCD",
+        "obsessive compulsive disorder",
+        "peer support",
+        "online groups",
+        "free",
+        "carers",
+        "loved ones"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://ocdaction.org.uk/online-support-groups/",
+      "sourceOwner": "OCD Action",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "carers",
+        "relationships"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-ocduk-online-groups",
+      "directoryId": "wider-support",
+      "name": "OCD-UK — online peer-support meetings",
+      "category": "Mental health and wellbeing",
+      "description": "Online groups to talk with others affected by OCD, with general and themed sessions.",
+      "who": "UK residents with OCD and adult family members or friends. The main open groups are for ages 18 and over.",
+      "access": "Choose a meeting and register in advance. A Zoom account is required to register and attend.",
+      "check": "Free; paid OCD-UK membership is not required. Places are limited, and themed groups have their own age or audience rules.",
+      "url": "https://www.ocduk.org/support-groups/online/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "OCD",
+        "obsessive compulsive disorder",
+        "peer support",
+        "free",
+        "online",
+        "carers",
+        "young adults",
+        "older people"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.ocduk.org/support-groups/online/",
+      "sourceOwner": "OCD-UK",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "carers",
+        "relationships",
+        "young-adults",
+        "older"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-beat-online-groups",
+      "directoryId": "wider-support",
+      "name": "Beat — eating-disorder online support groups",
+      "category": "Mental health and wellbeing",
+      "description": "Moderated text-chat groups for people affected by eating disorders, with different groups for different experiences.",
+      "who": "People in the UK who have or think they may have an eating disorder; no formal diagnosis is required.",
+      "access": "Choose a group on the website and read its joining and chat-room guidance.",
+      "check": "Check the current group timetable and age rules. These are peer-support chats; ask Beat about any access or cost questions.",
+      "url": "https://www.beateatingdisorders.org.uk/get-information-and-support/get-help-for-myself/support-now/online-support-groups/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "eating disorders",
+        "anorexia",
+        "bulimia",
+        "ARFID",
+        "binge eating",
+        "peer support",
+        "online",
+        "text chat"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.beateatingdisorders.org.uk/get-information-and-support/get-help-for-myself/support-now/online-support-groups/",
+      "sourceOwner": "Beat",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-mind-side-by-side",
+      "directoryId": "wider-support",
+      "name": "Mind — Side by Side online community",
+      "category": "Mental health and wellbeing",
+      "description": "A moderated online space to share mental-health experiences and offer mutual support.",
+      "who": "People over 18 who want online connection around mental health.",
+      "access": "Register on Side by Side, choose a username and read the community guidelines.",
+      "check": "Free online community. Registration is needed. It does not provide emergency support or a personal therapy service.",
+      "url": "https://sidebyside.mind.org.uk/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "peer support",
+        "mental health",
+        "online community",
+        "free",
+        "loneliness",
+        "moderated forum"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://sidebyside.mind.org.uk/",
+      "sourceOwner": "Mind",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-bdd-foundation-online-group",
+      "directoryId": "wider-support",
+      "name": "BDD Foundation — online BDD peer group",
+      "category": "Mental health and wellbeing",
+      "description": "A user-led Zoom group to share experiences of body dysmorphic disorder.",
+      "who": "People affected by body dysmorphic disorder; ask the organiser about any age or joining requirements.",
+      "access": "Email support@bddfoundation.org to register for the BDD Foundation’s own group. The page also lists other organisers’ groups.",
+      "check": "National Lottery funded; confirm any cost when registering. Camera use is optional. Check the current meeting dates.",
+      "url": "https://bddfoundation.org/support/online-support-groups/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "body dysmorphic disorder",
+        "BDD",
+        "peer support",
+        "body image",
+        "online",
+        "Zoom"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://bddfoundation.org/support/online-support-groups/",
+      "sourceOwner": "BDD Foundation",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-hoardinguk-online-support",
+      "directoryId": "wider-support",
+      "name": "HoardingUK — online support for hoarding",
+      "category": "Mental health and wellbeing",
+      "description": "Groups to share experiences of hoarding, alongside groups for family and friends.",
+      "who": "People with hoarding behaviours and people supporting someone who hoards.",
+      "access": "Choose an online group from the charity’s support-groups page and follow its booking link.",
+      "check": "Some sessions are free; Place in the Space requests a £5 donation, with a published waiver if unable to pay. Places can be full; check the booking.",
+      "url": "https://www.hoardinguk.org/support-groups/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "hoarding",
+        "clutter",
+        "peer support",
+        "families",
+        "carers",
+        "online",
+        "donation"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.hoardinguk.org/support-groups/",
+      "sourceOwner": "HoardingUK",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "carers",
+        "relationships"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-loss-foundation-grief-groups",
+      "directoryId": "wider-support",
+      "name": "The Loss Foundation — cancer-bereavement support groups",
+      "category": "Mental health and wellbeing",
+      "description": "Facilitated groups where people bereaved by cancer can talk, listen and connect.",
+      "who": "Adults affected by cancer bereavement; choose a group for the relevant loss or age group.",
+      "access": "Choose a support-group event from the calendar and register for the joining details.",
+      "check": "Free. Online and some in-person events are available. Check the event’s audience and availability. There is no pressure to speak.",
+      "url": "https://thelossfoundation.org/grief-support-groups/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "bereavement",
+        "grief",
+        "cancer",
+        "loss",
+        "peer support",
+        "free",
+        "online groups"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://thelossfoundation.org/grief-support-groups/",
+      "sourceOwner": "The Loss Foundation",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-way-widowed-young",
+      "directoryId": "wider-support",
+      "name": "WAY Widowed and Young — bereavement peer community",
+      "category": "Mental health and wellbeing",
+      "description": "Peer groups, local meetups and an online community after the death of a partner.",
+      "who": "People who were aged 50 or under when their partner died, married or unmarried, with or without children.",
+      "access": "Read the membership information and apply online. Ask about financial support with membership if needed.",
+      "check": "Paid annual membership is £30 at the check date. Financial help may be available. Check any separate event costs.",
+      "url": "https://www.widowedandyoung.org.uk/get-support/join-way",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "bereavement",
+        "widowed",
+        "partner loss",
+        "peer support",
+        "online",
+        "meetups",
+        "paid membership"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.widowedandyoung.org.uk/get-support/join-way",
+      "sourceOwner": "WAY Widowed and Young",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "relationships"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-compassionate-friends-forum",
+      "directoryId": "wider-support",
+      "name": "The Compassionate Friends — bereaved-parent community",
+      "category": "Mental health and wellbeing",
+      "description": "A private forum where bereaved parents can share experiences and support each other.",
+      "who": "Bereaved parents over 18 after the death of a child from one month old through adulthood.",
+      "access": "Use the forum registration link. The charity’s team checks registration before access.",
+      "check": "Check the forum rules and any cost questions with the charity. Other support for siblings and grandparents has separate access routes.",
+      "url": "https://www.tcf.org.uk/online-support-forum/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "bereavement",
+        "grief",
+        "child loss",
+        "bereaved parents",
+        "peer support",
+        "online forum"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.tcf.org.uk/online-support-forum/",
+      "sourceOwner": "The Compassionate Friends",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "relationships"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-long-covid-uk-community",
+      "directoryId": "wider-support",
+      "name": "Long Covid UK — online peer community",
+      "category": "Mental health and wellbeing",
+      "description": "Volunteer-moderated groups for people with Long Covid and those close to them, plus online activities.",
+      "who": "People living with Long Covid and their family or other close supporters.",
+      "access": "Follow the support-group links on the charity’s website and answer the Facebook group joining questions.",
+      "check": "A Facebook account is required for the main groups. Check any activity costs and access needs. In-person groups are only in specified locations.",
+      "url": "https://www.longcovid.org/support-services",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "Long Covid",
+        "long-term condition",
+        "peer support",
+        "carers",
+        "online",
+        "wellbeing activities"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.longcovid.org/support-services",
+      "sourceOwner": "Long Covid UK",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "carers",
+        "relationships"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "Online groups are accessible across the UK; in-person groups have limited local coverage."
+    },
+    {
+      "id": "wider-endometriosis-uk-groups",
+      "directoryId": "wider-support",
+      "name": "Endometriosis UK — local and online peer groups",
+      "category": "Physical health and care",
+      "description": "Groups and an online community for sharing experiences of endometriosis.",
+      "who": "People affected by endometriosis. Under-16s must attend support groups with an adult.",
+      "access": "Find a local group and join its mailing list, or use the website’s online support options.",
+      "check": "Check meeting format, access and any cost with the group. Some use private Facebook groups; online options are listed for people without a local group.",
+      "url": "https://www.endometriosis-uk.org/support-groups",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "endometriosis",
+        "peer support",
+        "long-term condition",
+        "online groups",
+        "LGBTQ+"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.endometriosis-uk.org/support-groups",
+      "sourceOwner": "Endometriosis UK",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "lgbtq"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-edsuk-support-groups",
+      "directoryId": "wider-support",
+      "name": "Ehlers-Danlos Support UK — EDS and HSD peer groups",
+      "category": "Physical health and care",
+      "description": "Volunteer-led local and online groups for meeting others with EDS or hypermobility spectrum disorders.",
+      "who": "UK patients with EDS or HSD and their families.",
+      "access": "Join the charity’s community, then find a regional group and check its meeting details.",
+      "check": "Basic membership is free and includes access to support groups. Paid membership options are also offered. Check event access and any extra costs.",
+      "url": "https://ehlers-danlos.uk/eds-hsd-support/support-groups/",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "EDS",
+        "Ehlers-Danlos",
+        "HSD",
+        "hypermobility",
+        "peer support",
+        "online groups",
+        "free basic membership",
+        "families"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://ehlers-danlos.uk/eds-hsd-support/support-groups/",
+      "sourceOwner": "The Ehlers-Danlos Support UK",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "relationships"
+      ],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-ptsd-resolution-therapy",
+      "directoryId": "wider-support",
+      "name": "PTSD Resolution — veterans and family therapy",
+      "category": "Mental health and wellbeing",
+      "description": "A charity offering free therapy through its therapist network, with local and remote appointments.",
+      "who": "UK armed-forces veterans, reservists and their families.",
+      "access": "Contact the charity or use its Register for Help form to discuss eligibility and options.",
+      "check": "Free for eligible beneficiaries; the service checks suitability and availability. The person can make direct contact. It is not an emergency service.",
+      "url": "https://ptsdresolution.org/get-help",
+      "phone": "0300 302 0551",
+      "picture": "talk",
+      "tags": [
+        "veterans",
+        "reservists",
+        "armed forces",
+        "families",
+        "trauma",
+        "PTSD",
+        "counselling",
+        "talking therapies",
+        "free"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://ptsdresolution.org/get-help",
+      "sourceOwner": "PTSD Resolution",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "relationships"
+      ],
+      "facets": [
+        "talking-therapies"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-combat-stress-peer-network",
+      "directoryId": "wider-support",
+      "name": "Combat Stress — veterans’ peer-support network",
+      "category": "Mental health and wellbeing",
+      "description": "A developing network of veteran-led online and in-person peer groups for connection and shared recovery experiences.",
+      "who": "Veterans seeking connection around mental health, including those not receiving Combat Stress treatment.",
+      "access": "Email peersupport@combatstress.org.uk to ask about current groups, or browse the Veterans Recovery Network page.",
+      "check": "Combat Stress treatment is not required. The network is developing and event listings are being planned; ask the team what is currently available and about any costs.",
+      "url": "https://combatstress.org.uk/get-help/get-support/peer-support/veterans-recovery-network/",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "veterans",
+        "armed forces",
+        "peer support",
+        "online groups",
+        "mental health",
+        "recovery network"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://combatstress.org.uk/get-help/get-support/peer-support/veterans-recovery-network/",
+      "sourceOwner": "Combat Stress",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "peer-support"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-nhs-yoga-pilates-videos",
+      "directoryId": "wider-support",
+      "name": "NHS — yoga, Pilates and meditation at home",
+      "category": "Sport and movement",
+      "description": "Free videos to try yoga, Pilates and meditation at home, including chair-based and pregnancy-related options.",
+      "who": "People wanting home activities; select a video appropriate to the person’s circumstances.",
+      "access": "Choose a video on the NHS website and read its suitability guidance before starting.",
+      "check": "Free. Read the specific video’s health and exercise guidance; seek advice if unsure about suitability after illness, injury or pregnancy.",
+      "url": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/",
+      "phone": "",
+      "picture": "community",
+      "tags": [
+        "yoga",
+        "Pilates",
+        "meditation",
+        "chair based",
+        "pregnancy",
+        "postnatal",
+        "online",
+        "home exercise",
+        "free"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.nhs.uk/live-well/exercise/pilates-and-yoga/",
+      "sourceOwner": "NHS",
+      "verificationStatus": "Provider website checked",
+      "audiences": [
+        "pregnancy-parents"
+      ],
+      "facets": [
+        "yoga",
+        "wellbeing"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-mental-health-foundation-breathing",
+      "directoryId": "wider-support",
+      "name": "Mental Health Foundation — short mindfulness audio",
+      "category": "Mental health and wellbeing",
+      "description": "A free three-minute guided breathing-space recording to try at home.",
+      "who": "People who would like a short, self-guided mindfulness activity.",
+      "access": "Play the recording from the charity’s website.",
+      "check": "Free. This is a recorded wellbeing exercise; no group booking or counselling is provided. Stop if it feels uncomfortable.",
+      "url": "https://www.mentalhealth.org.uk/explore-mental-health/podcasts/three-minute-mindfulness-breathing-space",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "mindfulness",
+        "breathing",
+        "relaxation",
+        "meditation",
+        "holistic wellbeing",
+        "free",
+        "audio",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.mentalhealth.org.uk/explore-mental-health/podcasts/three-minute-mindfulness-breathing-space",
+      "sourceOwner": "Mental Health Foundation",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "wellbeing"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
+    },
+    {
+      "id": "wider-free-mindfulness-project",
+      "directoryId": "wider-support",
+      "name": "The Free Mindfulness Project — guided recordings",
+      "category": "Mental health and wellbeing",
+      "description": "A collection of guided mindfulness, breathing and body-scan recordings to listen to or download.",
+      "who": "People looking for self-guided mindfulness resources rather than a live group.",
+      "access": "Choose a recording on the website or use its free audio-player web app.",
+      "check": "Free to access. Recordings vary in length and style. This resource does not provide individual assessment or talking therapy.",
+      "url": "https://www.freemindfulness.org/download",
+      "phone": "",
+      "picture": "talk",
+      "tags": [
+        "mindfulness",
+        "meditation",
+        "breathing",
+        "body scan",
+        "relaxation",
+        "holistic wellbeing",
+        "free",
+        "audio",
+        "online"
+      ],
+      "lastChecked": "2026-10-26",
+      "nextReview": "2027-01-26",
+      "sourceUrl": "https://www.freemindfulness.org/download",
+      "sourceOwner": "The Free Mindfulness Project",
+      "verificationStatus": "Provider website checked",
+      "audiences": [],
+      "facets": [
+        "wellbeing"
+      ],
+      "national": true,
+      "coverage": "UK-wide online or directory access; check the chosen service."
     }
   ],
   "areaDownloads": {
@@ -21962,19 +24944,19 @@
     "write": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjAiIGhlaWdodD0iMTkwIiB2aWV3Qm94PSIwIDAgMjIwIDE5MCI+PGcgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj48cGF0aCBkPSJNMzYgMjBoMTIwbDMwIDMwdjEyN0gzNloiIGZpbGw9IiNmNGY3ZjkiIHN0cm9rZT0iIzE4M2Q1NSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTE1NiAyMHYzMmgzMCIgZmlsbD0iI2JkZDVlMyIgc3Ryb2tlPSIjMTgzZDU1IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNNTUgNjhoODBNNTUgOTFoNThNNTUgMTE2aDQ1TTU1IDE0MWgzMiIgc3Ryb2tlPSIjN2I5YmFhIiBzdHJva2Utd2lkdGg9IjUiLz48ZyB0cmFuc2Zvcm09InJvdGF0ZSgzMiAxNDIgMTIwKSI+PHBhdGggZD0iTTEzMiA2N2gyNHY4N2wtMTIgMjItMTItMjJaIiBmaWxsPSIjZThiOTVjIiBzdHJva2U9IiMxODNkNTUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik0xMzIgNjd2LTEycTAtNyA3LTdoMTBxNyAwIDcgN3YxMloiIGZpbGw9IiNkYzljOTAiIHN0cm9rZT0iIzE4M2Q1NSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0ibTEzNyAxNjQgNyAxMiA3LTEyWiIgZmlsbD0iIzE4M2Q1NSIvPjwvZz48L2c+PC9zdmc+"
   },
   "directoryRelease": {
-    "version": 17,
-    "updated": "2026-10-25",
+    "version": 18,
+    "updated": "2026-10-26",
     "baselineCount": 311,
-    "newListings": 475,
-    "sourceNote": "National housing and legal resources verified against official or provider pages. Earlier source dates retained for unchanged records.",
-    "previousListings": 758,
-    "addedThisRelease": 28,
-    "updatedThisRelease": 7,
+    "newListings": 567,
+    "sourceNote": "Yoga, meditation, charitable talking therapies and peer-support access checked against provider and official pages. Costs, locality limits and direct-contact routes are recorded. Earlier check dates retained for unchanged records.",
+    "previousListings": 786,
+    "addedThisRelease": 92,
+    "updatedThisRelease": 0,
     "audienceIndexNote": "Audience filters use the groups explicitly named in each listing, intended users or recorded tags. They do not imply exclusive eligibility. Everyone shows all listings. General services are not duplicated under every audience."
   },
   "searchRelease": {
-    "version": 17,
-    "method": "Local keyword and common-needs matching. No external AI or personal-data submission.",
-    "nationalScope": "Relevant verified national routes are included with selected local areas for common-needs searches."
+    "version": 18,
+    "method": "Local keyword and common-needs matching, with optional AI interpretation only after an explicit request. Icon and area filters run locally.",
+    "nationalScope": "Verified national options accompany selected local areas for practical support, talking therapies, peer support, yoga and relaxation."
   }
 }

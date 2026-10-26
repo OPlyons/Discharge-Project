@@ -34,6 +34,9 @@
  }
  function index(r){
   const own=[r.name,r.description,...(r.tags||[])].join(' '),extra=[];
+  if((r.supportFacets||[]).some(f=>['yoga','wellbeing'].includes(f)))extra.push('holistic wellbeing mind body');
+  if((r.supportFacets||[]).includes('talking-therapies'))extra.push('talking therapy talking therapies counselling counseling psychotherapy');
+  if((r.supportFacets||[]).includes('peer-support'))extra.push('peer support peer led lived experience mutual support');
   if(/citizens advice/i.test(r.name))extra.push('cab citizens advice bureau');
   if(/board[ -]?games?/i.test(own))extra.push('boardgame boardgames board game board games tabletop gaming');
   for(const [pattern,aliases] of [[/mosque|masjid/i,'mosque mosques masjid muslim islam'],[/church|christian/i,'church churches christian'],[/synagogue|jewish/i,'synagogue synagogues jewish'],[/gurdwara|gurudwara|sikh/i,'gurdwara gurdwaras gurudwara gurudwaras sikh'],[/temple|mandir/i,'temple temples mandir mandirs'],[/quaker/i,'quaker quakers society of friends'],[/humanist/i,'humanist humanists humanism'],[/caf[eé]/i,'cafe cafes coffee shop'],[/\bclubs?\b/i,'club clubs social club social clubs']])if(pattern.test(own))extra.push(aliases);

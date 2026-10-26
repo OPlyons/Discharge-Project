@@ -1,6 +1,6 @@
 # Discharge and Transition Project
 
-The public website for peer support calls after discharge, service users, carers and community support. It includes 786 directory entries, combined call and feedback forms, accessible browsing, and a Community AI Navigator. The private project-management editor is not part of this repository.
+The public website for peer support calls after discharge, service users, carers and community support. It includes 878 directory entries, combined call and feedback forms, accessible browsing, and a Community AI Navigator. The private project-management editor is not part of this repository.
 
 Production: https://dtp.lxportal.space
 
@@ -33,7 +33,9 @@ npm run deploy:api
 
 Deploy the Worker before publishing a frontend contract change. Its configuration defines the AI binding, allowed production origins, request limits, rate limits and disabled request logging. The existing `cnwl-discharge-dev` deployment remains separate.
 
-Edit directory records in `data/directory.json`. Edit layout and wording in `site/template.html`, directory behaviour in `site/directory.js`, and Navigator behaviour in `site/navigator-ui.js`. Generated `dist` files are not committed. The original four Word forms, PDF packs, logos and favicon are checked against a baseline hash fixture.
+Edit directory records in `data/directory.json`. New records include source and review dates, access and cost notes; optional `facets` use `yoga`, `wellbeing` (meditation or relaxation activities), `talking-therapies` and `peer-support`. National records need explicit verified `national: true` and `coverage`; regional services must not be marked national. The original 786 records are retained unchanged and checked against a baseline digest.
+
+Edit layout and wording in `site/template.html`, directory behaviour in `site/directory.js`, and Navigator behaviour in `site/navigator-ui.js`. Generated `dist` files are not committed. The original four Word forms, PDF packs, logos and favicon are checked against a baseline hash fixture.
 
 ## Sentry and privacy
 
