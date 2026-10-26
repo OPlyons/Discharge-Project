@@ -8,6 +8,8 @@ Find support opens a single dashboard with a compact Support wizard, borough map
 
 The Support for icon opens an optional, labelled group picker. It filters listings that explicitly name a group, keeps the current area and support type, and defaults to Everyone. The picker uses a native dialog with keyboard focus, Escape dismissal and the site's reading options. These choices stay in the open page and are not stored or sent to AI.
 
+Directory maintenance uses scheduled background reviews: four small batches a day, up to 32 routine listings plus four failed-source retries, with a weekly summary of exceptions. Progress and evidence-backed suggestions are stored on the separate `directory-reviews` branch, outside the public build. The checker never changes service details or their information-checked dates automatically. See [the maintenance guide](maintenance/README.md).
+
 ## Run and check
 
 Use Node.js 24.

@@ -24,4 +24,5 @@ test('public build uses same-origin API, limited monitoring and restricted index
  assert.doesNotMatch(html,/discharge-community-navigator-dev\.oscar/);assert.ok(read('dist/_headers').toString().includes('noindex, nofollow'));assert.ok(read('dist/robots.txt').toString().includes('Disallow: /'));
  assert.deepEqual(JSON.parse(read('dist/_routes.json')),{version:1,include:['/api/*'],exclude:[]});
  assert.ok(!fs.existsSync(path.join(root,'dist/assets/monitoring.js.map')));
+ assert.ok(!fs.existsSync(path.join(root,'dist/maintenance')),'Maintenance records must stay outside the public website');
 });
