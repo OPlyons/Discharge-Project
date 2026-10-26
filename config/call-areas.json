@@ -1,0 +1,44 @@
+{
+  "directories": [
+    {
+      "id": "brent",
+      "name": "Brent"
+    },
+    {
+      "id": "harrow",
+      "name": "Harrow"
+    },
+    {
+      "id": "kensington-chelsea",
+      "name": "Kensington and Chelsea"
+    },
+    {
+      "id": "westminster",
+      "name": "Westminster"
+    },
+    {
+      "id": "camden",
+      "name": "Camden"
+    },
+    {
+      "id": "hillingdon",
+      "name": "Hillingdon"
+    },
+    {
+      "id": "milton-keynes",
+      "name": "Milton Keynes"
+    },
+    {
+      "id": "surrey",
+      "name": "Surrey"
+    },
+    {
+      "id": "ealing",
+      "name": "Ealing"
+    },
+    {
+      "id": "wider-support",
+      "name": "Wider support"
+    }
+  ]
+}
