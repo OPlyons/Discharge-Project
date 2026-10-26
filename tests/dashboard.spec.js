@@ -44,6 +44,9 @@ test('practical filters are directly available as icons and keep the borough cho
   const cards=page.locator('#resource-list article');await expect(cards.first()).toBeVisible();
   for(const label of await cards.locator('.category').allTextContents())expect(label).toContain(category);
  }
+ // Older wider entries without an explicit national flag must remain discoverable.
+ await expect(page.locator('#wider-results-hint')).toBeVisible();await page.locator('#matching-wider-support').click();
+ await expect(page.locator('#resource-list')).toContainText('Alcoholics Anonymous');
  await page.locator('#clear-filters').click();await expect(page.locator('#resource-count')).toContainText(records.length+' listings');expect(calls).toHaveLength(0);
 });
 test('wellbeing icons find new local services and include clearly labelled national options',async({page})=>{

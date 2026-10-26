@@ -150,9 +150,9 @@
   const words=terms(),started=!!(area.value||words.raw||activity!=='all'||topic.value||audience.value),dir=data.directories.find(d=>d.id===area.value),name=dir?.name||'all areas';
   syncChoices(words);selectedChoices();guidance(words,dir);$('directory-start').hidden=started;$('directory-call-note').hidden=!started;
   document.dispatchEvent(new CustomEvent('directorychoiceschange',{detail:{started}}));
-  const widerCount=data.resources.filter(r=>r.directoryId==='wider-support'&&matches(r,words,true)).length;
-  $('wider-results-hint').hidden=!dir||dir.id==='wider-support'||!widerCount||withNational(words);
-  $('matching-wider-support').textContent='See '+widerCount+' matching wider '+(widerCount===1?'option':'options')+' →';
+  const widerCount=data.resources.filter(r=>r.directoryId==='wider-support'&&matches(r,words,true)&&!(withNational(words)&&r.national)).length;
+  $('wider-results-hint').hidden=!dir||dir.id==='wider-support'||!widerCount;
+  $('matching-wider-support').textContent='Explore '+widerCount+' more wider '+(widerCount===1?'option':'options')+' →';
   $('area-intro').replaceChildren();if(started)$('area-intro').append(make('p',dir?.name||'Across all areas'));
   const label=topic.value||(words.label?words.label:(activity==='all'?'Groups, activities and support':groups.find(g=>g.id===activity).label));
   $('resource-results-heading').textContent=started?label:'Your local possibilities';
