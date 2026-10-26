@@ -6,6 +6,8 @@ Production: https://dtp.lxportal.space
 
 Find support opens a single dashboard with a compact Support wizard, borough map and coloured support icons. Map and icon choices browse locally and can refine existing AI results without another AI request. Find support explicitly runs AI; Search without AI performs local text search. Start again clears the query and every filter.
 
+The Support for icon opens an optional, labelled group picker. It filters listings that explicitly name a group, keeps the current area and support type, and defaults to Everyone. The picker uses a native dialog with keyboard focus, Escape dismissal and the site's reading options. These choices stay in the open page and are not stored or sent to AI.
+
 ## Run and check
 
 Use Node.js 24.

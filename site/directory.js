@@ -23,6 +23,19 @@
   carers:'M9 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 21v-5a6 6 0 0 1 10-4M17 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM13 21v-3a4 4 0 0 1 8 0v3',
   access:'M13 4a1.5 1.5 0 1 0 0-.1M12 8v6h6l3 6M12 10H8M10 13a5 5 0 1 0 6 6',
   faith:'M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z',
+  everyone:'M12 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 21v-4a6 6 0 0 1 12 0v4M5 7a2.5 2.5 0 0 0 0 5M3 15a4 4 0 0 0-2 4M19 7a2.5 2.5 0 0 1 0 5M21 15a4 4 0 0 1 2 4',
+  women:'M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12zM12 15v7M8 19h8',
+  men:'M10 9a6 6 0 1 0 0 12 6 6 0 0 0 0-12zM14 10l7-7M15 3h6v6',
+  neurodivergent:'M12 12c-3-5-5-6-7-5-5 2-5 8 0 10 2 1 4 0 7-5 3-5 5-6 7-5 5 2 5 8 0 10-2 1-4 0-7-5z',
+  disabled:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM12 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM6 10l6 1 6-1M12 11v4m0 0-3 4m3-4 3 4',
+  lgbtq:'M2 20v-5a10 10 0 0 1 20 0v5M6 20v-5a6 6 0 0 1 12 0v5M10 20v-5a2 2 0 0 1 4 0v5',
+  trans:'M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM12 17v6M9 20h6M16 8l6-6M17 2h5v5M8 8 2 2M2 7V2h5M2 9l7-7',
+  'culture-faith':'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM2 12h20M12 2c-6 5-6 15 0 20 6-5 6-15 0-20z',
+  older:'M8 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM2 21v-4a6 6 0 0 1 10-4M18 13a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM18 15v3l2 1',
+  'young-adults':'M9 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM3 21v-4a6 6 0 0 1 12 0v4M18 2l1.2 3.8L23 7l-3.8 1.2L18 12l-1.2-3.8L13 7l3.8-1.2z',
+  'pregnancy-parents':'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 3c4 0 3 5 0 4M8 11h.1M16 11h.1M8 15q4 4 8 0',
+  relationships:'M12 21S2 15 2 9c0-6 8-7 10-1 2-6 10-5 10 1 0 6-10 12-10 12zM8 11l4 4 4-4',
+  'audience-carers':'M12 12S6 8 6 5c0-3 4-4 6-1 2-3 6-2 6 1 0 3-6 7-6 7zM2 16l5-3 5 2h3a2 2 0 0 1 0 4h-5M2 20l5-1 8 3 7-6a2 2 0 0 0-3-2l-3 3',
  };
  const groups=[
   {id:'all',label:'All support',categories:null},
@@ -63,7 +76,23 @@
  const normalise=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('en-GB');
  const date=value=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(value||''))return 'Not recorded';return new Date(value+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});};
  function icon(key,cls){const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.7');svg.setAttribute('stroke-linecap','round');svg.setAttribute('stroke-linejoin','round');svg.setAttribute('aria-hidden','true');svg.setAttribute('focusable','false');if(cls)svg.setAttribute('class',cls);const p=document.createElementNS(svg.namespaceURI,'path');p.setAttribute('d',paths[key]||paths.all);svg.append(p);return svg;}
- const activityButtons=groups.map(g=>{const b=make('button',undefined,'activity-choice');b.type='button';b.dataset.activity=g.id;b.setAttribute('aria-pressed',String(g.id===activity));b.disabled=true;b.append(icon(g.id,'activity-icon'),make('span',g.label));b.addEventListener('click',()=>{activity=g.id;if(g.id==='all'&&!area.value)area.value='all';topic.value='';shown=12;render();});$('activity-choices').insertBefore(b,$('support-more-filters'));return b;});
+ const audienceTrigger=$('support-for-toggle'),audienceDialog=$('support-for-dialog');
+ const activityButtons=groups.map(g=>{const b=make('button',undefined,'activity-choice');b.type='button';b.dataset.activity=g.id;b.setAttribute('aria-pressed',String(g.id===activity));b.disabled=true;b.append(icon(g.id,'activity-icon'),make('span',g.label));b.addEventListener('click',()=>{activity=g.id;if(g.id==='all'&&!area.value)area.value='all';topic.value='';shown=12;render();});$('activity-choices').insertBefore(b,audienceTrigger);return b;});
+ audienceTrigger.prepend(icon('everyone','activity-icon'));
+ // Optional group choices use the same local filter as the previous select.
+ // Symbols accompany text; no personal details or identity choices are stored.
+ const audienceButtons=[['','Everyone'],...audiences].map(([id,label])=>{
+  const b=make('button',undefined,'audience-choice');b.type='button';b.dataset.audience=id;b.setAttribute('aria-pressed',String(!id));b.setAttribute('aria-label',label);
+  b.append(icon(id==='carers'?'audience-carers':id||'everyone','audience-icon'),make('span',label));
+  b.addEventListener('click',()=>{audience.value=id;if(!id&&!area.value)area.value='all';clearTimeout(timer);audience.dispatchEvent(new Event('change',{bubbles:true}));audienceDialog.close();});
+  $('audience-choices').append(b);return b;
+ });
+ audienceTrigger.addEventListener('click',()=>{audienceDialog.showModal();audienceTrigger.setAttribute('aria-expanded','true');audienceButtons.find(b=>b.dataset.audience===audience.value)?.focus({preventScroll:true});});
+ $('support-for-close').addEventListener('click',()=>audienceDialog.close());
+ audienceDialog.addEventListener('keydown',event=>{if(event.key!=='Tab')return;const first=$('support-for-close'),last=audienceButtons.at(-1);if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}});
+ audienceDialog.addEventListener('close',()=>{audienceTrigger.setAttribute('aria-expanded','false');audienceTrigger.focus({preventScroll:true});});
+ audienceDialog.addEventListener('click',event=>{if(event.target!==audienceDialog)return;const r=audienceDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)audienceDialog.close();});
+ window.addEventListener('hashchange',()=>{if(audienceDialog.open)audienceDialog.close();});
  const areaButtons=[...document.querySelectorAll('#support button[data-area]')];
  const shapes=[...document.querySelectorAll('[data-map-shape]')];
  for(const b of areaButtons){
@@ -131,6 +160,10 @@
   }
   for(const p of shapes){p.classList.toggle('is-selected',p.dataset.mapShape===area.value);p.classList.toggle('no-matches',!counts[p.dataset.mapShape]);}
   for(const b of activityButtons)b.setAttribute('aria-pressed',String(b.dataset.activity===activity&&!topic.value));
+  const audienceLabel=audiences.find(a=>a[0]===audience.value)?.[1]||'Everyone';
+  for(const b of audienceButtons)b.setAttribute('aria-pressed',String(b.dataset.audience===audience.value));
+  audienceTrigger.dataset.selected=String(!!audience.value);audienceTrigger.setAttribute('aria-label','Support for: '+audienceLabel+'. Choose a group');
+  $('audience-selection').hidden=!audience.value;$('audience-selection-label').textContent='Support for: '+audienceLabel;
   topic.options[0].textContent=activity==='all'?'All types':'All in this choice';
  }
  function selectedChoices(){
@@ -193,7 +226,7 @@
    for(const r of value.resources)r.searchIndex=engine.index(r);
    data=value;area.value=pendingArea;
    topic.replaceChildren(new Option('All types',''));for(const cat of [...new Set(data.resources.map(r=>r.category))].sort())topic.append(new Option(cat,cat));
-   for(const n of [area,topic,search,audience,$('clear-filters'),$('browse-all-areas'),...activityButtons,...areaButtons])n.disabled=false;
+   for(const n of [area,topic,search,audience,audienceTrigger,$('clear-filters'),$('browse-all-areas'),...activityButtons,...areaButtons])n.disabled=false;
    $('browse-all-areas').textContent='Or browse all '+data.resources.length+' listings →';$('directory-coverage').textContent=data.resources.length+' resources';
    areaChanged();
   }catch(error){$('resource-count').textContent='The directory could not be loaded.';$('directory-loading-error').hidden=false;console.error('Directory load failed:',error);}
@@ -204,6 +237,7 @@
  area.addEventListener('change',()=>{pendingArea=area.value;areaChanged();});
  topic.addEventListener('change',()=>{activity='all';shown=12;render();});
  audience.addEventListener('change',()=>{shown=12;render();});
+ $('audience-clear').addEventListener('click',()=>{audience.value='';audience.dispatchEvent(new Event('change',{bubbles:true}));audienceTrigger.focus({preventScroll:true});});
  let timer;search.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{shown=12;render();},180);});
  function showResults(){const h=$('resource-results-heading');h.focus({preventScroll:true});h.scrollIntoView({block:'start',behavior:'auto'});}
  $('directory-search-form').addEventListener('submit',event=>{event.preventDefault();clearTimeout(timer);shown=12;render();showResults();});
