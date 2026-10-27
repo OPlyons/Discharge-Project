@@ -1,6 +1,6 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {createHash} from 'node:crypto';import {JSDOM} from 'jsdom';
 const root=path.resolve(import.meta.dirname,'../..'),read=p=>fs.readFileSync(path.join(root,p));
-test('discharge call forms, leaflet and branding assets remain unchanged',()=>{
+test('discharge downloads and branding match their approved assets',()=>{
  const hashes=JSON.parse(read('tests/fixtures/asset-sha256.json'));
  for(const [file,hash] of Object.entries(hashes))assert.equal(createHash('sha256').update(read('dist/'+file)).digest('hex'),hash,file);
 });

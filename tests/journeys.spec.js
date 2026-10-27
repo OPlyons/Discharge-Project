@@ -1,3 +1,4 @@
+import fs from 'node:fs/promises';import {readDocxEntry} from './docx.js';
 import {test,expect} from '@playwright/test';import {interceptSentry} from './support.js';
 test.beforeEach(async({page})=>{await interceptSentry(page);});
 test('discharge home and call pages retain their navigation',async({page})=>{
@@ -11,12 +12,26 @@ test('old support bookmarks and new Find support links open the standalone navig
  await page.goto('/');await page.evaluate(()=>{location.hash='support';});await expect(page).toHaveURL('https://navigator.lxportal.space/');
 });
 test('combined call forms and staff area handover still work',async({page})=>{
- const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#staff-call');await expect(page.locator('#download-main')).toHaveAttribute('download','Person_Call_and_Feedback_v12.docx');
- const download=page.waitForEvent('download');await page.locator('#download-main').click();expect((await download).suggestedFilename()).toBe('Person_Call_and_Feedback_v12.docx');
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#staff-call');await expect(page.locator('#download-main')).toHaveAttribute('download','Person_Call_and_Feedback_v13.docx');
+ const download=page.waitForEvent('download');await page.locator('#download-main').click();expect((await download).suggestedFilename()).toBe('Person_Call_and_Feedback_v13.docx');
  await page.locator('#carer-call-link').click();await expect(page.locator('#download-main')).toHaveAttribute('download','Carer_Call_and_Feedback_v12.docx');
  await page.locator('#pack-customisation > summary').click();await page.locator('#staff-area').selectOption('harrow');
  await page.route('https://navigator.lxportal.space/**',route=>route.fulfill({status:200,contentType:'text/html',body:'<h1>Community Navigator</h1>'}));await page.locator('#local-support-link').click();await expect(page).toHaveURL('https://navigator.lxportal.space/#area-harrow');expect(errors).toEqual([]);
 });
 test('larger text does not overflow the discharge homepage',async({page})=>{
  await page.goto('/');await page.locator('#reading-options > summary').click();await page.locator('#larger-text').click();expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
+});
+
+test('customised person form keeps all seven feedback questions and safe team text',async({page})=>{
+ await page.goto('/#staff-call');
+ await page.locator('#pack-customisation > summary').click();
+ await page.locator('#staff-area').selectOption('harrow');
+ await page.locator('#staff-team').fill('Example & <Team>');
+ const downloading=page.waitForEvent('download');await page.locator('#download-main').click();
+ const file=await downloading;expect(file.suggestedFilename()).toBe('Person_Call_and_Feedback_v13.docx');
+ const xml=readDocxEntry(await fs.readFile(await file.path()),'word/document.xml');
+ expect(xml).toContain('Area: Harrow');expect(xml).toContain('Example &amp; &lt;Team&gt;');expect(xml).not.toContain('{{AREA}}');
+ await page.goto('/#about');
+ const questions=await page.locator('#call-questions .question-list li').allTextContents();expect(questions).toHaveLength(7);
+ for(const question of questions)expect(xml).toContain(question);
 });
