@@ -22,16 +22,24 @@ test('larger text does not overflow the discharge homepage',async({page})=>{
  await page.goto('/');await page.locator('#reading-options > summary').click();await page.locator('#larger-text').click();expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
 });
 
-test('customised person form keeps all seven feedback questions and safe team text',async({page})=>{
- await page.goto('/#staff-call');
- await page.locator('#pack-customisation > summary').click();
- await page.locator('#staff-area').selectOption('harrow');
- await page.locator('#staff-team').fill('Example & <Team>');
- const downloading=page.waitForEvent('download');await page.locator('#download-main').click();
- const file=await downloading;expect(file.suggestedFilename()).toBe('Person_Call_and_Feedback_v13.docx');
- const xml=readDocxEntry(await fs.readFile(await file.path()),'word/document.xml');
- expect(xml).toContain('Area: Harrow');expect(xml).toContain('Example &amp; &lt;Team&gt;');expect(xml).not.toContain('{{AREA}}');
- await page.goto('/#about');
- const questions=await page.locator('#call-questions .question-list li').allTextContents();expect(questions).toHaveLength(7);
- for(const question of questions)expect(xml).toContain(question);
+test('all customised workbook forms retain expanding boxes and safe team text',async({page})=>{
+ for(const [route,filename] of [['staff-offer','Offer_a_Call_v12.docx'],['staff-handover','Arrange_and_Hand_Over_v12.docx'],['staff-call','Person_Call_and_Feedback_v13.docx'],['staff-carer','Carer_Call_and_Feedback_v12.docx']]){
+  await page.goto('/#'+route);
+  await expect(page.locator('#pack-includes')).toContainText('Expanding answer boxes');
+  await expect(page.locator('.download-instruction')).toContainText('they grow as you write');
+  await page.locator('#pack-customisation > summary').click();
+  await page.locator('#staff-area').selectOption('harrow');
+  await page.locator('#staff-team').fill('Example & <Team>');
+  const downloading=page.waitForEvent('download');await page.locator('#download-main').click();
+  const file=await downloading;expect(file.suggestedFilename()).toBe(filename);
+  const bytes=await fs.readFile(await file.path()),xml=readDocxEntry(bytes,'word/document.xml');
+  expect(xml).toContain('Area: Harrow');expect(xml).toContain('Example &amp; &lt;Team&gt;');expect(xml).not.toContain('{{AREA}}');
+  expect(xml).toContain('w:hRule="atLeast"');expect(xml).not.toContain('w:hRule="exact"');expect(xml).not.toContain('<w:cantSplit');
+  expect(readDocxEntry(bytes,'word/styles.xml')).toContain('Frutiger LT Com');
+  if(route==='staff-call'){
+   await page.goto('/#about');
+   const questions=await page.locator('#call-questions .question-list li').allTextContents();expect(questions).toHaveLength(7);
+   for(const question of questions)expect(xml).toContain(question);
+  }
+ }
 });
