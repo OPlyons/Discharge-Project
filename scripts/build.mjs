@@ -15,10 +15,11 @@ let template=await read('site/template.html');
 function fill(tag,id,value){const re=new RegExp('(<'+tag+'\\b[^>]*\\bid="'+id+'"[^>]*>)[\\s\\S]*?(</'+tag+'>)','g');let count=0;template=template.replace(re,(_all,open,close)=>{count++;return open+value+close;});if(count!==1)throw new Error('Expected one '+id+', got '+count);}
 fill('script','public-resources',JSON.stringify(areas));
 const crisis=JSON.parse(await read('config/crisis-pathways.json'));
+const guidance=JSON.parse(await read('config/workbook-guidance.json'));
 fill('script','crisis-pathway-data',JSON.stringify(crisis));
 fill('script','crisis-pathway-ui',await read('site/crisis-pathways.js'));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const crisisHtml='<p><strong>Emergency now:</strong> '+esc(crisis.emergency)+'</p><p><strong>Urgent help:</strong> '+esc(crisis.urgent)+'</p><p>'+esc(crisis.ageNote)+'</p>'+Object.entries(crisis.areas).map(([id,area])=>'<details id="crisis-'+id+'"><summary>'+esc(area.name)+'</summary>'+area.routes.map(route=>'<h3>'+esc(route.name)+'</h3><p>'+esc(route.text)+'</p><p><a href="'+esc(route.url)+'" target="_blank" rel="noopener noreferrer">Check '+esc(route.name)+' access details</a></p>').join('')+(area.notice?'<p><a href="'+esc(area.notice.url)+'" target="_blank" rel="noopener noreferrer">'+esc(area.notice.text)+'</a></p>':'')+'</details>').join('')+'<p class="small-note">Sources checked '+crisis.checkedOn+'. Opening times and access can change. '+esc(crisis.staff)+'</p>';
+const crisisHtml='<p><strong>Emergency now:</strong> '+esc(crisis.emergency)+'</p><p><strong>Urgent help:</strong> '+esc(crisis.urgent)+'</p><p>'+esc(crisis.ageNote)+'</p><p><strong>Community crisis support:</strong> '+esc(guidance.community)+'</p>'+Object.entries(crisis.areas).map(([id,area])=>'<details id="crisis-'+id+'"><summary>'+esc(area.name)+'</summary>'+area.routes.map(route=>'<h3>'+esc(route.name)+'</h3><p>'+esc(route.text)+'</p><p><a href="'+esc(route.url)+'" target="_blank" rel="noopener noreferrer">Check '+esc(route.name)+' access details</a></p>').join('')+(area.notice?'<p><a href="'+esc(area.notice.url)+'" target="_blank" rel="noopener noreferrer">'+esc(area.notice.text)+'</a></p>':'')+'</details>').join('')+'<p class="small-note">Sources checked '+crisis.checkedOn+'. Opening times and access can change. '+esc(crisis.staff)+'</p>';
 fill('div','borough-crisis-content',crisisHtml);
 
 const ingestOrigin=new URL(settings.sentry.dsn).origin;
