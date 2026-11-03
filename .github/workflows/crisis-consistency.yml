@@ -1,0 +1,49 @@
+name: Shared crisis guidance
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compare-guidance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Select reviewed revision for PRs and current main for drift checks
+        id: source
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import {readCrisisSource} from './scripts/check-crisis-consistency.mjs';
+          const source=readCrisisSource('config/crisis-source.json');
+          const ref=process.env.EVENT_NAME==='pull_request'?source.revision:'main';
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'ref='+ref+'\n');
+          console.log('Comparing with OPlyons/Navigator at '+ref);
+          JS
+      - name: Read Navigator shared crisis data
+        uses: actions/checkout@v6
+        with:
+          repository: OPlyons/Navigator
+          ref: ${{ steps.source.outputs.ref }}
+          path: .crisis-canonical
+          persist-credentials: false
+          sparse-checkout: config/crisis-pathways.json
+          sparse-checkout-cone-mode: false
+      - name: Compare all shared guidance fields
+        run: node scripts/check-crisis-consistency.mjs .crisis-canonical/config/crisis-pathways.json
