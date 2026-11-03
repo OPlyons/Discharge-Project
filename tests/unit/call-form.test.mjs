@@ -32,7 +32,7 @@ test('all four customised downloads preserve the full approved form and its form
   assert.deepEqual(Object.keys(customised).sort(),[...parts.keys()].sort(),filename+' has every Word part');
   for(const [name,bytes] of parts){
    let expected=bytes;
-   if(name==='word/document.xml')expected=Buffer.from(bytes.toString().replace('Area: [optional]','Area: {{AREA}}').replace('Team: [optional]','Team: {{TEAM}}'));
+   if(name==='word/document.xml')expected=Buffer.from(bytes.toString().replace('Area: [optional]','Area: {{AREA}}').replace('Team: [optional]','Team: {{TEAM}}').replace(/<w:p(?: [^>]*)?>(?:(?!<\/w:p>)[\s\S])*?Local crisis routes: choose your borough on the website before downloading\.(?:(?!<\/w:p>)[\s\S])*?<\/w:p>/, '{{CRISIS_ROUTES_XML}}'));
    const item=customised[name],actual=item.text!==undefined?Buffer.from(item.text):Buffer.from(item.base64,'base64');
    assert.deepEqual(actual,expected,filename+' keeps '+name);
   }

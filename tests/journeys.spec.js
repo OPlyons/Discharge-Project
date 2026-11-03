@@ -43,3 +43,20 @@ test('all customised workbook forms retain expanding boxes and safe team text',a
   }
  }
 });
+
+test('borough crisis routes are included in all four downloaded forms and clear on the urgent page',async({page})=>{
+ await page.goto('/#staff-offer');
+ await expect(page.locator('#staff-area')).toBeVisible();
+ await page.locator('#staff-area').selectOption('hillingdon');
+ await expect(page.locator('#staff-crisis-routes')).toContainText('Hillingdon crisis routes');
+ await page.locator('#staff-crisis-routes summary').filter({hasText:'Lighthouse'}).click();
+ await expect(page.locator('#staff-crisis-routes')).toContainText('only after assessment and referral by Hillingdon A&E');
+ for(const route of ['staff-offer','staff-handover','staff-call','staff-carer']){
+  await page.goto('/#'+route);
+  const downloading=page.waitForEvent('download');await page.locator('#download-main').click();
+  const file=await downloading,xml=readDocxEntry(await fs.readFile(await file.path()),'word/document.xml');
+  expect(xml).toContain('Hillingdon Cove');expect(xml).toContain('Lighthouse at Hillingdon Hospital');expect(xml).toContain('999');expect(xml).toContain('NHS 111');expect(xml).not.toContain('{{CRISIS_');
+ }
+ await page.goto('/#urgent');await page.locator('#crisis-camden > summary').click();await expect(page.locator('#crisis-camden')).toContainText('Camden Crisis Sanctuary');
+ expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
+});

@@ -9,6 +9,7 @@ changes in a customised download. Font binaries must never be published here.
 import argparse
 import base64
 import json
+import re
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -33,6 +34,10 @@ def read_form(filename):
         if document.count(marker) != 1:
             raise ValueError(f"{filename}: expected one unbroken '{marker}' label")
         document = document.replace(marker, f"{label}: {{{{{variable}}}}}")
+    marker='Local crisis routes: choose your borough on the website before downloading.'
+    paragraph=re.search(r'<w:p(?: [^>]*)?>[^<]*(?:(?!</w:p>)[\s\S])*?'+re.escape(marker)+r'(?:(?!</w:p>)[\s\S])*?</w:p>',document)
+    if not paragraph: raise ValueError(f"{filename}: missing crisis appendix")
+    document=document[:paragraph.start()]+'{{CRISIS_ROUTES_XML}}'+document[paragraph.end():]
     parts["word/document.xml"] = document.encode("utf-8")
     return parts
 

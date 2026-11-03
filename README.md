@@ -33,3 +33,11 @@ npm run check
 ```
 
 Render and inspect every form after layout changes, including a long-answer copy to check page flow. `word-packs.json` is generated from the same four blank DOCX files; its Area and Team placeholders support the existing customised download. Update the asset checksum fixture after checking intentional document changes. Keep completed forms and font binaries out of the repository.
+
+## Safety and borough crisis guidance
+
+The offer form records relevant risks, agreed safety steps and the service safeguarding lead. The coordinator confirms these with the caller. Staff enter personal details in Word and the agreed NHS record, never in the website.
+
+`config/crisis-pathways.json` holds sourced borough crisis routes and the actual source-check date. The same data builds the urgent-help page and the local crisis appendix in each customised Word download. Selecting a borough is visible in the staff workspace; generic downloads retain emergency and NHS 111 guidance. Service access rules remain explicit: walk-in alternatives are distinct from A&E-referred Lighthouse support. Check provider notices and current access before use.
+
+After editing the forms or crisis data, regenerate all four DOCX files and `word-packs.json`, render the blank and customised forms, inspect their page flow, and update only the intentionally changed asset checksums.

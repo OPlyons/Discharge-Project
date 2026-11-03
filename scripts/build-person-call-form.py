@@ -197,9 +197,9 @@ para('Read the handover. Check identity, safe contact and communication needs.\n
 p=para(after=4);checkbox(p,'safe_to_talk','Safe to talk');checkbox(p,'call_agreed','Agrees to the call')
 para('If the call cannot go ahead, go to section 4.',size=13,after=2)
 para('2 Ask and listen','Heading 1',after=2)
-answer('How has it been since you left hospital?','since_leaving_hospital',78)
-answer('What helped you get ready to leave?','what_helped',68)
-answer('What was difficult or could have been better?','what_was_difficult',68)
+answer('How has it been since you left hospital?','since_leaving_hospital',60)
+answer('What helped you get ready to leave?','what_helped',54)
+answer('What was difficult or could have been better?','what_was_difficult',54)
 
 p=para('2 Ask and listen continued','Heading 1',after=12)
 p.paragraph_format.page_break_before=True
@@ -220,7 +220,7 @@ actions.columns[0].width=Mm(110);actions.columns[1].width=Mm(70)
 for i,(label,tag) in enumerate([('What did we agree?','agreed_next_steps'),('Who and when?','owner_and_time')]):
     p=actions.cell(0,i).paragraphs[0];p.paragraph_format.space_after=Pt(6);p.paragraph_format.keep_with_next=True
     r=p.add_run(label);r.bold=True;r.font.size=Pt(16)
-    cell_box(actions.cell(1,i),tag,label,78)
+    cell_box(actions.cell(1,i),tag,label,48)
 gap(3)
 choices('Another call?','another_call',('Yes','No','Not asked'))
 para('If yes, add its purpose and time in the boxes above.',size=13,after=3)
@@ -228,7 +228,7 @@ para('Any concern that needs help?','Heading 2',after=5)
 para('For urgent concerns, use the clinical or safeguarding route now.\nUse the backup contact if no one accepts the handover.',size=13.5,after=5,keep=True)
 para('Note the concern, who accepted the handover, when and what was agreed.',size=13.5,after=5,keep=True)
 table=doc.add_table(rows=1,cols=1);table.autofit=False;table.columns[0].width=Mm(180)
-cell_box(table.cell(0,0),'concern_and_handover','Concern and who accepted the handover',62)
+cell_box(table.cell(0,0),'concern_and_handover','Concern and who accepted the handover',36)
 gap(3)
 para('4 Record and save','Heading 1',after=7)
 p=para(after=4)
@@ -236,8 +236,11 @@ for i,opt in enumerate(['Completed','Partly completed','No answer']):checkbox(p,
 p=para(after=7)
 for i,opt in enumerate(['Declined','Rearranged','Could not continue']):checkbox(p,f'outcome_{i+3}',opt)
 para('If no answer or unable to continue, follow the handover plan.\nNo answer does not confirm safety.',size=13,after=3)
-answer('If unfinished, note the next attempt or action.','unfinished_next_attempt',49)
+answer('If unfinished, note the next attempt or action.','unfinished_next_attempt',32)
 para('Save and reopen in SystmOne. Keep the full form off the website.\nShare only the anonymous feedback they agreed to.',size=13,after=0)
+
+import runpy
+runpy.run_path(str(Path(__file__).with_name('crisis-forms.py')))['append_crisis_page'](doc)
 
 doc.core_properties.title='Peer support call and feedback'
 doc.core_properties.subject='Call notes and feedback with expanding answer boxes'
