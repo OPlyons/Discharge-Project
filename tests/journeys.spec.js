@@ -60,3 +60,24 @@ test('borough crisis routes are included in all four downloaded forms and clear 
  await page.goto('/#urgent');await page.locator('#crisis-camden > summary').click();await expect(page.locator('#crisis-camden')).toContainText('Camden Crisis Sanctuary');
  expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
 });
+
+test('corrected MHCAS eligibility and Milton Keynes SPA details reach all four Word downloads',async({page})=>{
+ for(const [area,advice] of [
+  ['brent','For residents of Brent, Harrow, Hillingdon, Kensington and Chelsea or Westminster.'],
+  ['milton-keynes','Milton Keynes SPA: 01908 724365 (24/7 crisis help)']
+ ]){
+  await page.goto('/#staff-offer');await page.locator('#staff-area').selectOption(area);
+  for(const route of ['staff-offer','staff-handover','staff-call','staff-carer']){
+   await page.goto('/#'+route);
+   await expect(page.locator('#staff-crisis-routes')).toContainText(advice);
+   const downloading=page.waitForEvent('download');await page.locator('#download-main').click();
+   const file=await downloading,xml=readDocxEntry(await fs.readFile(await file.path()),'word/document.xml');
+   expect(xml).toContain(advice);
+   if(area==='milton-keynes')expect(xml).toContain('Central CNWL SPA: 0800 0234 650 (Milton Keynes out-of-hours cover)');
+   expect(xml).toContain('NHS 111');expect(xml).toContain('999');expect(xml).not.toContain('{{CRISIS_');
+  }
+  await page.goto('/#urgent');await page.locator('#crisis-'+area+' > summary').click();
+  await expect(page.locator('#crisis-'+area)).toContainText(advice);
+  expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
+ }
+});

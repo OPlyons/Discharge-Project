@@ -13,3 +13,4 @@ coverage/
 *.DS_Store
 qa/generated/
 **/worker-configuration.d.ts
+.crisis-canonical/
