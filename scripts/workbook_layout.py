@@ -202,6 +202,9 @@ def opening(title,role):
     para('Area: [optional]   |   Team: [optional]',size=12,after=8)
 
 def save(dest,title):
+    import runpy
+    crisis=runpy.run_path(str(Path(__file__).with_name('crisis-forms.py')))
+    crisis['append_crisis_page'](doc)
     doc.core_properties.title=title
     doc.core_properties.subject='Staff call form with expanding answer boxes'
     doc.core_properties.author='CNWL Lived Experience Workforce'
