@@ -7,11 +7,15 @@ from docx.oxml.ns import qn
 MARKER='Local crisis routes: choose your borough on the website before downloading.'
 def append_crisis_page(doc):
     data=json.loads((Path(__file__).resolve().parents[1]/'config/crisis-pathways.json').read_text())
+    guidance=json.loads((Path(__file__).resolve().parents[1]/'config/workbook-guidance.json').read_text())
     h=doc.add_paragraph('If someone needs urgent help','Heading 1')
     h.paragraph_format.page_break_before=True
     for title,key in [('Emergency now','emergency'),('Urgent mental health help','urgent')]:
         doc.add_paragraph(title,'Heading 2')
         doc.add_paragraph(data[key])
+    doc.add_paragraph(data['ageNote'])
+    doc.add_paragraph('Community crisis support','Heading 2')
+    doc.add_paragraph(guidance['community'])
     doc.add_paragraph(data['staff'])
     p=doc.add_paragraph(MARKER)
     p.paragraph_format.space_before=Pt(8)
