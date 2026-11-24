@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';import {readDocxEntry} from './docx.js';
 import {test,expect} from '@playwright/test';import {interceptSentry, openReadingOptions, showStaffCrisisRoutes} from './support.js';
 test.beforeEach(async({page})=>{await interceptSentry(page);});
 test('discharge home and call pages retain their navigation',async({page})=>{
- await page.goto('/');await expect(page.getByRole('heading',{name:'Support for your next steps.',exact:true})).toBeVisible();
+ await page.goto('/');await expect(page.getByRole('heading',{name:'Peer support after hospital',exact:true})).toBeVisible();
  for(const [link,heading] of [['About the calls','About the calls'],['For carers','Support for family and carers'],['Staff guide','Staff call guide']]){
   const main=page.getByRole('navigation',{name:'Main navigation',exact:true});
   const mobile=!(await main.isVisible());
@@ -32,6 +32,25 @@ test('combined call forms and staff area handover still work',async({page})=>{
 });
 test('larger text does not overflow the discharge homepage',async({page})=>{
  await page.goto('/');await openReadingOptions(page);await page.locator('#larger-text').click();expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
+});
+
+test('the homepage fits a laptop and a phone with photographs and both reading links',async({page})=>{
+ for(const [width,height] of [[1280,720],[375,812]]){
+  await page.setViewportSize({width,height});
+  await page.goto('/');
+  await page.evaluate(()=>document.fonts.ready);
+  await expect(page.locator('#home img.photo')).toHaveCount(3);
+  const photos=await page.locator('#home img.photo').evaluateAll(images=>images.every(image=>
+   image.complete&&image.naturalWidth>0&&image.getBoundingClientRect().width>0
+  ));
+  expect(photos).toBe(true);
+  const reading=page.getByRole('navigation',{name:'More about the call'});
+  await expect(reading.getByRole('link',{name:/How the call works/})).toHaveAttribute('href','#process');
+  await expect(reading.getByRole('link',{name:/Download the call leaflet/})).toHaveAttribute('download','');
+  const fits=await page.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1&&
+   document.documentElement.scrollWidth<=innerWidth);
+  expect(fits).toBe(true);
+ }
 });
 
 test('compact and tablet headers keep both support buttons clear of the project name',async({page})=>{

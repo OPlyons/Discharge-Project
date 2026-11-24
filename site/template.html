@@ -11,17 +11,17 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'none'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self' {{MONITOR_ORIGIN}}; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
     /><script src="/assets/monitoring.js?v={{RELEASE_ID}}"></script
-    ><meta name="theme-color" content="#f6f7f2" /><meta
+    ><meta name="theme-color" content="#ffffff" /><meta
       name="description"
       content="Optional peer support calls after leaving a mental health ward. Information for people leaving hospital, carers and staff."
-    /><title>Support for your next steps | Discharge &amp; Transition Project</title
+    /><title>Peer support after hospital | Discharge &amp; Transition Project</title
     ><link rel="icon" href="assets/favicon.ico" /><link
       rel="preload"
       href="assets/dm-sans.ttf"
       as="font"
       type="font/ttf"
       crossorigin
-    /><link rel="stylesheet" href="style.css" /><noscript
+    /><link rel="stylesheet" href="style.css?v={{RELEASE_ID}}" /><noscript
       ><style>
         .page[hidden],
         .page [data-topic][hidden],
@@ -89,27 +89,13 @@
           d="M2.8 20v-2.1a6.2 6.2 0 0 1 12.4 0V20M16 5.3a3.2 3.2 0 0 1 0 6.2M18.2 14a5.5 5.5 0 0 1 3.1 5.1"
         />
       </symbol>
-      <symbol id="i-clipboard" viewBox="0 0 24 24">
-        <rect x="5" y="5" width="14" height="16" rx="2" />
-        <rect x="9" y="3" width="6" height="4" rx="1.5" />
-        <path d="M9 12h6m-6 4h4" />
-      </symbol>
       <symbol id="i-compass" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="9" />
         <path d="m16.4 7.6-2.5 6.3-6.3 2.5 2.5-6.3Z" />
       </symbol>
-      <symbol id="i-route" viewBox="0 0 24 24">
-        <circle cx="5.7" cy="5.8" r="2.5" />
-        <circle cx="18.3" cy="18.2" r="2.5" />
-        <path d="M10.5 5.8h4.9a3.2 3.2 0 0 1 0 6.4H8.1a3 3 0 0 0 0 6h5.4" />
-      </symbol>
       <symbol id="i-book" viewBox="0 0 24 24">
         <path d="M12 6.2c-3-2.1-6-2.3-9-1v14c3-1.3 6-1 9 1 3-2 6-2.3 9-1v-14c-3-1.3-6-1.1-9 1Zm0 0v14" />
       </symbol>
-      <symbol id="i-document" viewBox="0 0 24 24">
-        <path d="M6 3h8l4 4v14H6zM14 3v5h4m-9 4h6m-6 4h6" />
-      </symbol>
-      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v11m-4-4 4 4 4-4M4 16v4h16v-4" /></symbol>
       <symbol id="i-shield" viewBox="0 0 24 24">
         <path d="M12 3 4.5 6v5.8c0 4.2 3.2 7.2 7.5 9.2 4.3-2 7.5-5 7.5-9.2V6z" />
         <path d="m8.6 11.8 2.1 2.2 4.6-4.7" />
@@ -127,52 +113,27 @@
         />
         <path d="M8.5 10.3h7m-7 3.4h4.3" />
       </symbol>
-      <symbol id="i-map" viewBox="0 0 24 24">
-        <path d="m3 6 6-2.5 6 2.5 6-2.5V18l-6 2.5L9 18l-6 2.5zM9 3.5V18m6-12v14.5" />
-      </symbol>
-      <symbol id="i-pin" viewBox="0 0 24 24">
-        <path d="M18.5 9.5c0 5-6.5 11.1-6.5 11.1S5.5 14.5 5.5 9.5a6.5 6.5 0 1 1 13 0Z" />
-        <circle cx="12" cy="9.5" r="2.2" />
-      </symbol>
       <symbol id="i-mail" viewBox="0 0 24 24">
         <rect x="3" y="5" width="18" height="14" rx="2" />
         <path d="m4.3 6.8 7.7 5.6 7.7-5.6" />
       </symbol>
-      <symbol id="i-external" viewBox="0 0 24 24"><path d="M13 4h7v7m0-7-9 9m-2-7H5v14h14v-4" /></symbol>
       <symbol id="i-lifebuoy" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="9" />
         <circle cx="12" cy="12" r="4" />
         <path d="m5.6 5.6 3.6 3.6m5.6 5.6 3.6 3.6m0-12.8-3.6 3.6m-5.6 5.6-3.6 3.6" />
       </symbol>
-      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.6 4.5L19 7" /></symbol>
       <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" /></symbol>
       <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></symbol>
       <symbol id="i-print" viewBox="0 0 24 24">
         <path d="M7 8V3h10v5M7 17H4V9h16v8h-3M7 14h10v7H7z" />
         <circle cx="17" cy="11.3" r=".5" />
       </symbol>
-      <symbol id="i-info" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 11v5m0-9v.2" />
-      </symbol>
-      <symbol id="i-calendar" viewBox="0 0 24 24">
-        <rect x="3" y="5" width="18" height="16" rx="2" />
-        <path d="M7 3v4m10-4v4M3 10h18m-13 4h2" />
-      </symbol>
       <symbol id="i-lock" viewBox="0 0 24 24">
         <rect x="5" y="10" width="14" height="11" rx="2" />
         <path d="M8 10V7a4 4 0 1 1 8 0v3m-4 4v3" />
       </symbol>
-      <symbol id="i-camera" viewBox="0 0 24 24">
-        <path d="M3 7h4l2-3h6l2 3h4v13H3Z" />
-        <circle cx="12" cy="13" r="3.4" />
-      </symbol>
       <symbol id="i-list" viewBox="0 0 24 24">
         <path d="M9 6h12M9 12h12M9 18h12m-17-12h1m-1 6h1m-1 6h1" />
-      </symbol>
-      <symbol id="i-chatheart" viewBox="0 0 24 24">
-        <path d="M20 15.5a4 4 0 0 1-4 4H9l-5 2V7a3.5 3.5 0 0 1 3.5-3.5H17A3.5 3.5 0 0 1 20.5 7z" />
-        <path d="M8 10.5c0-2.1 2.6-2.8 4-.7 1.4-2.1 4-1.4 4 .7 0 1.4-2.1 3.1-4 4.5-1.9-1.4-4-3.1-4-4.5Z" />
       </symbol>
     </svg>
     <a class="skip" href="#main">Skip to content</a>
@@ -250,106 +211,55 @@
       <section
         class="page home"
         data-page="home"
-        data-title="Support for your next steps"
+        data-title="Peer support after hospital"
         id="home"
-        aria-label="Support for your next steps"
+        aria-label="Peer support after hospital"
       >
         <div class="home-grid">
           <section class="hero">
-            <div class="hero-copy"
-              ><p class="eyebrow"
-                ><span class="phone-disc"
-                  ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                    <use href="#i-phonewave"></use></svg
-                ></span>
-                Peer support after hospital</p
-              >
-              <h1 tabindex="-1">Support for<br />your <span>next steps.</span></h1>
-              <p class="hero-intro"
-                >Your mental health ward may offer you a peer support call. Talk about settling in at home and
-                what would help.</p
-              >
-              <a class="button hero-button" href="#about"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-phone"></use></svg
-                ><span>About your call</span></a
-              ></div
-            >
-            <div class="hero-media"
-              ><img
-                class="photo"
-                src="assets/phone-call.webp"
-                alt="A woman talking on a mobile phone outdoors."
-                decoding="async"
-            /></div>
+            <div class="hero-copy">
+              <h1 tabindex="-1">Peer support after hospital</h1>
+              <p class="hero-intro">Your mental health ward may offer you a call from a peer support worker. You can talk about how things are going at home and what would help.</p>
+              <a class="button hero-button" href="#about">About your call</a>
+            </div>
+            <div class="hero-media">
+              <img class="photo" src="assets/phone-call.webp" alt="A woman talking on a mobile phone outdoors." decoding="async" />
+            </div>
           </section>
           <a class="tile carers-tile" href="#carers">
-            <div class="tile-body"
-              ><span class="iconbox"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-people"></use></svg></span
-              ><h2
-                >For family<br class="carer-break" />
-                and carers</h2
-              ><p>Find support for yourself.</p></div
-            >
-            <div class="carer-image"
-              ><img
-                class="photo"
-                src="assets/conversation.webp"
-                alt="Two women sitting together on a sofa, talking and looking at a phone."
-                decoding="async"
-            /></div>
+            <div class="tile-body">
+              <h2>For family and carers</h2>
+              <p>You can ask for a call for yourself.</p>
+            </div>
+            <div class="carer-image">
+              <img class="photo" src="assets/conversation.webp" alt="Two women sitting together on a sofa, talking and looking at a phone." decoding="async" />
+            </div>
           </a>
-          <a class="tile staff-tile" href="#downloads"
-            ><div class="tile-body"
-              ><span class="iconbox"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-clipboard"></use></svg></span
-              ><div><h2>Staff call guide</h2><p>Get the form for your next call.</p></div></div
-            ></a
-          >
-          <a class="tile navigator-tile" href="https://navigator.lxportal.space/"
-            ><div class="tile-body"
-              ><span class="iconbox"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-compass"></use></svg></span
-              ><div
-                ><h2>Find local support</h2><p>Find groups, activities and practical help near you.</p></div
-              ><span class="tile-link"
-                >Community Navigator
-                <svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></span></div
-            ><div class="park-image"
-              ><img
-                class="photo"
-                src="assets/walking-together.webp"
-                alt="An older couple walking together in the sunshine."
-                decoding="async" /></div
-          ></a>
-          <a class="tile process-tile" href="#process"
-            ><div class="tile-body"
-              ><span class="iconbox"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-route"></use></svg></span
-              ><div><h2>How it works</h2><p>Before, during and after a call.</p></div
-              ><span class="tile-link">Explore the four steps</span></div
-            ></a
-          >
-          <a class="tile leaflet-tile" href="assets/About_your_peer_support_call.pdf" download
-            ><div class="tile-body"
-              ><span class="iconbox"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-book"></use></svg></span
-              ><div><h2>Read the call leaflet</h2><p>A copy to read, print or share.</p></div
-              ><span class="tile-link"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-download"></use>
-                </svg>
-                Download PDF <small>· 4 pages</small></span
-              ></div
-            ></a
-          >
+          <a class="tile staff-tile" href="#downloads">
+            <div class="tile-body">
+              <h2>Staff call guide</h2>
+              <p>Find the form you need to offer, arrange or make a call.</p>
+            </div>
+          </a>
+          <a class="tile navigator-tile" href="https://navigator.lxportal.space/">
+            <div class="tile-body">
+              <h2>Find local support</h2>
+              <p>Browse groups, activities and practical help near you in Community Navigator.</p>
+            </div>
+            <div class="park-image">
+              <img class="photo" src="assets/walking-together.webp" alt="An older couple walking together in the sunshine." decoding="async" />
+            </div>
+          </a>
+          <nav class="home-reading" aria-label="More about the call">
+            <a href="#process">
+              <span>How the call works</span>
+              <small>What happens before, during and after a call.</small>
+            </a>
+            <a href="assets/About_your_peer_support_call.pdf" download>
+              <span>Download the call leaflet</span>
+              <small>A four-page PDF to read, print or share.</small>
+            </a>
+          </nav>
         </div>
         <div class="choice-strip"
           ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
@@ -382,10 +292,6 @@
         ><div class="book-layout"
           ><div class="book-rail panel"
             ><nav aria-label="Topics" class="topic-list"
-              ><span class="rail-heading"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-phonewave"></use></svg
-                >Topics</span
               ><div class="mob-topic"
                 ><label
                   >Topic<select data-topic-select
@@ -411,7 +317,7 @@
               alt="A woman talking on a mobile phone outdoors."
               decoding="async" /></div
           ><div
-            ><article data-topic="about" class="reading-panel panel"
+            ><article data-topic="about" class="reading-panel"
               ><div class="reading-content"
                 ><h2 tabindex="-1">What is a peer support call?</h2
                 ><p
@@ -430,12 +336,11 @@
                   ></div
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 1 of 6</span
                 ><div class="topic-buttons"
                   ><a class="button small" href="#about-choices"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="about-choices" data-topic="about-choices" class="reading-panel panel" hidden
+            ><article id="about-choices" data-topic="about-choices" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">You choose what works for you</h2
                 ><dl class="definitions"
@@ -457,39 +362,31 @@
                   ></dl
                 ><a class="textlink" href="#privacy"><span>How we handle your information</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 2 of 6</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#about"><span>Back</span></a
+                  ><a class="secondary-link" href="#about"><span>Back</span></a
                   ><a class="button small" href="#call-questions"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="call-questions" data-topic="call-questions" class="reading-panel panel" hidden
+            ><article id="call-questions" data-topic="call-questions" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">What might we talk about?</h2
                 ><p>You can read the questions in advance and answer as many as you like.</p
-                ><ol class="questions question-list"
+                ><ul class="questions question-list"
                   ><li
-                    ><span class="item-number" aria-hidden="true" data-number="1"></span
                     ><span>How has it been since you left hospital?</span></li
                   ><li
-                    ><span class="item-number" aria-hidden="true" data-number="2"></span
                     ><span>What helped you get ready to leave?</span></li
                   ><li
-                    ><span class="item-number" aria-hidden="true" data-number="3"></span
                     ><span>What was difficult or could have been better?</span></li
                   ><li
-                    ><span class="item-number" aria-hidden="true" data-number="4"></span
                     ><span>Are your next steps clear?</span></li
                   ><li
-                    ><span class="item-number" aria-hidden="true" data-number="5"></span
                     ><span>Do you know who to contact if you need help?</span></li
                   ><li
-                    ><span class="item-number" aria-hidden="true" data-number="6"></span
                     ><span>Is there any support you would like to explore?</span></li
                   ><li
-                    ><span class="item-number" aria-hidden="true" data-number="7"></span
                     ><span>What would you like the ward to know?</span></li
-                  ></ol
+                  ></ul
                 ><details class="disclosure"
                   ><summary>Other prompts you might hear</summary
                   ><div
@@ -499,13 +396,12 @@
                   ></details
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 3 of 6</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#about-choices"><span>Back</span></a
+                  ><a class="secondary-link" href="#about-choices"><span>Back</span></a
                   ><a class="button small" href="#about-arrange"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="about-arrange" data-topic="about-arrange" class="reading-panel panel" hidden
+            ><article id="about-arrange" data-topic="about-arrange" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">A time and way that suit you</h2
                 ><p
@@ -521,13 +417,12 @@
                   ><span>How to ask about a call</span></a
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 4 of 6</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#call-questions"><span>Back</span></a
+                  ><a class="secondary-link" href="#call-questions"><span>Back</span></a
                   ><a class="button small" href="#about-carers"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="about-carers" data-topic="about-carers" class="reading-panel panel" hidden
+            ><article id="about-carers" data-topic="about-carers" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">You decide who joins you</h2
                 ><p
@@ -542,13 +437,12 @@
                   ><span>Support for family and carers</span></a
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 5 of 6</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#about-arrange"><span>Back</span></a
+                  ><a class="secondary-link" href="#about-arrange"><span>Back</span></a
                   ><a class="button small" href="#about-after"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="about-after" data-topic="about-after" class="reading-panel panel" hidden
+            ><article id="about-after" data-topic="about-after" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Agreeing what happens next</h2
                 ><p
@@ -563,10 +457,9 @@
                   Needing hospital care again is not a failure.</p
                 ><a class="textlink" href="#resources"><span>Read or share the call leaflet</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 6 of 6</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#about-carers"><span>Back</span></a
-                  ><a class="quiet-button" href="#home"><span>Home</span></a></div
+                  ><a class="secondary-link" href="#about-carers"><span>Back</span></a
+                  ><a class="secondary-link" href="#home"><span>Home</span></a></div
                 ></div
               ></article
             ></div
@@ -592,10 +485,6 @@
         ><div class="book-layout"
           ><div class="book-rail panel"
             ><nav aria-label="Topics" class="topic-list"
-              ><span class="rail-heading"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-people"></use></svg
-                >Topics</span
               ><div class="mob-topic"
                 ><label
                   >Topic<select data-topic-select
@@ -615,7 +504,7 @@
               alt="Two women sitting together on a sofa, talking and looking at a phone."
               decoding="async" /></div
           ><div
-            ><article data-topic="carers" class="reading-panel panel"
+            ><article data-topic="carers" class="reading-panel"
               ><div class="reading-content"
                 ><h2 tabindex="-1">Time to talk about you</h2
                 ><p
@@ -628,15 +517,13 @@
                   ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                     <use href="#i-compass"></use></svg
                   ><span>Find local support</span
-                  ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                    <use href="#i-external"></use></svg></a></div
+                  ></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 1 of 3</span
                 ><div class="topic-buttons"
                   ><a class="button small" href="#carer-choices"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="carer-choices" data-topic="carer-choices" class="reading-panel panel" hidden
+            ><article id="carer-choices" data-topic="carer-choices" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Your choices and information</h2
                 ><p
@@ -647,13 +534,12 @@
                   can listen to your concerns while protecting the other person’s private care information.</p
                 ><a class="textlink" href="#privacy"><span>More about information and privacy</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 2 of 3</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#carers"><span>Back</span></a
+                  ><a class="secondary-link" href="#carers"><span>Back</span></a
                   ><a class="button small" href="#carer-arrange"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="carer-arrange" data-topic="carer-arrange" class="reading-panel panel" hidden
+            ><article id="carer-arrange" data-topic="carer-arrange" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Speak to the ward team</h2
                 ><p
@@ -661,16 +547,13 @@
                   arrange a safe way to contact you and discuss any communication support you need.</p
                 ><p>You do not need to fill in a form online.</p
                 ><a class="button secondary" download href="assets/About_your_peer_support_call.pdf"
-                  ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                    <use href="#i-download"></use></svg
                   ><span>Download the call leaflet</span></a
                 >
                 <a class="textlink" href="#contact"><span>Contact and help</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 3 of 3</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#carer-choices"><span>Back</span></a
-                  ><a class="quiet-button" href="#home"><span>Home</span></a></div
+                  ><a class="secondary-link" href="#carer-choices"><span>Back</span></a
+                  ><a class="secondary-link" href="#home"><span>Home</span></a></div
                 ></div
               ></article
             ></div
@@ -692,41 +575,25 @@
           ><span aria-hidden="true">/</span><span>Staff call guide</span></nav
         ><header class="page-title"
           ><h1 tabindex="-1">Staff call guide</h1
-          ><p>Choose the step you are working on. Each form opens in Word.</p></header
+          ><p>Choose a form for the task you are doing. You can open each form in Word.</p></header
         >
-        <div class="task-grid"
-          ><a href="#staff-offer" class="staff-task task-0"
-            ><span class="step-tag">Step 1 of 3</span
-            ><span class="iconbox"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-chat"></use></svg></span
+        <div class="staff-form-list"
+          ><a href="#staff-offer" class="staff-form-link"
             ><h2>Offer a call</h2><p>Explain the call and record the person’s choice.</p
-            ><span class="role-label">Ward staff or discharge coordinator</span></a
-          ><a href="#staff-handover" class="staff-task task-1"
-            ><span class="step-tag">Step 2 of 3</span
-            ><span class="iconbox"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-calendar"></use></svg></span
+            ><span class="form-role">Ward staff or discharge coordinator</span></a
+          ><a href="#staff-handover" class="staff-form-link"
             ><h2>Arrange the call</h2><p>Agree who will call and confirm the handover.</p
-            ><span class="role-label">Lived Experience Coordinator</span></a
-          ><a href="#staff-call" class="staff-task task-2"
-            ><span class="step-tag">Step 3 of 3</span
-            ><span class="iconbox"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-phonewave"></use></svg></span
+            ><span class="form-role">Lived Experience Coordinator</span></a
+          ><a href="#staff-call" class="staff-form-link"
             ><h2>Call a person leaving hospital</h2><p>Record the conversation and feedback together.</p
-            ><span class="role-label">Peer support worker</span></a
-          ><a href="#staff-carer" class="staff-task task-3"
-            ><span class="step-tag">Step 3 of 3</span
-            ><span class="iconbox"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-people"></use></svg></span
+            ><span class="form-role">Peer support worker</span></a
+          ><a href="#staff-carer" class="staff-form-link"
             ><h2>Call a carer</h2><p>Focus on the carer’s own experience and support.</p
-            ><span class="role-label">Peer support worker</span></a
+            ><span class="form-role">Peer support worker</span></a
           ></div
         >
         <div class="staff-lower"
-          ><section class="panel staff-files"
+          ><section class="staff-files"
             ><details class="disclosure"
               ><summary>All four blank Word forms</summary
               ><div
@@ -737,8 +604,6 @@
                       class="textlink"
                       download="Offer_a_Call_v12.docx"
                       href="assets/Offer_a_Call_v12.docx"
-                      ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                        <use href="#i-download"></use></svg
                       ><span>Offer a call</span></a
                     ></li
                   ><li
@@ -747,8 +612,6 @@
                       class="textlink"
                       download="Arrange_and_Hand_Over_v12.docx"
                       href="assets/Arrange_and_Hand_Over_v12.docx"
-                      ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                        <use href="#i-download"></use></svg
                       ><span>Arrange the call</span></a
                     ></li
                   ><li
@@ -757,8 +620,6 @@
                       class="textlink"
                       download="Person_Call_and_Feedback_v13.docx"
                       href="assets/Person_Call_and_Feedback_v13.docx"
-                      ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                        <use href="#i-download"></use></svg
                       ><span>Call a person leaving hospital</span></a
                     ></li
                   ><li
@@ -767,8 +628,6 @@
                       class="textlink"
                       download="Carer_Call_and_Feedback_v12.docx"
                       href="assets/Carer_Call_and_Feedback_v12.docx"
-                      ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                        <use href="#i-download"></use></svg
                       ><span>Call a carer</span></a
                     ></li
                   ></ul
@@ -776,7 +635,7 @@
               ></details
             ></section
           >
-          <div class="panel staff-related"
+          <div class="staff-related"
             ><a class="textlink" href="#resources"
               ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                 <use href="#i-book"></use></svg
@@ -785,8 +644,7 @@
               ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                 <use href="#i-people"></use></svg
               ><span>CNWL workforce map</span
-              ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-external"></use></svg></a></div
+              ></a></div
         ></div>
         <div class="inset-note"
           ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
@@ -812,22 +670,17 @@
           ><span aria-hidden="true">/</span><span>Staff call guide</span></nav
         ><header class="page-title task-title"
           ><a href="#downloads" class="parent-link">Staff call guide</a
-          ><h1 id="staff-task-title" tabindex="-1">Offer a call</h1><p id="staff-step"></p
+          ><h1 id="staff-task-title" tabindex="-1">Offer a call</h1><p id="staff-role"></p
         ></header>
         <div class="stage-picker" role="group" aria-label="Staff workspace"
           ><button type="button" aria-pressed="true" data-stage="form">Word form</button
           ><button type="button" aria-pressed="false" data-stage="guidance">Step guidance</button></div
         ><div class="workspace" data-stage-active="form"
           ><section class="panel download-box"
-            ><div class="panel-eyebrow"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-document"></use>
-              </svg>
-              Word form</div
             ><h2>Get your form</h2><p>Open the form in Word. The white answer boxes grow as you write.</p>
             <label for="staff-area">Borough or area for this form</label
             ><select id="staff-area"
-              ><option value="">Blank form · no area selected</option
+              ><option value="">Blank form without a borough</option
               >{{STAFF_AREAS}}<option value="other">Other area / Trust-wide</option></select
             >
             <p class="field-hint"
@@ -840,27 +693,25 @@
                 ><label for="staff-team">Ward or team name only</label
                 ><input id="staff-team" type="text" maxlength="150" autocomplete="off" /><button
                   id="clear-pack"
-                  class="quiet-button"
+                  class="secondary-link"
                   type="button"
                   >Clear area and team</button
                 ></div
               ></details
             >
             <a class="button" download id="download-main" href="assets/Offer_a_Call_v12.docx"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-download"></use></svg
               ><span>Download Word form</span></a
             ><p class="form-status" id="pack-status" role="status"></p>
             <p id="pack-destination" class="destination"></p
           ></section>
-          <section class="panel guide-box"
+          <section class="guide-box"
             ><div class="guide-tabs" role="group" aria-label="Staff guidance"
               ><button data-guide="guide" aria-pressed="true">What to do</button
               ><button data-guide="outcomes" aria-pressed="false">If plans change</button
               ><button data-guide="routes" aria-pressed="false">Crisis routes</button></div
             >
             <div data-guide-panel="guide"
-              ><h2>What to do</h2><ol class="guide-list" id="staff-guide"></ol
+              ><h2>What to do</h2><ul class="guide-list" role="list" id="staff-guide"></ul
               ><div class="inset-note"
                 ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                   <use href="#i-choice"></use></svg
@@ -871,7 +722,7 @@
             ></div>
             <div data-guide-panel="routes" hidden
               ><div id="staff-crisis-routes"></div
-              ><button id="choose-form-area" type="button" class="quiet-button"
+              ><button id="choose-form-area" type="button" class="secondary-link"
                 >Change borough on the form</button
               ><a class="textlink" href="#urgent"><span>Emergency and borough crisis guide</span></a></div
             >
@@ -886,8 +737,7 @@
             ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <use href="#i-compass"></use></svg
             ><span>Community support</span
-            ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-              <use href="#i-external"></use></svg></a
+            ></a
           ><a class="textlink" href="#resources"
             ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
               <use href="#i-book"></use></svg
@@ -896,7 +746,7 @@
         ></section
       >
       <section
-        class="page butter topic-page"
+        class="page mist topic-page"
         data-page="process"
         data-title="How the project works"
         id="process"
@@ -914,24 +764,20 @@
         ><div class="book-layout"
           ><div class="book-rail panel"
             ><nav aria-label="Topics" class="topic-list"
-              ><span class="rail-heading"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-route"></use></svg
-                >Topics</span
               ><div class="mob-topic"
                 ><label
                   >Topic<select data-topic-select
-                    ><option value="process">1. The ward offers a call</option
-                    ><option value="process-arrange">2. Arranging the call</option
-                    ><option value="process-call">3. Talking together</option
-                    ><option value="process-next">4. Agreeing next steps</option></select
+                    ><option value="process">The ward offers a call</option
+                    ><option value="process-arrange">Arranging the call</option
+                    ><option value="process-call">Talking together</option
+                    ><option value="process-next">Agreeing next steps</option></select
                   ></label
                 ></div
               ><div class="topic-links"
-                ><a href="#process" data-topic-link="process">1. The ward offers a call</a
-                ><a href="#process-arrange" data-topic-link="process-arrange">2. Arranging the call</a
-                ><a href="#process-call" data-topic-link="process-call">3. Talking together</a
-                ><a href="#process-next" data-topic-link="process-next">4. Agreeing next steps</a></div
+                ><a href="#process" data-topic-link="process">The ward offers a call</a
+                ><a href="#process-arrange" data-topic-link="process-arrange">Arranging the call</a
+                ><a href="#process-call" data-topic-link="process-call">Talking together</a
+                ><a href="#process-next" data-topic-link="process-next">Agreeing next steps</a></div
               ></nav
             ><img
               class="photo rail-photo"
@@ -939,7 +785,7 @@
               alt="A woman talking on a mobile phone outdoors."
               decoding="async" /></div
           ><div
-            ><article data-topic="process" class="reading-panel panel"
+            ><article data-topic="process" class="reading-panel"
               ><div class="reading-content"
                 ><h2 tabindex="-1">The ward offers a call</h2
                 ><p
@@ -951,12 +797,11 @@
                   ><p>If you say no, the team stops arranging the call. Your usual care continues.</p></div
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 1 of 4</span
                 ><div class="topic-buttons"
                   ><a class="button small" href="#process-arrange"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="process-arrange" data-topic="process-arrange" class="reading-panel panel" hidden
+            ><article id="process-arrange" data-topic="process-arrange" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">The call is arranged</h2
                 ><p
@@ -967,13 +812,12 @@
                   ><span>Ways to make your call work for you</span></a
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 2 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#process"><span>Back</span></a
+                  ><a class="secondary-link" href="#process"><span>Back</span></a
                   ><a class="button small" href="#process-call"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="process-call" data-topic="process-call" class="reading-panel panel" hidden
+            ><article id="process-call" data-topic="process-call" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">You talk with a peer worker</h2
                 ><p
@@ -988,13 +832,12 @@
                   ><span>See the seven call questions</span></a
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 3 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#process-arrange"><span>Back</span></a
+                  ><a class="secondary-link" href="#process-arrange"><span>Back</span></a
                   ><a class="button small" href="#process-next"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="process-next" data-topic="process-next" class="reading-panel panel" hidden
+            ><article id="process-next" data-topic="process-next" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">You agree what happens next</h2
                 ><p
@@ -1005,10 +848,9 @@
                   caller records your decision on the same form as the call.</p
                 ><a class="textlink" href="#learning"><span>How the team uses feedback</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 4 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#process-call"><span>Back</span></a
-                  ><a class="quiet-button" href="#home"><span>Home</span></a></div
+                  ><a class="secondary-link" href="#process-call"><span>Back</span></a
+                  ><a class="secondary-link" href="#home"><span>Home</span></a></div
                 ></div
               ></article
             ></div
@@ -1034,22 +876,14 @@
         >
         <div class="resources-grid"
           ><section class="feature-panel leaflet-feature"
-            ><span class="iconbox"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-book"></use></svg></span
             ><h2>About your peer support call</h2
             ><p>A four-page leaflet about the call, your choices and what happens afterwards.</p
-            ><p class="metadata">PDF · 1.1 MB</p
+            ><p class="metadata">PDF (1.1 MB)</p
             ><a class="button" download href="assets/About_your_peer_support_call.pdf"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-download"></use></svg
               ><span>Download the leaflet</span></a
             ></section
           >
           <section class="feature-panel directory-feature"
-            ><span class="iconbox"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-map"></use></svg></span
             ><h2>Local support directories</h2
             ><p>Choose an area for a printable directory. Check with the service before travelling.</p>
             <label for="directory-area">Area for your PDF</label
@@ -1063,13 +897,10 @@
               ></noscript
             ><div class="resource-actions"
               ><a id="directory-download" class="button" aria-disabled="true"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-download"></use></svg
                 ><span>Open area PDF</span></a
               ><a class="textlink" href="https://navigator.lxportal.space/"
                 ><span>Browse Community Navigator</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a></div></section></div
+                ></a></div></section></div
       ></section>
       <section
         class="page rose"
@@ -1117,12 +948,7 @@
               ></section
             ></div
           >
-          <section class="panel boroughs"
-            ><div class="panel-eyebrow"
-              ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <use href="#i-pin"></use>
-              </svg>
-              Local help</div
+          <section class="boroughs"
             ><h2>Crisis routes by borough</h2><label for="urgent-area">Choose your borough or area</label
             ><select id="urgent-area"
               ><option value="">Choose an area</option
@@ -1139,8 +965,7 @@
                 class="textlink"
                 href="https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/"
                 ><span>NHS urgent mental health advice</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a></div></section></div
+                ></a></div></section></div
       ></section>
       <section
         class="page sage topic-page"
@@ -1161,10 +986,6 @@
         ><div class="book-layout"
           ><div class="book-rail panel"
             ><nav aria-label="Topics" class="topic-list"
-              ><span class="rail-heading"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-chat"></use></svg
-                >Topics</span
               ><div class="mob-topic"
                 ><label
                   >Topic<select data-topic-select
@@ -1178,7 +999,7 @@
               ></nav
             ></div
           ><div
-            ><article data-topic="learning" class="reading-panel panel"
+            ><article data-topic="learning" class="reading-panel"
               ><div class="reading-content"
                 ><h2 tabindex="-1">You said, we did</h2
                 ><p
@@ -1193,12 +1014,11 @@
                   ></div
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 1 of 2</span
                 ><div class="topic-buttons"
                   ><a class="button small" href="#learning-review"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="learning-review" data-topic="learning-review" class="reading-panel panel" hidden
+            ><article id="learning-review" data-topic="learning-review" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">How the team learns from calls</h2
                 ><dl class="definitions"
@@ -1223,10 +1043,9 @@
                   ></dl
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 2 of 2</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#learning"><span>Back</span></a
-                  ><a class="quiet-button" href="#home"><span>Home</span></a></div
+                  ><a class="secondary-link" href="#learning"><span>Back</span></a
+                  ><a class="secondary-link" href="#home"><span>Home</span></a></div
                 ></div
               ></article
             ></div
@@ -1234,7 +1053,7 @@
         ></section
       >
       <section
-        class="page peach topic-page"
+        class="page sage topic-page"
         data-page="contact"
         data-title="Contact and help"
         id="contact"
@@ -1252,10 +1071,6 @@
         ><div class="book-layout"
           ><div class="book-rail panel"
             ><nav aria-label="Topics" class="topic-list"
-              ><span class="rail-heading"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-mail"></use></svg
-                >Topics</span
               ><div class="mob-topic"
                 ><label
                   >Topic<select data-topic-select
@@ -1273,7 +1088,7 @@
               ></nav
             ></div
           ><div
-            ><article data-topic="contact" class="reading-panel panel"
+            ><article data-topic="contact" class="reading-panel"
               ><div class="reading-content"
                 ><h2 tabindex="-1">Contact the project team</h2
                 ><p
@@ -1294,12 +1109,11 @@
                   ></div
                 ><a class="textlink" href="#urgent"><span>Get urgent help</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 1 of 4</span
                 ><div class="topic-buttons"
                   ><a class="button small" href="#call-arrangements"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="call-arrangements" data-topic="call-arrangements" class="reading-panel panel" hidden
+            ><article id="call-arrangements" data-topic="call-arrangements" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">How to ask about a call</h2
                 ><p
@@ -1309,13 +1123,12 @@
                 ><p>You can ask someone you trust to go through the information with you.</p
                 ><a class="textlink" href="#about"><span>Read about the calls</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 2 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#contact"><span>Back</span></a
+                  ><a class="secondary-link" href="#contact"><span>Back</span></a
                   ><a class="button small" href="#contact-reading"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="contact-reading" data-topic="contact-reading" class="reading-panel panel" hidden
+            ><article id="contact-reading" data-topic="contact-reading" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Choose how to read the site</h2
                 ><p
@@ -1326,13 +1139,12 @@
                   >Open reading options</button
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 3 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#call-arrangements"><span>Back</span></a
+                  ><a class="secondary-link" href="#call-arrangements"><span>Back</span></a
                   ><a class="button small" href="#contact-downloads"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="contact-downloads" data-topic="contact-downloads" class="reading-panel panel" hidden
+            ><article id="contact-downloads" data-topic="contact-downloads" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Opening a downloaded file</h2
                 ><p
@@ -1347,10 +1159,9 @@
                   live directory and opening external websites need an internet connection.</p
                 ><a class="textlink" href="#resources"><span>Leaflet and local directories</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 4 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#contact-reading"><span>Back</span></a
-                  ><a class="quiet-button" href="#home"><span>Home</span></a></div
+                  ><a class="secondary-link" href="#contact-reading"><span>Back</span></a
+                  ><a class="secondary-link" href="#home"><span>Home</span></a></div
                 ></div
               ></article
             ></div
@@ -1376,10 +1187,6 @@
         ><div class="book-layout"
           ><div class="book-rail panel"
             ><nav aria-label="Topics" class="topic-list"
-              ><span class="rail-heading"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-lock"></use></svg
-                >Topics</span
               ><div class="mob-topic"
                 ><label
                   >Topic<select data-topic-select
@@ -1399,7 +1206,7 @@
               ></nav
             ></div
           ><div
-            ><article data-topic="privacy" class="reading-panel panel"
+            ><article data-topic="privacy" class="reading-panel"
               ><div class="reading-content"
                 ><h2 tabindex="-1">Your call and your feedback</h2
                 ><p
@@ -1418,12 +1225,11 @@
                   ></div
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 1 of 5</span
                 ><div class="topic-buttons"
                   ><a class="button small" href="#privacy-record"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="privacy-record" data-topic="privacy-record" class="reading-panel panel" hidden
+            ><article id="privacy-record" data-topic="privacy-record" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Who can see your notes?</h2
                 ><p
@@ -1435,13 +1241,12 @@
                   need it for their work. The completed form stays off this website.</p
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 2 of 5</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#privacy"><span>Back</span></a
+                  ><a class="secondary-link" href="#privacy"><span>Back</span></a
                   ><a class="button small" href="#privacy-feedback"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="privacy-feedback" data-topic="privacy-feedback" class="reading-panel panel" hidden
+            ><article id="privacy-feedback" data-topic="privacy-feedback" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">What can be shared publicly?</h2
                 ><p
@@ -1452,13 +1257,12 @@
                   private. The team keeps draft files and figures in its separate working area.</p
                 ><a class="textlink" href="#learning"><span>Feedback and updates</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 3 of 5</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#privacy-record"><span>Back</span></a
+                  ><a class="secondary-link" href="#privacy-record"><span>Back</span></a
                   ><a class="button small" href="#privacy-web"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="privacy-web" data-topic="privacy-web" class="reading-panel panel" hidden
+            ><article id="privacy-web" data-topic="privacy-web" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">When you use this website</h2
                 ><p
@@ -1475,13 +1279,12 @@
                   CNWL team.</p
                 ><a class="textlink" href="#contact"><span>Contact the peer support team</span></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 4 of 5</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#privacy-feedback"><span>Back</span></a
+                  ><a class="secondary-link" href="#privacy-feedback"><span>Back</span></a
                   ><a class="button small" href="#privacy-directory"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="privacy-directory" data-topic="privacy-directory" class="reading-panel panel" hidden
+            ><article id="privacy-directory" data-topic="privacy-directory" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Looking for support online</h2
                 ><p
@@ -1492,13 +1295,11 @@
                   care information out of searches.</p
                 ><a class="textlink" href="https://navigator.lxportal.space/#navigator-privacy"
                   ><span>Community Navigator privacy information</span
-                  ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                    <use href="#i-external"></use></svg></a></div
+                  ></a></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 5 of 5</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#privacy-web"><span>Back</span></a
-                  ><a class="quiet-button" href="#home"><span>Home</span></a></div
+                  ><a class="secondary-link" href="#privacy-web"><span>Back</span></a
+                  ><a class="secondary-link" href="#home"><span>Home</span></a></div
                 ></div
               ></article
             ></div
@@ -1506,7 +1307,7 @@
         ></section
       >
       <section
-        class="page butter topic-page"
+        class="page mist topic-page"
         data-page="accessibility"
         data-title="Accessibility and words explained"
         id="accessibility"
@@ -1524,10 +1325,6 @@
         ><div class="book-layout"
           ><div class="book-rail panel"
             ><nav aria-label="Topics" class="topic-list"
-              ><span class="rail-heading"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-book"></use></svg
-                >Topics</span
               ><div class="mob-topic"
                 ><label
                   >Topic<select data-topic-select
@@ -1545,7 +1342,7 @@
               ></nav
             ></div
           ><div
-            ><article data-topic="accessibility" class="reading-panel panel"
+            ><article data-topic="accessibility" class="reading-panel"
               ><div class="reading-content"
                 ><h2 tabindex="-1">Choose what helps you read</h2
                 ><p
@@ -1559,12 +1356,11 @@
                   >Open reading options</button
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 1 of 4</span
                 ><div class="topic-buttons"
                   ><a class="button small" href="#access-files"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="access-files" data-topic="access-files" class="reading-panel panel" hidden
+            ><article id="access-files" data-topic="access-files" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Read on paper or in Word</h2
                 ><p
@@ -1580,17 +1376,16 @@
                   ><span>Tell the team about an access problem</span></a
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 2 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#accessibility"><span>Back</span></a
+                  ><a class="secondary-link" href="#accessibility"><span>Back</span></a
                   ><a class="button small" href="#access-words"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="access-words" data-topic="access-words" class="reading-panel panel" hidden
+            ><article id="access-words" data-topic="access-words" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Words about leaving hospital</h2><p>Choose a word to read its meaning.</p
                 ><details class="disclosure"
-                  ><summary>Discharge</summary><div><p>Leaving hospital.</p></div></details
+                  ><summary>Discharge</summary><div><p>Discharge means leaving hospital.</p></div></details
                 ><details class="disclosure"
                   ><summary>Transition</summary
                   ><div><p>A change from one place or kind of support to another.</p></div></details
@@ -1617,13 +1412,12 @@
                   ><div><p>Someone who gives unpaid support to another person.</p></div></details
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 3 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#access-files"><span>Back</span></a
+                  ><a class="secondary-link" href="#access-files"><span>Back</span></a
                   ><a class="button small" href="#access-team"><span>Next topic</span></a></div
                 ></div
               ></article
-            ><article id="access-team" data-topic="access-team" class="reading-panel panel" hidden
+            ><article id="access-team" data-topic="access-team" class="reading-panel" hidden
               ><div class="reading-content"
                 ><h2 tabindex="-1">Feedback, care and team roles</h2><p>Choose a word to read its meaning.</p
                 ><details class="disclosure"
@@ -1657,10 +1451,9 @@
                   ></details
                 ></div
               ><div class="topic-bottom"
-                ><span class="count">Topic 4 of 4</span
                 ><div class="topic-buttons"
-                  ><a class="quiet-button" href="#access-words"><span>Back</span></a
-                  ><a class="quiet-button" href="#home"><span>Home</span></a></div
+                  ><a class="secondary-link" href="#access-words"><span>Back</span></a
+                  ><a class="secondary-link" href="#home"><span>Home</span></a></div
                 ></div
               ></article
             ></div
@@ -1683,11 +1476,10 @@
         ><header class="page-title"
           ><h1 tabindex="-1">Photographs</h1
           ><p
-            >These stock photographs illustrate everyday conversations and activities. You can find the
-            photographers and original images below.</p
+            >The photographs show everyday conversations and activities. Each credit links to the original on Pexels.</p
           ></header
         ><div class="credits-grid"
-          ><article class="panel credit"
+          ><article class="credit"
             ><img
               class="photo"
               src="assets/phone-call.webp"
@@ -1699,15 +1491,10 @@
                 class="textlink"
                 href="https://www.pexels.com/photo/attractive-black-woman-talking-on-mobile-phone-5356623/"
                 ><span>Original photograph</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a
-              ><a class="textlink" href="https://www.pexels.com/license/"
-                ><span>Pexels licence</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a
-              ><p class="metadata">Resized and cropped for display.</p></div
+                ></a
+              ></div
             ></article
-          ><article class="panel credit"
+          ><article class="credit"
             ><img
               class="photo"
               src="assets/conversation.webp"
@@ -1719,15 +1506,10 @@
                 class="textlink"
                 href="https://www.pexels.com/photo/photograph-of-women-talking-while-sitting-5921962/"
                 ><span>Original photograph</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a
-              ><a class="textlink" href="https://www.pexels.com/license/"
-                ><span>Pexels licence</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a
-              ><p class="metadata">Resized and cropped for display.</p></div
+                ></a
+              ></div
             ></article
-          ><article class="panel credit"
+          ><article class="credit"
             ><img
               class="photo"
               src="assets/walking-together.webp"
@@ -1739,29 +1521,21 @@
                 class="textlink"
                 href="https://www.pexels.com/photo/man-and-woman-walking-on-gray-concrete-bench-5637808/"
                 ><span>Original photograph</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a
-              ><a class="textlink" href="https://www.pexels.com/license/"
-                ><span>Pexels licence</span
-                ><svg class="icon ext" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-external"></use></svg></a
-              ><p class="metadata">Resized and cropped for display.</p></div
+                ></a
+              ></div
             ></article
-          ></div
-        ></section
+          ></div>
+        <p class="photo-licence">These photographs have been cropped for this site. <a href="https://www.pexels.com/license/">Read the Pexels licence</a>.</p>
+      </section
       >
       <noscript
         ><section class="nojs" id="plain-downloads"
           ><h2>Call information and forms</h2><p>Read the leaflet or choose a blank Word form below.</p
           ><a class="button" download href="assets/About_your_peer_support_call.pdf"
-            ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-              <use href="#i-download"></use></svg
             ><span>Download the call leaflet</span></a
           ><ul class="bare-links"
             ><li
               ><a class="textlink" download="Offer_a_Call_v12.docx" href="assets/Offer_a_Call_v12.docx"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-download"></use></svg
                 ><span>Offer a call</span></a
               ></li
             ><li
@@ -1769,8 +1543,6 @@
                 class="textlink"
                 download="Arrange_and_Hand_Over_v12.docx"
                 href="assets/Arrange_and_Hand_Over_v12.docx"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-download"></use></svg
                 ><span>Arrange the call</span></a
               ></li
             ><li
@@ -1778,8 +1550,6 @@
                 class="textlink"
                 download="Person_Call_and_Feedback_v13.docx"
                 href="assets/Person_Call_and_Feedback_v13.docx"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-download"></use></svg
                 ><span>Call a person leaving hospital</span></a
               ></li
             ><li
@@ -1787,8 +1557,6 @@
                 class="textlink"
                 download="Carer_Call_and_Feedback_v12.docx"
                 href="assets/Carer_Call_and_Feedback_v12.docx"
-                ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                  <use href="#i-download"></use></svg
                 ><span>Call a carer</span></a
               ></li
             ></ul
@@ -1823,5 +1591,5 @@
     </script>
     <script src="assets/crisis-pathways.js"></script>
     <script src="workbooks.js"></script
-    ><script src="site.js"></script></body
+    ><script src="site.js?v={{RELEASE_ID}}"></script></body
 ></html>

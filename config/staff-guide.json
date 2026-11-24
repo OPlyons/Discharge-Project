@@ -3,7 +3,6 @@
     "offer": {
       "name": "Offer_a_Call_v12",
       "title": "Offer a call",
-      "step": "1",
       "role": "Ward staff or discharge coordinator",
       "destination": "Save in the agreed NHS record.",
       "done": "The choice is recorded. If agreed, the coordinator has received the handover.",
@@ -25,7 +24,6 @@
     "handover": {
       "name": "Arrange_and_Hand_Over_v12",
       "title": "Arrange the call",
-      "step": "2",
       "role": "Lived Experience Coordinator",
       "destination": "Save with the offer form in the agreed NHS record.",
       "done": "The caller has accepted and has the contact details, record access and help routes.",
@@ -47,7 +45,6 @@
     "call_service": {
       "name": "Person_Call_and_Feedback_v13",
       "title": "Call a person leaving hospital",
-      "step": "3",
       "role": "Peer support worker",
       "destination": "Save the whole form in the person’s SystmOne record.",
       "done": "The form is saved and any concern has been passed to the appropriate team.",
@@ -69,7 +66,6 @@
     "call_carer": {
       "name": "Carer_Call_and_Feedback_v12",
       "title": "Call a carer",
-      "step": "3",
       "role": "Peer support worker",
       "destination": "Save the whole form in the carer’s agreed record.",
       "done": "The form is saved in the carer’s agreed record and any concern has been passed on.",
