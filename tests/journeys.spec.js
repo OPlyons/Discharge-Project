@@ -12,6 +12,26 @@ test('discharge home and call pages retain their navigation',async({page})=>{
   await expect(page.locator('main h1:visible')).toHaveText(heading);
  }
 });
+test('staff can choose a task, open its Word form and return to the guide', async ({page}) => {
+  const tasks = [
+    ['Before the call', 'Offer a call', 'Offer_a_Call_v12.docx'],
+    ['Before the call', 'Arrange the call', 'Arrange_and_Hand_Over_v12.docx'],
+    ['Making a call', 'Call a person leaving hospital', 'Person_Call_and_Feedback_v13.docx'],
+    ['Making a call', 'Call a carer', 'Carer_Call_and_Feedback_v12.docx']
+  ];
+  await page.goto('/#downloads');
+  for (const [group, task, filename] of tasks) {
+    const choice = page.getByRole('region', {name: group, exact: true}).getByRole('link', {name: task, exact: true});
+    await expect(choice).toBeInViewport();
+    await choice.click();
+    await expect(page.getByRole('heading', {level: 1, name: task, exact: true})).toBeVisible();
+    await expect(page.locator('#download-main')).toHaveAttribute('download', filename);
+    await page.goBack();
+    await expect(page.locator('.staff-files details')).not.toHaveAttribute('open', '');
+  }
+  await page.getByText('Download blank Word forms', {exact: true}).click();
+  await expect(page.locator('#blank-task-downloads a[download]:visible')).toHaveCount(4);
+});
 test('old support bookmarks and new Find support links open the standalone navigator',async({page})=>{
  await page.route('https://navigator.lxportal.space/**',route=>route.fulfill({status:200,contentType:'text/html',body:'<h1>Community Navigator</h1>'}));
  await page.goto('/#support');await expect(page).toHaveURL('https://navigator.lxportal.space/');
