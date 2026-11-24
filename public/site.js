@@ -189,7 +189,7 @@
     const p = data.packs[currentKey];
     const isCall = currentKey.startsWith('call_');
     byId('staff-task-title').textContent = p.title;
-    byId('staff-step').textContent = 'Step ' + p.step + ' of 3 · ' + p.role;
+    byId('staff-role').textContent = p.role;
     byId('pack-destination').textContent = p.destination;
     byId('staff-done').textContent = p.done;
     download.href = 'assets/' + p.name + '.docx';
@@ -200,18 +200,14 @@
       call_service: 'Download person call form',
       call_carer: 'Download carer call form',
     };
-    download.querySelector('span').textContent = labels[currentKey] + ' · Word';
+    download.querySelector('span').textContent = labels[currentKey] + ' (Word)';
     const switchLink = byId('call-switch');
     switchLink.hidden = !isCall;
     switchLink.href = currentKey === 'call_carer' ? '#staff-call' : '#staff-carer';
     switchLink.textContent = currentKey === 'call_carer' ? 'Open person call form' : 'Open carer call form';
-    const guide = p.guide.map(([title, description], index) => {
+    const guide = p.guide.map(([title, description]) => {
       const li = node('li');
-      const body = node('div');
-      const number = node('span', String(index + 1), 'item-number');
-      number.setAttribute('aria-hidden', 'true');
-      body.append(node('h3', title), node('p', description));
-      li.append(number, body);
+      li.append(node('h3', title), node('p', description));
       return li;
     });
     byId('staff-guide').replaceChildren(...guide);
@@ -230,7 +226,7 @@
     if (isCall) {
       const safety = node(
         'p',
-        'Urgent concern? Use the agreed clinical or safeguarding route now. If no one accepts the handover, use the backup contact.',
+        'If you have an urgent concern, use the agreed clinical or safeguarding route now. If no one accepts the handover, use the backup contact.',
       );
       outcomeHost.append(safety);
     }
