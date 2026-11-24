@@ -296,6 +296,9 @@
     select.addEventListener('change', () => {
       location.hash = select.value;
     });
+  // Native fragment targets provide direct access to blank forms when JavaScript is off.
+  // The router handles those same fragments once the workspace is available.
+  for (const form of all('#blank-task-downloads a[id]')) form.removeAttribute('id');
   const aliases = {
     'staff-run': 'downloads',
     'staff-monthly': 'downloads',
