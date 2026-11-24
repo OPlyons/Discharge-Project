@@ -2,7 +2,7 @@
 
 Public site: https://dtp.lxportal.space/
 
-This repository owns the discharge information, carer pages and staff call forms. The layout and forms are retained.
+The public site uses a bento layout for discharge information, carer pages and staff call forms. The Find support button beside Urgent help opens Community Navigator.
 
 Community support has moved to [Community Navigator](https://navigator.lxportal.space/), maintained in [OPlyons/Navigator](https://github.com/OPlyons/Navigator). All Find support links and legacy `#support` bookmarks open that site. Staff area choices can be passed as a public area identifier; form details are never passed.
 
@@ -32,7 +32,7 @@ npm run build
 npm run check
 ```
 
-Render and inspect every form after layout changes, including a long-answer copy to check page flow. `word-packs.json` is generated from the same four blank DOCX files; its Area and Team placeholders support the existing customised download. Update the asset checksum fixture after checking intentional document changes. Keep completed forms and font binaries out of the repository.
+Render and inspect every form after layout changes, including a long-answer copy to check page flow. `word-packs.json` is generated from the same four blank DOCX files; its Area and Team placeholders support the existing customised download. Update the asset checksum fixture after checking intentional document changes. Keep completed forms and licensed Frutiger font binaries out of the repository.
 
 ## Safety and borough crisis guidance
 

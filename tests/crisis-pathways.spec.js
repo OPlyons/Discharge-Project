@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import {test,expect} from '@playwright/test';
 import {readDocxEntry} from './docx.js';
-import {interceptSentry} from './support.js';
+import {interceptSentry, openReadingOptions} from './support.js';
 
 const data=JSON.parse(await fs.readFile(new URL('../config/crisis-pathways.json',import.meta.url),'utf8'));
 const guidance=JSON.parse(await fs.readFile(new URL('../config/workbook-guidance.json',import.meta.url),'utf8'));
@@ -11,7 +11,7 @@ test.beforeEach(async({page})=>{await interceptSentry(page);});
 for(const [area,info] of Object.entries(data.areas))test('local safety guidance follows '+info.name+' into all four forms',async({page})=>{
  await page.goto('/#staff-offer');
  await page.locator('#staff-area').selectOption(area);
- await expect(page.locator('#staff-crisis-routes h3')).toHaveText(info.name+' crisis routes');
+ await expect(page.locator('#staff-crisis-routes h2')).toHaveText(info.name+' crisis routes');
  for(const route of routes){
   await page.goto('/#'+route);
   await expect(page.locator('#staff-area')).toHaveValue(area);
@@ -27,9 +27,13 @@ for(const [area,info] of Object.entries(data.areas))test('local safety guidance 
  }
  await page.goto('/#urgent');
  const section=page.locator('#crisis-'+area);
- await section.locator(':scope > summary').focus();await page.keyboard.press('Enter');
+ await page.locator('#urgent-area').selectOption(area);
+ await expect(section).toBeVisible();
+ const service=section.locator('summary').first();
+ await service.focus();await page.keyboard.press('Enter');
+ await expect(section.locator('details').first()).toHaveAttribute('open','');
  for(const service of info.routes)await expect(section).toContainText(service.text);
  if(info.notice)await expect(section.getByRole('link',{name:info.notice.text,exact:true})).toHaveAttribute('href',info.notice.url);
- await page.locator('#reading-options > summary').click();await page.locator('#larger-text').click();
+ await openReadingOptions(page);await page.locator('#larger-text').click();
  expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
 });
