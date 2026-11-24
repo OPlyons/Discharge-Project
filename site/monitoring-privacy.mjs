@@ -12,7 +12,7 @@ export function sanitiseEvent(event,context){
   const values=rawValues.slice(0,3).map(value=>{
    const originalFrames=Array.isArray(value.stacktrace?.frames)?value.stacktrace.frames:[];anyOriginalFrames||=originalFrames.length>0;
    const frames=originalFrames.slice(-25).flatMap(frame=>{
-    try{const url=new URL(frame.filename,context.origin);if(url.origin!==context.origin||!['/','/index.html','/assets/monitoring.js'].includes(url.pathname))return [];return [{filename:url.origin+url.pathname,lineno:safeNumber(frame.lineno),colno:safeNumber(frame.colno),in_app:true}];}catch{return [];}
+    try{const url=new URL(frame.filename,context.origin);if(url.origin!==context.origin||!['/','/index.html','/site.js','/workbooks.js','/assets/crisis-pathways.js','/assets/monitoring.js'].includes(url.pathname))return [];return [{filename:url.origin+url.pathname,lineno:safeNumber(frame.lineno),colno:safeNumber(frame.colno),in_app:true}];}catch{return [];}
    });
    return {type:errorTypes.has(value.type)?value.type:'Error',value:ERROR_CODES[code],...(frames.length?{stacktrace:{frames}}:{})};
   });
