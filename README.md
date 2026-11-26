@@ -18,7 +18,7 @@ Sentry receives only sanitised technical errors. Search text, form information, 
 
 ## Workbook forms
 
-The four staff forms use large numbered headings, a pale page background and white answer boxes. Multiline Word controls sit in rows with minimum heights and may continue across pages, so longer notes are not clipped. The call forms keep feedback and recording together. Original asset URLs remain stable.
+Staff download one `Discharge_and_Transition_Form.docx` covering the offer, handover, person call and carer call. The website keeps a separate guide for each stage. Use a separate copy for each person or carer and complete the relevant call section. The form uses large headings, a pale page background and white answer boxes. Multiline Word controls sit in rows with minimum heights and may continue across pages, so longer notes are not clipped. Feedback and recording stay together, with one shared crisis appendix. Earlier asset URLs and customised templates remain available for existing links and cached pages.
 
 Frutiger is specified in the editable documents. The supplied font files permit preview/print embedding only; they are not embedded in the editable forms or distributed by the website. Install the licensed Frutiger Light and Bold fonts locally for authoring and accurate visual checks. Word substitutes an available font when Frutiger is absent.
 
@@ -27,12 +27,13 @@ To regenerate the forms, use Python with `python-docx`:
 ```sh
 python scripts/build-person-call-form.py
 python scripts/build-support-workbooks.py
+python scripts/build-combined-workbook.py
 python scripts/rebuild-word-packs.py
 npm run build
 npm run check
 ```
 
-Render and inspect every form after layout changes, including a long-answer copy to check page flow. `word-packs.json` is generated from the same four blank DOCX files; its Area and Team placeholders support the existing customised download. Update the asset checksum fixture after checking intentional document changes. Keep completed forms and licensed Frutiger font binaries out of the repository.
+The combined form is assembled from the four original DOCX files. Its build preserves the answer controls, gives each section unique control identifiers and keeps one copy of the crisis appendix. Render and inspect the combined form after layout changes, including a long-answer copy to check page flow. `word-packs.json` includes the combined form and earlier templates, with Area and Team placeholders for customised downloads. Update the asset checksum fixture after checking intentional document changes. Keep completed forms and licensed Frutiger font binaries out of the repository.
 
 ## Safety and borough crisis guidance
 
@@ -40,7 +41,7 @@ The offer form records relevant risks, agreed safety steps and the service safeg
 
 `config/crisis-pathways.json` holds sourced borough crisis routes and the actual source-check date. The same data builds the urgent-help page and the local crisis appendix in each customised Word download. Selecting a borough is visible in the staff workspace; generic downloads retain emergency and NHS 111 guidance. Service access rules remain explicit: walk-in alternatives are distinct from A&E-referred Lighthouse support. Check provider notices and current access before use.
 
-After editing the forms or generic crisis appendix, regenerate all four DOCX files and `word-packs.json`, render the blank and customised forms, inspect their page flow, and update only the intentionally changed asset checksums. Borough route text is inserted from the crisis configuration when a customised form is downloaded. For changes confined to that text, rebuild the site and verify the downloaded forms; the generic blank assets do not need regeneration.
+After editing the forms or generic crisis appendix, regenerate the original DOCX files, the combined form and `word-packs.json`, render the blank and customised forms, inspect their page flow, and update only the intentionally changed asset checksums. Borough route text is inserted from the crisis configuration when a customised form is downloaded. For changes confined to that text, rebuild the site and verify the downloaded forms; the generic blank assets do not need regeneration.
 
 Navigator owns the shared crisis wording. This project's `config/crisis-pathways.json` must match its reviewed copy in full. See the [3 November 2026 source review](maintenance/crisis-guidance-review-2026-11-03.md) for the eligibility decisions and supporting sources.
 
@@ -48,4 +49,4 @@ The read-only `Shared crisis guidance` workflow compares every field against Nav
 
 To update shared guidance, verify NHS/provider sources, change Navigator, copy the reviewed JSON here and record its exact Navigator commit in `config/crisis-source.json`. Open paired PRs and run the comparison locally with `node scripts/check-crisis-consistency.mjs ../navigator/config/crisis-pathways.json`. After approval, merge Navigator first, then this project, and confirm the main-branch comparison passes.
 
-See the [workbook source check and publication steps](maintenance/crisis-pathways-sources.md) for the wider provider review. The coordinator records the safeguarding lead separately from clinical and backup contacts. DTP-specific community support advice in `config/workbook-guidance.json` supplies both the website and the blank Word appendix without changing the shared crisis dataset. Browser checks download all four forms for every supported area on desktop and phone, and audit expanded crisis sections for accessibility.
+See the [workbook source check and publication steps](maintenance/crisis-pathways-sources.md) for the wider provider review. The coordinator records the safeguarding lead separately from clinical and backup contacts. DTP-specific community support advice in `config/workbook-guidance.json` supplies both the website and the blank Word appendix without changing the shared crisis dataset. Browser checks download the combined form from every staff stage for all supported areas on desktop and phone, including the blank download, the fallback after an error and expanded crisis sections.

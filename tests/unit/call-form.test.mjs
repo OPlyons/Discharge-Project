@@ -10,7 +10,7 @@ const namespace='http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const checkboxNamespace='http://schemas.microsoft.com/office/word/2010/wordml';
 const xml=s=>new JSDOM(s,{contentType:'text/xml'}).window.document;
 const nodes=(document,name)=>[...document.getElementsByTagNameNS(namespace,name)];
-const forms={offer:'Offer_a_Call_v12.docx',handover:'Arrange_and_Hand_Over_v12.docx',call_service:'Person_Call_and_Feedback_v13.docx',call_carer:'Carer_Call_and_Feedback_v12.docx'};
+const forms={combined:'Discharge_and_Transition_Form.docx',offer:'Offer_a_Call_v12.docx',handover:'Arrange_and_Hand_Over_v12.docx',call_service:'Person_Call_and_Feedback_v13.docx',call_carer:'Carer_Call_and_Feedback_v12.docx'};
 const questions=[
  'How has it been since you left hospital?',
  'What helped you get ready to leave?',
@@ -21,11 +21,11 @@ const questions=[
  'What would you like the ward to know?'
 ];
 
-test('all four customised downloads preserve the full approved form and its formatting',()=>{
+test('customised downloads preserve the combined form and earlier templates',()=>{
  const pack=JSON.parse(read('dist/assets/word-packs.json'));
  const page=new JSDOM(read('dist/index.html').toString()).window.document;
  const links=[...page.querySelectorAll('#blank-task-downloads a[download]')].map(a=>a.download);
- assert.deepEqual(links,Object.values(forms));
+ assert.deepEqual(links,[forms.combined]);
  for(const [key,filename] of Object.entries(forms)){
   const parts=readDocxEntries(read('dist/assets/'+filename));
   const customised={...pack.common,...pack.templates[key]};
@@ -42,7 +42,7 @@ test('all four customised downloads preserve the full approved form and its form
  }
 });
 
-test('all four Word forms have expanding white answer boxes and editable controls',()=>{
+test('Word forms have expanding white answer boxes and editable controls',()=>{
  for(const filename of Object.values(forms)){
   const parts=readDocxEntries(read('dist/assets/'+filename));
   const document=xml(parts.get('word/document.xml').toString());
@@ -62,6 +62,32 @@ test('all four Word forms have expanding white answer boxes and editable control
   assert.match(parts.get('word/styles.xml').toString(),/Frutiger LT Com/);
   assert.ok(![...parts.keys()].some(name=>name.startsWith('word/fonts/')),filename+' does not distribute restricted editable font binaries');
  }
+});
+
+test('the combined form keeps every original answer control and one shared crisis appendix', () => {
+ const combined = xml(readDocxEntry(read('dist/assets/' + forms.combined), 'word/document.xml'));
+ const controls = new Map(nodes(combined, 'sdt').map(control => [
+  nodes(control, 'tag')[0].getAttributeNS(namespace, 'val'), control
+ ]));
+ let expectedCount = 0;
+ for (const [key, prefix] of [['offer', 'offer'], ['handover', 'handover'], ['call_service', 'person'], ['call_carer', 'carer']]) {
+  const original = xml(readDocxEntry(read('dist/assets/' + forms[key]), 'word/document.xml'));
+  for (const control of nodes(original, 'sdt')) {
+   const tag = prefix + '_' + nodes(control, 'tag')[0].getAttributeNS(namespace, 'val');
+   assert.ok(controls.has(tag), tag + ' is retained');
+   assert.equal(nodes(controls.get(tag), 'sdtContent')[0].textContent, nodes(control, 'sdtContent')[0].textContent);
+   expectedCount++;
+  }
+ }
+ assert.equal(controls.size, expectedCount);
+ const text = combined.documentElement.textContent;
+ assert.equal(text.split('If someone needs urgent help').length - 1, 1);
+ assert.equal(text.split('Area: [optional]').length - 1, 1);
+ assert.equal(text.split('Team: [optional]').length - 1, 1);
+ assert.ok(text.includes('Use a separate copy for each person or carer.'));
+ const bookmarks = nodes(combined, 'bookmarkStart').map(n => n.getAttributeNS(namespace, 'name'));
+ assert.deepEqual(bookmarks, ['offer', 'handover', 'person', 'carer']);
+ for (const link of nodes(combined, 'hyperlink')) assert.ok(bookmarks.includes(link.getAttributeNS(namespace, 'anchor')));
 });
 
 test('the person call form keeps all seven promised feedback prompts with usable answer controls',()=>{

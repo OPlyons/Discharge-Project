@@ -192,19 +192,12 @@
     byId('staff-role').textContent = p.role;
     byId('pack-destination').textContent = p.destination;
     byId('staff-done').textContent = p.done;
-    download.href = 'assets/' + p.name + '.docx';
-    download.download = p.name + '.docx';
-    const labels = {
-      offer: 'Download offer form',
-      handover: 'Download handover form',
-      call_service: 'Download person call form',
-      call_carer: 'Download carer call form',
-    };
-    download.querySelector('span').textContent = labels[currentKey] + ' (Word)';
+    download.href = 'assets/' + data.download.name + '.docx';
+    download.download = data.download.name + '.docx';
     const switchLink = byId('call-switch');
     switchLink.hidden = !isCall;
     switchLink.href = currentKey === 'call_carer' ? '#staff-call' : '#staff-carer';
-    switchLink.textContent = currentKey === 'call_carer' ? 'Open person call form' : 'Open carer call form';
+    switchLink.textContent = currentKey === 'call_carer' ? 'Person call guidance' : 'Carer call guidance';
     const guide = p.guide.map(([title, description]) => {
       const li = node('li');
       li.append(node('h3', title), node('p', description));
@@ -255,20 +248,20 @@
       MONTH: '[Complete in Word]',
     };
     try {
-      const blob = await window.DischargeForms.prepare(currentKey, values);
+      const blob = await window.DischargeForms.prepare(data.download.key, values);
       if (ticket !== generation) return;
       if (objectUrl) URL.revokeObjectURL(objectUrl);
       objectUrl = URL.createObjectURL(blob);
       const a = node('a', 'Save Word form');
       a.href = objectUrl;
-      a.download = info.name + '.docx';
+      a.download = data.download.name + '.docx';
       status.replaceChildren(document.createTextNode('Your form is ready. '), a);
       a.click();
     } catch {
       if (ticket !== generation) return;
       const a = node('a', 'Download the blank form');
-      a.href = 'assets/' + info.name + '.docx';
-      a.download = info.name + '.docx';
+      a.href = 'assets/' + data.download.name + '.docx';
+      a.download = data.download.name + '.docx';
       status.replaceChildren(
         document.createTextNode('We couldn’t prepare the customised form. Try again or use the blank copy. '),
         a,
@@ -298,7 +291,7 @@
     });
   // Native fragment targets provide direct access to blank forms when JavaScript is off.
   // The router handles those same fragments once the workspace is available.
-  for (const form of all('#blank-task-downloads a[id]')) form.removeAttribute('id');
+  for (const form of all('#blank-task-downloads [id]')) form.removeAttribute('id');
   const aliases = {
     'staff-run': 'downloads',
     'staff-monthly': 'downloads',
@@ -328,7 +321,6 @@
       location.replace(navigatorOrigin + (key === 'navigator-privacy' ? '#navigator-privacy' : ''));
       return;
     }
-    const original = key;
     key = aliases[key] || key;
     if (key === 'staff-results' || key === 'staff-workspace') key = lastStaffRoute || 'downloads';
     if (key.startsWith('crisis-') && Object.hasOwn(crisis.areas, key.slice(7))) {
@@ -359,7 +351,6 @@
       const topicHeading = renderTopic(page, key);
       if (wasPage === page && key !== page.id) heading = topicHeading;
     }
-    if (original === 'blank-task-downloads') page.querySelector('.staff-files details').open = true;
     const navKey = page.id === 'staff-workspace' ? 'downloads' : page.id === 'process' ? 'about' : page.id;
     for (const a of all('[data-nav]')) {
       if (a.dataset.nav === navKey) a.setAttribute('aria-current', 'page');

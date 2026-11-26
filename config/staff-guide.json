@@ -1,7 +1,6 @@
 {
   "packs": {
     "offer": {
-      "name": "Offer_a_Call_v12",
       "title": "Offer a call",
       "role": "Ward staff or discharge coordinator",
       "destination": "Save in the agreed NHS record.",
@@ -22,19 +21,18 @@
       ]
     },
     "handover": {
-      "name": "Arrange_and_Hand_Over_v12",
       "title": "Arrange the call",
       "role": "Lived Experience Coordinator",
-      "destination": "Save with the offer form in the agreed NHS record.",
+      "destination": "Continue in the same form and save it in the agreed NHS record.",
       "done": "The caller has accepted and has the contact details, record access and help routes.",
       "guide": [
         [
           "Choose the caller",
-          "Agree who will call and when. Use the existing offer form."
+          "Agree who will call and when. Use the existing offer section."
         ],
         [
           "Prepare",
-          "Confirm the risks and safety steps from the offer form. Record the clinical contact, service safeguarding lead and backup contact. Check record access, safe contact, crisis routes and the no answer plan."
+          "Confirm the risks and safety steps from the offer section. Record the clinical contact, service safeguarding lead and backup contact. Check record access, safe contact, crisis routes and the no answer plan."
         ],
         [
           "Confirm",
@@ -43,7 +41,6 @@
       ]
     },
     "call_service": {
-      "name": "Person_Call_and_Feedback_v13",
       "title": "Call a person leaving hospital",
       "role": "Peer support worker",
       "destination": "Save the whole form in the person’s SystmOne record.",
@@ -64,7 +61,6 @@
       ]
     },
     "call_carer": {
-      "name": "Carer_Call_and_Feedback_v12",
       "title": "Call a carer",
       "role": "Peer support worker",
       "destination": "Save the whole form in the carer’s agreed record.",
@@ -152,5 +148,9 @@
     "staff-handover": "handover",
     "staff-call": "call_service",
     "staff-carer": "call_carer"
+  },
+  "download": {
+    "key": "combined",
+    "name": "Discharge_and_Transition_Form"
   }
 }

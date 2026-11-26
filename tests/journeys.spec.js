@@ -12,12 +12,12 @@ test('discharge home and call pages retain their navigation',async({page})=>{
   await expect(page.locator('main h1:visible')).toHaveText(heading);
  }
 });
-test('staff can choose a task, open its Word form and return to the guide', async ({page}) => {
+test('staff can read each task and download the same full form', async ({page}) => {
   const tasks = [
-    ['Before the call', 'Offer a call', 'Offer_a_Call_v12.docx'],
-    ['Before the call', 'Arrange the call', 'Arrange_and_Hand_Over_v12.docx'],
-    ['Making a call', 'Call a person leaving hospital', 'Person_Call_and_Feedback_v13.docx'],
-    ['Making a call', 'Call a carer', 'Carer_Call_and_Feedback_v12.docx']
+    ['Before the call', 'Offer a call', 'Discharge_and_Transition_Form.docx'],
+    ['Before the call', 'Arrange the call', 'Discharge_and_Transition_Form.docx'],
+    ['Making a call', 'Call a person leaving hospital', 'Discharge_and_Transition_Form.docx'],
+    ['Making a call', 'Call a carer', 'Discharge_and_Transition_Form.docx']
   ];
   await page.goto('/#downloads');
   for (const [group, task, filename] of tasks) {
@@ -27,10 +27,8 @@ test('staff can choose a task, open its Word form and return to the guide', asyn
     await expect(page.getByRole('heading', {level: 1, name: task, exact: true})).toBeVisible();
     await expect(page.locator('#download-main')).toHaveAttribute('download', filename);
     await page.goBack();
-    await expect(page.locator('.staff-files details')).not.toHaveAttribute('open', '');
   }
-  await page.getByText('Download blank Word forms', {exact: true}).click();
-  await expect(page.locator('#blank-task-downloads a[download]:visible')).toHaveCount(4);
+  await expect(page.locator('#blank-task-downloads a[download]:visible')).toHaveCount(1);
 });
 test('old support bookmarks and new Find support links open the standalone navigator',async({page})=>{
  await page.route('https://navigator.lxportal.space/**',route=>route.fulfill({status:200,contentType:'text/html',body:'<h1>Community Navigator</h1>'}));
@@ -43,12 +41,38 @@ test('old support bookmarks and new Find support links open the standalone navig
  await support.click();await expect(page).toHaveURL('https://navigator.lxportal.space/');
  await page.goto('/');await page.evaluate(()=>{location.hash='support';});await expect(page).toHaveURL('https://navigator.lxportal.space/');
 });
-test('combined call forms and staff area handover still work',async({page})=>{
- const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#staff-call');await expect(page.locator('#download-main')).toHaveAttribute('download','Person_Call_and_Feedback_v13.docx');
- const download=page.waitForEvent('download');await page.locator('#download-main').click();expect((await download).suggestedFilename()).toBe('Person_Call_and_Feedback_v13.docx');
- await page.getByRole('link',{name:'Open carer call form'}).click();await expect(page.locator('#download-main')).toHaveAttribute('download','Carer_Call_and_Feedback_v12.docx');
+test('the full form and separate call guidance preserve the chosen area',async({page})=>{
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/#staff-call');await expect(page.locator('#download-main')).toHaveAttribute('download','Discharge_and_Transition_Form.docx');
+ const download=page.waitForEvent('download');await page.locator('#download-main').click();expect((await download).suggestedFilename()).toBe('Discharge_and_Transition_Form.docx');
+ await page.getByRole('link',{name:'Carer call guidance'}).click();await expect(page.locator('#download-main')).toHaveAttribute('download','Discharge_and_Transition_Form.docx');
  await page.locator('#pack-customisation > summary').click();await page.locator('#staff-area').selectOption('harrow');
  await page.route('https://navigator.lxportal.space/**',route=>route.fulfill({status:200,contentType:'text/html',body:'<h1>Community Navigator</h1>'}));await page.locator('#local-support-link').click();await expect(page).toHaveURL('https://navigator.lxportal.space/#area-harrow');expect(errors).toEqual([]);
+});
+test('the full form is available without JavaScript and after a customised download fails', async ({browser, page, baseURL}) => {
+ const context = await browser.newContext({javaScriptEnabled: false, baseURL});
+ const plain = await context.newPage();
+ await plain.goto('/#staff-handover');
+ const plainDownload = plain.waitForEvent('download');
+ await plain.locator('#plain-downloads a[download$=".docx"]').click();
+ const file = await plainDownload;
+ expect(file.suggestedFilename()).toBe('Discharge_and_Transition_Form.docx');
+ const text = readDocxEntry(await fs.readFile(await file.path()), 'word/document.xml');
+ for (const section of ['Offer a peer support call', 'Arrange the call', 'Call a person leaving hospital', 'Call a carer']) expect(text).toContain(section);
+ await context.close();
+
+ await page.route('**/assets/word-packs.json', route => route.fulfill({status: 503, body: 'Unavailable'}));
+ await page.goto('/#staff-call');
+ await page.locator('#pack-customisation > summary').click();
+ await page.locator('#staff-area').selectOption('harrow');
+ await page.locator('#download-main').click();
+ const fallback = page.getByRole('link', {name: 'Download the blank form', exact: true});
+ await expect(fallback).toHaveAttribute('download', 'Discharge_and_Transition_Form.docx');
+ await expect(fallback).toHaveAttribute('href', 'assets/Discharge_and_Transition_Form.docx');
+ await page.unroute('**/assets/word-packs.json');
+ const retried = page.waitForEvent('download');
+ await page.locator('#download-main').click();
+ const retriedFile = await retried;
+ expect(readDocxEntry(await fs.readFile(await retriedFile.path()), 'word/document.xml')).toContain('Harrow crisis routes');
 });
 test('larger text does not overflow the discharge homepage',async({page})=>{
  await page.goto('/');await openReadingOptions(page);await page.locator('#larger-text').click();expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
@@ -96,8 +120,8 @@ test('compact and tablet headers keep both support buttons clear of the project 
  }
 });
 
-test('all customised workbook forms retain expanding boxes and safe team text',async({page})=>{
- for(const [route,filename] of [['staff-offer','Offer_a_Call_v12.docx'],['staff-handover','Arrange_and_Hand_Over_v12.docx'],['staff-call','Person_Call_and_Feedback_v13.docx'],['staff-carer','Carer_Call_and_Feedback_v12.docx']]){
+test('the full form from every staff task keeps expanding boxes and safe team text',async({page})=>{
+ for(const [route,filename] of [['staff-offer','Discharge_and_Transition_Form.docx'],['staff-handover','Discharge_and_Transition_Form.docx'],['staff-call','Discharge_and_Transition_Form.docx'],['staff-carer','Discharge_and_Transition_Form.docx']]){
   await page.goto('/#'+route);
   await expect(page.locator('.download-box')).toContainText('white answer boxes grow as you write');
   await expect(page.locator('#download-main')).toHaveAttribute('download',filename);
@@ -110,6 +134,8 @@ test('all customised workbook forms retain expanding boxes and safe team text',a
   expect(xml).toContain('Area: Harrow');expect(xml).toContain('Example &amp; &lt;Team&gt;');expect(xml).not.toContain('{{AREA}}');
   expect(xml).toContain('w:hRule="atLeast"');expect(xml).not.toContain('w:hRule="exact"');expect(xml).not.toContain('<w:cantSplit');
   expect(readDocxEntry(bytes,'word/styles.xml')).toContain('Frutiger LT Com');
+  for (const section of ['Offer a peer support call','Arrange the call','Call a person leaving hospital','Call a carer']) expect(xml).toContain(section);
+  expect(xml.match(/If someone needs urgent help/g)).toHaveLength(1);
   if(route==='staff-call'){
    await page.goto('/#call-questions');
    const questions=await page.locator('#call-questions .question-list li').allTextContents();expect(questions).toHaveLength(7);
@@ -118,7 +144,7 @@ test('all customised workbook forms retain expanding boxes and safe team text',a
  }
 });
 
-test('borough crisis routes are included in all four downloaded forms and clear on the urgent page',async({page})=>{
+test('borough crisis routes reach the full form from all four staff tasks',async({page})=>{
  await page.goto('/#staff-offer');
  await expect(page.locator('#staff-area')).toBeVisible();
  await page.locator('#staff-area').selectOption('hillingdon');
@@ -138,7 +164,7 @@ test('borough crisis routes are included in all four downloaded forms and clear 
  expect(await page.locator('html').evaluate(el=>el.scrollWidth<=el.clientWidth)).toBeTruthy();
 });
 
-test('corrected MHCAS eligibility and Milton Keynes SPA details reach all four Word downloads',async({page})=>{
+test('MHCAS eligibility and Milton Keynes SPA details reach every full form download',async({page})=>{
  for(const [area,advice] of [
   ['brent','For residents of Brent, Harrow, Hillingdon, Kensington and Chelsea or Westminster.'],
   ['milton-keynes','Milton Keynes SPA: 01908 724365 (24/7 crisis help)']
