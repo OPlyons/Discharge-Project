@@ -35,6 +35,14 @@ npm run check
 
 The combined form is assembled from the four original DOCX files. Its build preserves the answer controls, gives each section unique control identifiers and keeps one copy of the crisis appendix. Render and inspect the combined form after layout changes, including a long-answer copy to check page flow. `word-packs.json` includes the combined form and earlier templates, with Area and Team placeholders for customised downloads. Update the asset checksum fixture after checking intentional document changes. Keep completed forms and licensed Frutiger font binaries out of the repository.
 
+### Harrow pilot version
+
+The staff guide and `#harrow-pilot` page offer `Harrow_Peer_Support_Follow_Up_Form_Working_Draft.docx`, based on Stuart Angus's 26 November 2026 draft for Northwick Park Hospital. Selecting Harrow also shows this separate download in every staff task. The general combined form remains available. Both downloads work without JavaScript.
+
+The Harrow draft has four sections with named role owners, separate person/carer records, expanding Word answer controls and seven A4 pages when blank. It uses Arial and does not require the licensed Frutiger font. Rebuild it with `python scripts/build-harrow-pilot-form.py`, render and inspect every page plus a long-answer copy, then update its asset checksum. It is a static local version, not a template in `word-packs.json`. Rebuild and check it when the shared emergency or urgent wording changes; its link opens the current Harrow crisis routes on the site.
+
+The three-attempt limit, exceptions, coordinator closure and handover-back arrangements are explicitly proposals for local agreement. They must not be presented as approved Trust-wide policy. See the [Harrow pilot editing notes](maintenance/harrow-pilot-2026-11-26.md).
+
 ## Safety and borough crisis guidance
 
 The offer form records relevant risks, agreed safety steps and the service safeguarding lead. The coordinator confirms these with the caller. Staff enter personal details in Word and the agreed NHS record, never in the website.

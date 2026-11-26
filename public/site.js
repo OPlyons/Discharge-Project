@@ -138,6 +138,7 @@
   }
   function renderLocalRoutes() {
     window.DTPCrisis.render(byId('staff-crisis-routes'), staffArea.value);
+    byId('harrow-form-option').hidden = staffArea.value !== 'harrow';
     byId('local-support-link').href =
       navigatorOrigin + (data.directories[staffArea.value] ? '#area-' + staffArea.value : '');
   }
@@ -351,7 +352,7 @@
       const topicHeading = renderTopic(page, key);
       if (wasPage === page && key !== page.id) heading = topicHeading;
     }
-    const navKey = page.id === 'staff-workspace' ? 'downloads' : page.id === 'process' ? 'about' : page.id;
+    const navKey = ['staff-workspace', 'harrow-pilot'].includes(page.id) ? 'downloads' : page.id === 'process' ? 'about' : page.id;
     for (const a of all('[data-nav]')) {
       if (a.dataset.nav === navKey) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
