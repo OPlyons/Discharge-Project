@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild browser-customised Word downloads from the four approved DOCX files.
+"""Rebuild browser-customised downloads from the combined and earlier DOCX files.
 
 Run with Python 3 after updating the form assets. No third-party packages needed.
 The blank documents are the source of truth; only their optional area/team line
@@ -16,6 +16,7 @@ from zipfile import ZipFile
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "public" / "assets"
 FILES = {
+    "combined": "Discharge_and_Transition_Form.docx",
     "offer": "Offer_a_Call_v12.docx",
     "handover": "Arrange_and_Hand_Over_v12.docx",
     "call_service": "Person_Call_and_Feedback_v13.docx",
@@ -78,7 +79,7 @@ if __name__ == "__main__":
     if args.check:
         if target.read_bytes() != content:
             raise SystemExit("word-packs.json is stale; run python3 scripts/rebuild-word-packs.py")
-        print("All four customised templates match their approved Word forms.")
+        print("All customised templates match their Word forms.")
     else:
         target.write_bytes(content)
-        print(f"Rebuilt {target.relative_to(ROOT)} from all four Word forms.")
+        print(f"Rebuilt {target.relative_to(ROOT)} from the Word forms.")

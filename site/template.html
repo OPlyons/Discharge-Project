@@ -238,7 +238,7 @@
           <a class="tile staff-tile" href="#downloads">
             <div class="tile-body">
               <h2>Staff call guide</h2>
-              <p>Find the form you need to offer, arrange or make a call.</p>
+              <p>Follow each stage and download the full Word form.</p>
             </div>
           </a>
           <a class="tile navigator-tile" href="https://navigator.lxportal.space/">
@@ -576,7 +576,7 @@
         >
         <header class="page-title">
           <h1 tabindex="-1">Staff call guide</h1>
-          <p>Choose a task for guidance and a Word form.</p>
+          <p>One Word form covers the full process. Choose a task for guidance.</p>
         </header>
         <div class="staff-choices">
           <section class="staff-preparation" aria-labelledby="staff-prepare-title">
@@ -605,48 +605,10 @@
           </section>
         </div>
         <div class="staff-lower"
-          ><section class="staff-files"
-            ><details class="disclosure"
-              ><summary>Download blank Word forms</summary
-              ><div
-                ><ul class="bare-links" id="blank-task-downloads"
-                  ><li
-                    ><a
-                      id="staff-offer"
-                      class="textlink"
-                      download="Offer_a_Call_v12.docx"
-                      href="assets/Offer_a_Call_v12.docx"
-                      ><span>Offer a call</span></a
-                    ></li
-                  ><li
-                    ><a
-                      id="staff-handover"
-                      class="textlink"
-                      download="Arrange_and_Hand_Over_v12.docx"
-                      href="assets/Arrange_and_Hand_Over_v12.docx"
-                      ><span>Arrange the call</span></a
-                    ></li
-                  ><li
-                    ><a
-                      id="staff-call"
-                      class="textlink"
-                      download="Person_Call_and_Feedback_v13.docx"
-                      href="assets/Person_Call_and_Feedback_v13.docx"
-                      ><span>Call a person leaving hospital</span></a
-                    ></li
-                  ><li
-                    ><a
-                      id="staff-carer"
-                      class="textlink"
-                      download="Carer_Call_and_Feedback_v12.docx"
-                      href="assets/Carer_Call_and_Feedback_v12.docx"
-                      ><span>Call a carer</span></a
-                    ></li
-                  ></ul
-                ></div
-              ></details
-            ></section
-          >
+          ><section class="staff-files" id="blank-task-downloads" aria-label="Download the full form">
+            <a class="button" download="Discharge_and_Transition_Form.docx" href="assets/Discharge_and_Transition_Form.docx"><span id="staff-offer"></span><span id="staff-handover"></span><span id="staff-call"></span><span id="staff-carer"></span>Download full form (Word)</a>
+            <a class="textlink" href="#staff-offer">Add a borough or team to the form</a>
+          </section>
           <div class="staff-related"
             ><a class="textlink" href="#resources"
               ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
@@ -662,7 +624,7 @@
           ><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
             <use href="#i-lock"></use></svg
           ><p
-            >Write personal details and call notes in Word. Save the form in the agreed NHS record.</p
+            >Use a separate copy for each person or carer. Complete the relevant sections in Word and save the form in their agreed record.</p
           ></div
         ></section
       >
@@ -688,7 +650,7 @@
           ><button type="button" aria-pressed="false" data-stage="guidance">Step guidance</button></div
         ><div class="workspace" data-stage-active="form"
           ><section class="panel download-box"
-            ><h2>Get your form</h2><p>Open the form in Word. The white answer boxes grow as you write.</p>
+            ><h2>Download the full form</h2><p>The form includes the offer, handover, person call and carer call sections. Use a separate copy for each person or carer.</p><p>Open the form in Word. The white answer boxes grow as you write.</p>
             <label for="staff-area">Borough or area for this form</label
             ><select id="staff-area"
               ><option value="">Blank form without a borough</option
@@ -710,8 +672,8 @@
                 ></div
               ></details
             >
-            <a class="button" download id="download-main" href="assets/Offer_a_Call_v12.docx"
-              ><span>Download Word form</span></a
+            <a class="button" download="Discharge_and_Transition_Form.docx" id="download-main" href="assets/Discharge_and_Transition_Form.docx"
+              ><span>Download full form (Word)</span></a
             ><p class="form-status" id="pack-status" role="status"></p>
             <p id="pack-destination" class="destination"></p
           ></section>
@@ -1541,36 +1503,11 @@
       >
       <noscript
         ><section class="nojs" id="plain-downloads"
-          ><h2>Call information and forms</h2><p>Read the leaflet or choose a blank Word form below.</p
+          ><h2>Call information and form</h2><p>Read the leaflet or download the full Word form covering the offer, handover and calls.</p
           ><a class="button" download href="assets/About_your_peer_support_call.pdf"
             ><span>Download the call leaflet</span></a
-          ><ul class="bare-links"
-            ><li
-              ><a class="textlink" download="Offer_a_Call_v12.docx" href="assets/Offer_a_Call_v12.docx"
-                ><span>Offer a call</span></a
-              ></li
-            ><li
-              ><a
-                class="textlink"
-                download="Arrange_and_Hand_Over_v12.docx"
-                href="assets/Arrange_and_Hand_Over_v12.docx"
-                ><span>Arrange the call</span></a
-              ></li
-            ><li
-              ><a
-                class="textlink"
-                download="Person_Call_and_Feedback_v13.docx"
-                href="assets/Person_Call_and_Feedback_v13.docx"
-                ><span>Call a person leaving hospital</span></a
-              ></li
-            ><li
-              ><a
-                class="textlink"
-                download="Carer_Call_and_Feedback_v12.docx"
-                href="assets/Carer_Call_and_Feedback_v12.docx"
-                ><span>Call a carer</span></a
-              ></li
-            ></ul
+          ><p><a class="button" download="Discharge_and_Transition_Form.docx" href="assets/Discharge_and_Transition_Form.docx">Download full form (Word)</a></p>
+          <p>Use a separate copy for each person or carer and complete the relevant sections.</p
           ></section
         ></noscript
       > </main

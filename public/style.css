@@ -1270,22 +1270,11 @@ select {
   align-self: start;
   min-height: 2.75rem;
 }
-.staff-files > .disclosure {
-  border: 0;
-}
-.staff-files summary {
+.staff-files {
   display: flex;
-  width: fit-content;
-  max-width: 100%;
-  min-height: 2.75rem;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.5rem 0.22rem 0.5rem 0;
-}
-.staff-files summary::after {
-  position: static;
-  flex: none;
-  margin-bottom: 0.15rem;
+  gap: 0.65rem 1.35rem;
 }
 .staff-related,
 .work-links {
@@ -1765,9 +1754,6 @@ select {
   .staff-files,
   .staff-related {
     padding: 0;
-  }
-  .staff-files summary {
-    padding-block: 0.3rem;
   }
   .staff-related {
     min-height: 2rem;

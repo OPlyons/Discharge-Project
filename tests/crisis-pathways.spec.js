@@ -8,7 +8,7 @@ const guidance=JSON.parse(await fs.readFile(new URL('../config/workbook-guidance
 const routes=['staff-offer','staff-handover','staff-call','staff-carer'];
 test.beforeEach(async({page})=>{await interceptSentry(page);});
 
-for(const [area,info] of Object.entries(data.areas))test('local safety guidance follows '+info.name+' into all four forms',async({page})=>{
+for(const [area,info] of Object.entries(data.areas))test('local safety guidance follows '+info.name+' into the full form from every staff task',async({page})=>{
  await page.goto('/#staff-offer');
  await page.locator('#staff-area').selectOption(area);
  await expect(page.locator('#staff-crisis-routes h2')).toHaveText(info.name+' crisis routes');
