@@ -1276,6 +1276,27 @@ select {
   align-items: center;
   gap: 0.65rem 1.35rem;
 }
+.harrow-download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--line);
+}
+.harrow-download > div:first-child { flex: 1 1 23rem; }
+.harrow-download h2 { margin: 0 0 0.35rem; font-size: 1.3rem; }
+.harrow-download p { margin: 0; max-width: 65ch; }
+.harrow-download-actions { display: grid; gap: 0.6rem; justify-items: start; }
+.harrow-intro, .harrow-agreement { max-width: 80ch; }
+.harrow-intro > p, .harrow-agreement p, .harrow-agreement li { line-height: 1.6; }
+.harrow-process { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); gap: 0.5rem 3rem; margin-block: 1.5rem; }
+.harrow-process h2 { font-size: 1.4rem; line-height: 1.3; }
+.harrow-process p { line-height: 1.6; }
+.harrow-agreement li { margin-block: 0.6rem; }
+.harrow-form-option { margin-block: 1rem; padding-block: 0.75rem; border-block: 1px solid var(--line); }
+.harrow-form-option p { font-size: 1rem; }
 .staff-related,
 .work-links {
   display: flex;

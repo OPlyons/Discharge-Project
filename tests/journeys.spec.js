@@ -30,6 +30,38 @@ test('staff can read each task and download the same full form', async ({page}) 
   }
   await expect(page.locator('#blank-task-downloads a[download]:visible')).toHaveCount(1);
 });
+test('staff can find the Harrow draft without changing the general form', async ({page}) => {
+  await page.goto('/#downloads');
+  const download = page.waitForEvent('download');
+  await page.locator('.harrow-download').getByRole('link', {name: 'Download Harrow draft (Word)', exact: true}).click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe('Harrow_Peer_Support_Follow_Up_Form_Working_Draft.docx');
+  const xml = readDocxEntry(await fs.readFile(await file.path()), 'word/document.xml');
+  for (const section of ['Section 1  Ward staff', 'Section 2  LX Coordinator', 'Section 3  Peer Support Caller', 'Section 4  Peer Support Caller']) expect(xml).toContain(section);
+  expect(xml).toContain('Pilot decisions still to agree');
+  await page.locator('.harrow-download').getByRole('link', {name: 'Harrow process and points to agree', exact: true}).click();
+  await expect(page.getByRole('heading', {level: 1, name: 'Harrow pilot form', exact: true})).toBeVisible();
+  await expect(page.locator('.harrow-process > section')).toHaveCount(4);
+  await expect(page.locator('#harrow-pilot')).toContainText('still need local agreement');
+  expect(await page.locator('html').evaluate(el => el.scrollWidth <= el.clientWidth)).toBeTruthy();
+
+  await page.goto('/#staff-offer');
+  const option = page.locator('#harrow-form-option');
+  await expect(option).toBeHidden();
+  await page.locator('#staff-area').selectOption('harrow');
+  await expect(option).toBeVisible();
+  for (const route of ['staff-offer', 'staff-handover', 'staff-call', 'staff-carer']) {
+    await page.goto('/#' + route);
+    await expect(option).toBeVisible();
+    await expect(option.locator('a[download]')).toHaveAttribute('download', file.suggestedFilename());
+    await expect(page.locator('#download-main')).toHaveAttribute('download', 'Discharge_and_Transition_Form.docx');
+  }
+  await page.goto('/#staff-offer');
+  await page.locator('#staff-area').selectOption('hillingdon');
+  await expect(option).toBeHidden();
+  await page.locator('#staff-area').selectOption('');
+  await expect(option).toBeHidden();
+});
 test('old support bookmarks and new Find support links open the standalone navigator',async({page})=>{
  await page.route('https://navigator.lxportal.space/**',route=>route.fulfill({status:200,contentType:'text/html',body:'<h1>Community Navigator</h1>'}));
  await page.goto('/#support');await expect(page).toHaveURL('https://navigator.lxportal.space/');
@@ -53,11 +85,16 @@ test('the full form is available without JavaScript and after a customised downl
  const plain = await context.newPage();
  await plain.goto('/#staff-handover');
  const plainDownload = plain.waitForEvent('download');
- await plain.locator('#plain-downloads a[download$=".docx"]').click();
+ await plain.locator('#plain-downloads a[download="Discharge_and_Transition_Form.docx"]').click();
  const file = await plainDownload;
  expect(file.suggestedFilename()).toBe('Discharge_and_Transition_Form.docx');
  const text = readDocxEntry(await fs.readFile(await file.path()), 'word/document.xml');
  for (const section of ['Offer a peer support call', 'Arrange the call', 'Call a person leaving hospital', 'Call a carer']) expect(text).toContain(section);
+ const harrowDownload = plain.waitForEvent('download');
+ await plain.locator('#plain-downloads a[download="Harrow_Peer_Support_Follow_Up_Form_Working_Draft.docx"]').click();
+ const harrowFile = await harrowDownload;
+ expect(harrowFile.suggestedFilename()).toBe('Harrow_Peer_Support_Follow_Up_Form_Working_Draft.docx');
+ expect(readDocxEntry(await fs.readFile(await harrowFile.path()), 'word/document.xml')).toContain('Pilot decisions still to agree');
  await context.close();
 
  await page.route('**/assets/word-packs.json', route => route.fulfill({status: 503, body: 'Unavailable'}));
